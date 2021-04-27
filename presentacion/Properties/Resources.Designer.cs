@@ -73,6 +73,16 @@ namespace presentacion.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap giferror {
+            get {
+                object obj = ResourceManager.GetObject("giferror", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap hqdefault {
             get {
                 object obj = ResourceManager.GetObject("hqdefault", resourceCulture);
@@ -86,6 +96,16 @@ namespace presentacion.Properties {
         internal static System.Drawing.Bitmap jojo {
             get {
                 object obj = ResourceManager.GetObject("jojo", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap jojo1 {
+            get {
+                object obj = ResourceManager.GetObject("jojo1", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

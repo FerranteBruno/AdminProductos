@@ -232,11 +232,13 @@ namespace presentacion
             // pbImagenProducto
             // 
             this.pbImagenProducto.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.pbImagenProducto.BackgroundImage = global::presentacion.Properties.Resources.logo1;
             this.pbImagenProducto.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.pbImagenProducto.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.pbImagenProducto.ErrorImage = global::presentacion.Properties.Resources.jojo;
+            this.pbImagenProducto.ErrorImage = global::presentacion.Properties.Resources.giferror;
             this.pbImagenProducto.Image = global::presentacion.Properties.Resources.logo1;
             this.pbImagenProducto.ImageLocation = "";
+            this.pbImagenProducto.InitialImage = global::presentacion.Properties.Resources.logo1;
             this.pbImagenProducto.Location = new System.Drawing.Point(0, 0);
             this.pbImagenProducto.Name = "pbImagenProducto";
             this.pbImagenProducto.Size = new System.Drawing.Size(279, 179);
