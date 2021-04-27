@@ -1,0 +1,6 @@
+E:\Git\Pointer-Bucks\AdminProductos\dominio\bin\Debug\dominio.dll
+E:\Git\Pointer-Bucks\AdminProductos\dominio\bin\Debug\dominio.pdb
+E:\Git\Pointer-Bucks\AdminProductos\dominio\obj\Debug\dominio.csprojAssemblyReference.cache
+E:\Git\Pointer-Bucks\AdminProductos\dominio\obj\Debug\dominio.csproj.CoreCompileInputs.cache
+E:\Git\Pointer-Bucks\AdminProductos\dominio\obj\Debug\dominio.dll
+E:\Git\Pointer-Bucks\AdminProductos\dominio\obj\Debug\dominio.pdb
