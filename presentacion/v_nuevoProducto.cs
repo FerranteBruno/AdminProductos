@@ -16,6 +16,7 @@ namespace presentacion
         public v_nuevoProducto()
         {
             InitializeComponent();
+            Controles.Add(txtCodigo);
             Controles.Add(txtNombre);
             Controles.Add(txtStock);
             Controles.Add(cbxMarca);
@@ -27,9 +28,9 @@ namespace presentacion
 
         private void v_nuevoProducto_Load(object sender, EventArgs e)
         {
-            txtNombre.Focus();
+            txtCodigo.Focus();
         }
-        public bool checkControles(List<Control> listado)
+        public bool  checkControles(List<Control> listado)
         {
             int cont = 0;
             Control aux = new Control();
@@ -76,6 +77,7 @@ namespace presentacion
         {
             if (a.KeyChar == (char)Keys.Enter)
             {
+                a.Handled = true;
                 aux.Focus();
             }
         }
@@ -101,6 +103,14 @@ namespace presentacion
             listado[0].Focus();
         }
 
+        private void FondoRojoBlanco(ref TextBox caja)
+        {
+            if (caja.BackColor == Color.Red)
+            {
+                caja.BackColor = Color.White;
+            }
+        }
+
         private void guardarProducto()
         {
 
@@ -113,15 +123,26 @@ namespace presentacion
 
         private void txtStock_KeyPress(object sender, KeyPressEventArgs e)
         {
+           
+
             if ((e.KeyChar < 48 || e.KeyChar > 59) && e.KeyChar != 8)
+            {
                 e.Handled = true;
+                FondoRojoBlanco(ref txtStock);
+            }
+           
             saltoDeCampo(e, cbxMarca);
         }
 
         private void txtPrecio_KeyPress(object sender, KeyPressEventArgs e)
         {
+
             if ((e.KeyChar < 48 || e.KeyChar > 59) && e.KeyChar != 8)
+            {
+                FondoRojoBlanco(ref txtStock);
                 e.Handled = true;
+            }
+            
             saltoDeCampo(e, txtDescripcion);
         }
 
@@ -135,21 +156,25 @@ namespace presentacion
 
         private void cbxMarca_KeyPress(object sender, KeyPressEventArgs e)
         {
+            cbxMarca.BackColor = Color.White;
             saltoDeCampo(e, cbxCategoria);
         }
 
         private void cbxCategoria_KeyPress(object sender, KeyPressEventArgs e)
         {
+            cbxCategoria.BackColor = Color.White;
             saltoDeCampo(e, txtUrlImagen);
         }
 
         private void txtUrlImagen_KeyPress(object sender, KeyPressEventArgs e)
         {
+            FondoRojoBlanco(ref txtUrlImagen);
             saltoDeCampo(e, txtPrecio);
         }
 
         private void txtDescripcion_KeyPress(object sender, KeyPressEventArgs e)
         {
+            FondoRojoBlanco(ref txtDescripcion);
             if (e.KeyChar == (char)Keys.Enter)
             {
                 guardarProducto();
@@ -165,6 +190,7 @@ namespace presentacion
 
         private void txtNombre_KeyPress(object sender, KeyPressEventArgs e)
         {
+            FondoRojoBlanco(ref txtNombre);
             saltoDeCampo(e,txtStock);
         }
 
@@ -178,6 +204,12 @@ namespace presentacion
         {
             v_nuevaCategoria vent = new v_nuevaCategoria();
             vent.ShowDialog();
+        }
+
+        private void txtCodigo_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            FondoRojoBlanco(ref txtCodigo);
+            saltoDeCampo(e,txtNombre);
         }
     }
 }

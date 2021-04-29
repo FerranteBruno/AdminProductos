@@ -39,9 +39,11 @@ namespace presentacion
             this.label6 = new System.Windows.Forms.Label();
             this.btnNuevaMarca = new System.Windows.Forms.Button();
             this.label3 = new System.Windows.Forms.Label();
+            this.label8 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
             this.txtNombre = new System.Windows.Forms.TextBox();
+            this.txtCodigo = new System.Windows.Forms.TextBox();
             this.txtPrecio = new System.Windows.Forms.TextBox();
             this.txtStock = new System.Windows.Forms.TextBox();
             this.cbxMarca = new System.Windows.Forms.ComboBox();
@@ -114,17 +116,19 @@ namespace presentacion
             this.panel8.Controls.Add(this.label6);
             this.panel8.Controls.Add(this.btnNuevaMarca);
             this.panel8.Controls.Add(this.label3);
+            this.panel8.Controls.Add(this.label8);
             this.panel8.Controls.Add(this.label1);
             this.panel8.Controls.Add(this.label7);
             this.panel8.Controls.Add(this.txtNombre);
+            this.panel8.Controls.Add(this.txtCodigo);
             this.panel8.Controls.Add(this.txtPrecio);
             this.panel8.Controls.Add(this.txtStock);
             this.panel8.Controls.Add(this.cbxMarca);
             this.panel8.Controls.Add(this.cbxCategoria);
             this.panel8.Controls.Add(this.txtUrlImagen);
-            this.panel8.Location = new System.Drawing.Point(25, 33);
+            this.panel8.Location = new System.Drawing.Point(25, 6);
             this.panel8.Name = "panel8";
-            this.panel8.Size = new System.Drawing.Size(353, 350);
+            this.panel8.Size = new System.Drawing.Size(353, 404);
             this.panel8.TabIndex = 25;
             // 
             // label5
@@ -133,7 +137,7 @@ namespace presentacion
             this.label5.AutoSize = true;
             this.label5.BackColor = System.Drawing.Color.Transparent;
             this.label5.ForeColor = System.Drawing.SystemColors.ActiveCaption;
-            this.label5.Location = new System.Drawing.Point(37, 180);
+            this.label5.Location = new System.Drawing.Point(37, 230);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(58, 15);
             this.label5.TabIndex = 11;
@@ -146,7 +150,7 @@ namespace presentacion
             this.label4.AutoSize = true;
             this.label4.BackColor = System.Drawing.Color.Transparent;
             this.label4.ForeColor = System.Drawing.SystemColors.ActiveCaption;
-            this.label4.Location = new System.Drawing.Point(37, 126);
+            this.label4.Location = new System.Drawing.Point(37, 180);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(40, 15);
             this.label4.TabIndex = 12;
@@ -161,7 +165,7 @@ namespace presentacion
             this.btnNuevaCategoria.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnNuevaCategoria.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnNuevaCategoria.ForeColor = System.Drawing.Color.Lime;
-            this.btnNuevaCategoria.Location = new System.Drawing.Point(244, 198);
+            this.btnNuevaCategoria.Location = new System.Drawing.Point(244, 251);
             this.btnNuevaCategoria.Name = "btnNuevaCategoria";
             this.btnNuevaCategoria.Size = new System.Drawing.Size(28, 23);
             this.btnNuevaCategoria.TabIndex = 23;
@@ -174,7 +178,7 @@ namespace presentacion
             this.label6.AutoSize = true;
             this.label6.BackColor = System.Drawing.Color.Transparent;
             this.label6.ForeColor = System.Drawing.SystemColors.ActiveCaption;
-            this.label6.Location = new System.Drawing.Point(37, 234);
+            this.label6.Location = new System.Drawing.Point(37, 280);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(87, 15);
             this.label6.TabIndex = 10;
@@ -189,7 +193,7 @@ namespace presentacion
             this.btnNuevaMarca.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnNuevaMarca.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnNuevaMarca.ForeColor = System.Drawing.Color.Lime;
-            this.btnNuevaMarca.Location = new System.Drawing.Point(244, 144);
+            this.btnNuevaMarca.Location = new System.Drawing.Point(244, 201);
             this.btnNuevaMarca.Name = "btnNuevaMarca";
             this.btnNuevaMarca.Size = new System.Drawing.Size(28, 23);
             this.btnNuevaMarca.TabIndex = 23;
@@ -202,12 +206,25 @@ namespace presentacion
             this.label3.AutoSize = true;
             this.label3.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.label3.ForeColor = System.Drawing.SystemColors.ActiveCaption;
-            this.label3.Location = new System.Drawing.Point(37, 72);
+            this.label3.Location = new System.Drawing.Point(37, 130);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(36, 15);
             this.label3.TabIndex = 13;
             this.label3.Text = "Stock";
             this.label3.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
+            // label8
+            // 
+            this.label8.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.label8.AutoSize = true;
+            this.label8.BackColor = System.Drawing.Color.Transparent;
+            this.label8.ForeColor = System.Drawing.SystemColors.ActiveCaption;
+            this.label8.Location = new System.Drawing.Point(37, 80);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(51, 15);
+            this.label8.TabIndex = 15;
+            this.label8.Text = "Nombre";
+            this.label8.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // label1
             // 
@@ -215,11 +232,11 @@ namespace presentacion
             this.label1.AutoSize = true;
             this.label1.BackColor = System.Drawing.Color.Transparent;
             this.label1.ForeColor = System.Drawing.SystemColors.ActiveCaption;
-            this.label1.Location = new System.Drawing.Point(37, 21);
+            this.label1.Location = new System.Drawing.Point(37, 30);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(51, 15);
+            this.label1.Size = new System.Drawing.Size(46, 15);
             this.label1.TabIndex = 15;
-            this.label1.Text = "Nombre";
+            this.label1.Text = "Codigo";
             this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // label7
@@ -228,7 +245,7 @@ namespace presentacion
             this.label7.AutoSize = true;
             this.label7.BackColor = System.Drawing.Color.Transparent;
             this.label7.ForeColor = System.Drawing.SystemColors.ActiveCaption;
-            this.label7.Location = new System.Drawing.Point(37, 288);
+            this.label7.Location = new System.Drawing.Point(37, 330);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(40, 15);
             this.label7.TabIndex = 9;
@@ -238,16 +255,25 @@ namespace presentacion
             // txtNombre
             // 
             this.txtNombre.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.txtNombre.Location = new System.Drawing.Point(37, 39);
+            this.txtNombre.Location = new System.Drawing.Point(37, 101);
             this.txtNombre.Name = "txtNombre";
             this.txtNombre.Size = new System.Drawing.Size(279, 23);
             this.txtNombre.TabIndex = 8;
             this.txtNombre.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtNombre_KeyPress);
             // 
+            // txtCodigo
+            // 
+            this.txtCodigo.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.txtCodigo.Location = new System.Drawing.Point(37, 51);
+            this.txtCodigo.Name = "txtCodigo";
+            this.txtCodigo.Size = new System.Drawing.Size(279, 23);
+            this.txtCodigo.TabIndex = 8;
+            this.txtCodigo.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtCodigo_KeyPress);
+            // 
             // txtPrecio
             // 
             this.txtPrecio.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.txtPrecio.Location = new System.Drawing.Point(37, 306);
+            this.txtPrecio.Location = new System.Drawing.Point(37, 351);
             this.txtPrecio.Name = "txtPrecio";
             this.txtPrecio.Size = new System.Drawing.Size(101, 23);
             this.txtPrecio.TabIndex = 2;
@@ -256,7 +282,7 @@ namespace presentacion
             // txtStock
             // 
             this.txtStock.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.txtStock.Location = new System.Drawing.Point(37, 90);
+            this.txtStock.Location = new System.Drawing.Point(37, 151);
             this.txtStock.Name = "txtStock";
             this.txtStock.Size = new System.Drawing.Size(101, 23);
             this.txtStock.TabIndex = 6;
@@ -266,7 +292,7 @@ namespace presentacion
             // 
             this.cbxMarca.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.cbxMarca.FormattingEnabled = true;
-            this.cbxMarca.Location = new System.Drawing.Point(37, 144);
+            this.cbxMarca.Location = new System.Drawing.Point(37, 201);
             this.cbxMarca.Name = "cbxMarca";
             this.cbxMarca.Size = new System.Drawing.Size(201, 23);
             this.cbxMarca.TabIndex = 16;
@@ -277,7 +303,7 @@ namespace presentacion
             // 
             this.cbxCategoria.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.cbxCategoria.FormattingEnabled = true;
-            this.cbxCategoria.Location = new System.Drawing.Point(37, 198);
+            this.cbxCategoria.Location = new System.Drawing.Point(37, 251);
             this.cbxCategoria.Name = "cbxCategoria";
             this.cbxCategoria.Size = new System.Drawing.Size(201, 23);
             this.cbxCategoria.TabIndex = 16;
@@ -287,7 +313,7 @@ namespace presentacion
             // txtUrlImagen
             // 
             this.txtUrlImagen.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.txtUrlImagen.Location = new System.Drawing.Point(37, 252);
+            this.txtUrlImagen.Location = new System.Drawing.Point(37, 301);
             this.txtUrlImagen.Name = "txtUrlImagen";
             this.txtUrlImagen.Size = new System.Drawing.Size(279, 23);
             this.txtUrlImagen.TabIndex = 3;
@@ -488,7 +514,7 @@ namespace presentacion
         private System.Windows.Forms.TextBox txtPrecio;
         private System.Windows.Forms.TextBox txtUrlImagen;
         private System.Windows.Forms.TextBox txtStock;
-        private System.Windows.Forms.TextBox txtNombre;
+        private System.Windows.Forms.TextBox txtCodigo;
         private System.Windows.Forms.TextBox txtDescripcion;
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Panel panel3;
@@ -510,5 +536,7 @@ namespace presentacion
         private System.Windows.Forms.Panel panel8;
         private System.Windows.Forms.Panel panel6;
         private System.Windows.Forms.Label label9;
+        private System.Windows.Forms.Label label8;
+        private System.Windows.Forms.TextBox txtNombre;
     }
 }
