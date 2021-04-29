@@ -16,5 +16,41 @@ namespace presentacion
         {
             InitializeComponent();
         }
+        private void ocultarMostrarPaneles(Panel aux)
+        {
+            if (aux.Visible == true)
+            {
+                aux.Visible = false;
+            }
+            else
+            {
+                aux.Visible = true;
+            }
+        }
+
+        private void btnVer_Click(object sender, EventArgs e)
+        {
+            
+        }
+
+        private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label3_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void cbxMarca_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label4_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

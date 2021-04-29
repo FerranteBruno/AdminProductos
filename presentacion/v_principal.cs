@@ -28,6 +28,7 @@ namespace presentacion
                 aux.Visible = true;
             }
         }
+
         private void abrirFormHijo(Form hijo)
         {
             if (formActivo != null)
@@ -42,8 +43,8 @@ namespace presentacion
             pnlContenedor.Tag = hijo;
             hijo.BringToFront();
             hijo.Show();
-
         }
+
         private void abrirYcomprobarForm(Form vent)
         {
             Type tipo = vent.GetType();
@@ -84,6 +85,7 @@ namespace presentacion
         {
             this.Close();
         }
+
         int posx = 0;
         int posy = 0;
         private void pnlTitulo_MouseMove(object sender, MouseEventArgs e)
@@ -108,6 +110,16 @@ namespace presentacion
         private void btnAdministracion_Click(object sender, EventArgs e)
         {
             ocultarMostrarPaneles(pnlAdministracion);
+        }
+
+        private void btnNuevaCategoria_Click(object sender, EventArgs e)
+        {
+            abrirYcomprobarForm(new v_nuevaCategoria());
+        }
+
+        private void btnNuevaMarca_Click(object sender, EventArgs e)
+        {
+            abrirYcomprobarForm(new v_nuevaMarca());
         }
     }
 }

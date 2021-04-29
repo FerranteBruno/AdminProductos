@@ -17,21 +17,6 @@ namespace presentacion
             InitializeComponent();
         }
 
-        private void label2_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void panel1_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
-
-        private void button1_Click(object sender, EventArgs e)
-        {
-            
-        }
-
         private void v_nuevoProducto_Load(object sender, EventArgs e)
         {
             
@@ -39,7 +24,9 @@ namespace presentacion
 
         private void textBox6_TextChanged(object sender, EventArgs e)
         {
-            pbImagenProducto.ImageLocation = textBox6.Text.ToString();
+            pbImagenProducto.ImageLocation = txtUrlImagen.Text.ToString();
         }
+
+        
     }
 }

@@ -20,3 +20,5 @@ E:\Git\Pointer-Bucks\AdminProductos\presentacion\obj\Debug\net5.0-windows\presen
 E:\Git\Pointer-Bucks\AdminProductos\presentacion\obj\Debug\net5.0-windows\ref\presentacion.dll
 E:\Git\Pointer-Bucks\AdminProductos\presentacion\obj\Debug\net5.0-windows\presentacion.pdb
 E:\Git\Pointer-Bucks\AdminProductos\presentacion\obj\Debug\net5.0-windows\presentacion.genruntimeconfig.cache
+E:\Git\Pointer-Bucks\AdminProductos\presentacion\obj\Debug\net5.0-windows\presentacion.v_nuevaCategoria.resources
+E:\Git\Pointer-Bucks\AdminProductos\presentacion\obj\Debug\net5.0-windows\presentacion.v_nuevaMarca.resources

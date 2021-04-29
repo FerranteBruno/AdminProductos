@@ -41,8 +41,8 @@ namespace presentacion
             this.btnProductos = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
             this.pnlAdministracion = new System.Windows.Forms.Panel();
-            this.button2 = new System.Windows.Forms.Button();
-            this.button3 = new System.Windows.Forms.Button();
+            this.btnNuevaMarca = new System.Windows.Forms.Button();
+            this.btnNuevaCategoria = new System.Windows.Forms.Button();
             this.btnNuevoProducto = new System.Windows.Forms.Button();
             this.btnAdministracion = new System.Windows.Forms.Button();
             this.pnlContenedor = new System.Windows.Forms.Panel();
@@ -216,8 +216,8 @@ namespace presentacion
             // pnlAdministracion
             // 
             this.pnlAdministracion.BackColor = System.Drawing.Color.DimGray;
-            this.pnlAdministracion.Controls.Add(this.button2);
-            this.pnlAdministracion.Controls.Add(this.button3);
+            this.pnlAdministracion.Controls.Add(this.btnNuevaMarca);
+            this.pnlAdministracion.Controls.Add(this.btnNuevaCategoria);
             this.pnlAdministracion.Controls.Add(this.btnNuevoProducto);
             this.pnlAdministracion.Cursor = System.Windows.Forms.Cursors.Hand;
             this.pnlAdministracion.Dock = System.Windows.Forms.DockStyle.Top;
@@ -227,37 +227,39 @@ namespace presentacion
             this.pnlAdministracion.TabIndex = 4;
             this.pnlAdministracion.Visible = false;
             // 
-            // button2
+            // btnNuevaMarca
             // 
-            this.button2.Dock = System.Windows.Forms.DockStyle.Top;
-            this.button2.FlatAppearance.BorderSize = 0;
-            this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button2.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.button2.ForeColor = System.Drawing.Color.Silver;
-            this.button2.Location = new System.Drawing.Point(0, 76);
-            this.button2.Name = "button2";
-            this.button2.Padding = new System.Windows.Forms.Padding(35, 0, 0, 0);
-            this.button2.Size = new System.Drawing.Size(185, 38);
-            this.button2.TabIndex = 4;
-            this.button2.Text = "Nueva Marca";
-            this.button2.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button2.UseVisualStyleBackColor = true;
+            this.btnNuevaMarca.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnNuevaMarca.FlatAppearance.BorderSize = 0;
+            this.btnNuevaMarca.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnNuevaMarca.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.btnNuevaMarca.ForeColor = System.Drawing.Color.Silver;
+            this.btnNuevaMarca.Location = new System.Drawing.Point(0, 76);
+            this.btnNuevaMarca.Name = "btnNuevaMarca";
+            this.btnNuevaMarca.Padding = new System.Windows.Forms.Padding(35, 0, 0, 0);
+            this.btnNuevaMarca.Size = new System.Drawing.Size(185, 38);
+            this.btnNuevaMarca.TabIndex = 4;
+            this.btnNuevaMarca.Text = "Nueva Marca";
+            this.btnNuevaMarca.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnNuevaMarca.UseVisualStyleBackColor = true;
+            this.btnNuevaMarca.Click += new System.EventHandler(this.btnNuevaMarca_Click);
             // 
-            // button3
+            // btnNuevaCategoria
             // 
-            this.button3.Dock = System.Windows.Forms.DockStyle.Top;
-            this.button3.FlatAppearance.BorderSize = 0;
-            this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button3.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.button3.ForeColor = System.Drawing.Color.Silver;
-            this.button3.Location = new System.Drawing.Point(0, 38);
-            this.button3.Name = "button3";
-            this.button3.Padding = new System.Windows.Forms.Padding(35, 0, 0, 0);
-            this.button3.Size = new System.Drawing.Size(185, 38);
-            this.button3.TabIndex = 3;
-            this.button3.Text = "Nueva Categoria";
-            this.button3.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button3.UseVisualStyleBackColor = true;
+            this.btnNuevaCategoria.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnNuevaCategoria.FlatAppearance.BorderSize = 0;
+            this.btnNuevaCategoria.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnNuevaCategoria.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.btnNuevaCategoria.ForeColor = System.Drawing.Color.Silver;
+            this.btnNuevaCategoria.Location = new System.Drawing.Point(0, 38);
+            this.btnNuevaCategoria.Name = "btnNuevaCategoria";
+            this.btnNuevaCategoria.Padding = new System.Windows.Forms.Padding(35, 0, 0, 0);
+            this.btnNuevaCategoria.Size = new System.Drawing.Size(185, 38);
+            this.btnNuevaCategoria.TabIndex = 3;
+            this.btnNuevaCategoria.Text = "Nueva Categoria";
+            this.btnNuevaCategoria.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnNuevaCategoria.UseVisualStyleBackColor = true;
+            this.btnNuevaCategoria.Click += new System.EventHandler(this.btnNuevaCategoria_Click);
             // 
             // btnNuevoProducto
             // 
@@ -357,8 +359,8 @@ namespace presentacion
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Panel pnlAdministracion;
-        private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.Button button3;
+        private System.Windows.Forms.Button btnNuevaMarca;
+        private System.Windows.Forms.Button btnNuevaCategoria;
         private System.Windows.Forms.Button btnNuevoProducto;
         private System.Windows.Forms.Button btnAdministracion;
     }
