@@ -15,19 +15,19 @@ namespace negocio
         public List<Producto> listar()
         {
             List<Producto> lista = new List<Producto>();
-            SqlConnection conexion = new SqlConnection();
+            //SqlConnection conexion = new SqlConnection();
 
             AccesoDatos datos = new AccesoDatos();
 
             try
             {
-                datos.setearConsulta("select Numero, Nombre, Descripcion, m.Nombre, c.Nombre , UrlImagen, Stock, Estado Precio from Articulos A, ELEMENTOS m, ELEMENTOS c Where A.IDMarca = m.ID and A.IDCategoria = c.ID ");
+                datos.setearConsulta("select Codigo, Nombre, Descripcion, m.Nombre, c.Nombre , UrlImagen, Stock, Estado Precio from Articulos A, ELEMENTOS m, ELEMENTOS c Where A.IDMarca = m.ID and A.IDCategoria = c.ID ");
                 datos.ejecutarLectura();
 
                 while (datos.Lector.Read())
                 {
                     Producto aux = new Producto();
-                    aux.Codigo = (int)datos.Lector["Numero"];
+                    aux.Codigo = (string)datos.Lector["Codigo"];
                     aux.Nombre = (string)datos.Lector["Nombre"];
                     aux.Descripcion = datos.Lector.GetString(150);
 
@@ -50,7 +50,7 @@ namespace negocio
             }
             finally
             {
-                conexion.Close();
+                datos.cerrarConexion();
             }
 
         }
@@ -64,19 +64,18 @@ namespace negocio
                     + nuevo.Codigo + ", '"
                     + nuevo.Nombre + "', '"
                     + nuevo.Descripcion + "', '" 
-                    + nuevo.UrlImagen + "', " 
-                    + nuevo.Marca.ID + "', '"
-                    + nuevo.Categoria.ID + "', '"
-                    + nuevo.UrlImagen + "', '"
-                    + nuevo.Precio+ "', '"
-                    + nuevo.Stock + "', '"
+                    + nuevo.UrlImagen + "', '" 
+                    + nuevo.Marca.ID + ", "
+                    + nuevo.Categoria.ID + ", '"
+                    + nuevo.UrlImagen + "', "
+                    + nuevo.Precio+ ", "
+                    + nuevo.Stock + ", "
                     + nuevo.Estado + ")";
 
-                datos.setearConsulta("insert into Productos as p (" +
+                datos.setearConsulta("insert into Productos(" +
                     "Codigo," +
                     " Nombre," +
                     " Descripcion," +
-                    " IdTipo," +
                     " IDMarca," +
                     " IDCategoria," +
                     " UrlImagen," +
@@ -100,13 +99,92 @@ namespace negocio
 
         public void modificar(Producto modificar)
         {
+            AccesoDatos datos = new AccesoDatos();
+            try
+            {
 
+                /*string valores = "values("
+                    + modificar.Codigo + ", '"
+                    + modificar.Nombre + "', '"
+                    + modificar.Descripcion + "', '"
+                    + modificar.UrlImagen + "', "
+                    + modificar.Marca.ID + "', '"
+                    + modificar.Categoria.ID + "', '"
+                    + modificar.UrlImagen + "', '"
+                    + modificar.Precio + "', '"
+                    + modificar.Stock + "', '"
+                    + modificar.Estado + ")";*/
+
+                datos.setearConsulta(
+                    "update Productos" +
+                    " set"+
+                    "Codigo = '" + modificar.Codigo+"',"+
+                    " Nombre = '" + modificar.Nombre + "'," +
+                    " Descripcion = '" + modificar.Descripcion + "'," +
+                    " IdMarca = '" + modificar.Marca.ID + "'," +
+                    " IDCategoria = '" + modificar.Categoria.ID + "'," +
+                    " UrlImagen = '" + modificar.UrlImagen + "'," +
+                    " Precio = " + modificar.Precio + "," +
+                    " Stock = " + modificar.Stock + "," +
+                    " Estado = " + modificar.Estado+
+                    "where Codigo = '"+modificar.Codigo+ "'"
+                    );
+
+                datos.ejectutarAccion();
+
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+            finally
+            {
+                datos.cerrarConexion();
+            }
         }
 
-        public void eliminar(int id)
+        public void eliminar(string codigo)
         {
+            AccesoDatos datos = new AccesoDatos();
+            try
+            { 
+                datos.setearConsulta("select ID, Codigo, Descripcion, m.Nombre, c.Nombre , UrlImagen, Stock, Estado Precio from Articulos A, ELEMENTOS m, ELEMENTOS c Where A.IDMarca = m.ID and A.IDCategoria = c.ID ");
+                datos.ejecutarLectura();
 
+                Producto aux = new Producto();
+
+                aux.Codigo = (string)datos.Lector["Codigo"];
+
+                if(aux.Codigo != codigo)
+                {
+                    datos.cerrarConexion();
+                   // return;???
+                }
+
+                if(aux.Codigo == codigo)
+                {
+                    aux.Estado = false;
+                }
+
+                datos.setearConsulta(
+                    "update Productos" +
+                    " set" +
+                    " Estado = " + aux.Estado +
+                    "where Codigo = '" + aux.Codigo + "'"
+                    );
+
+                datos.ejectutarAccion();
+
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+            finally
+            {
+                datos.cerrarConexion();
+            }
         }
+    }
 
     }
-}
