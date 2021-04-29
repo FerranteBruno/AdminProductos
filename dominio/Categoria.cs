@@ -10,6 +10,18 @@ namespace dominio
     {
         public int ID { get; set; }
 
-        public string nombre { get; set; }
+        public string Nombre { get; set; }
+
+        public bool Estado { get; set; }
+
+        public Categoria()
+        {
+
+        }
+
+        public Categoria(string Nombre)
+        {
+            this.Nombre = Nombre;
+        }
     }
 }

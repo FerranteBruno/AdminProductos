@@ -4,3 +4,12 @@ E:\Git\Pointer-Bucks\AdminProductos\negocio\obj\Debug\negocio.csprojAssemblyRefe
 E:\Git\Pointer-Bucks\AdminProductos\negocio\obj\Debug\negocio.csproj.CoreCompileInputs.cache
 E:\Git\Pointer-Bucks\AdminProductos\negocio\obj\Debug\negocio.dll
 E:\Git\Pointer-Bucks\AdminProductos\negocio\obj\Debug\negocio.pdb
+C:\Users\darkz\source\repos\AdminProd\AdminProductos\negocio\bin\Debug\negocio.dll
+C:\Users\darkz\source\repos\AdminProd\AdminProductos\negocio\bin\Debug\negocio.pdb
+C:\Users\darkz\source\repos\AdminProd\AdminProductos\negocio\bin\Debug\dominio.dll
+C:\Users\darkz\source\repos\AdminProd\AdminProductos\negocio\bin\Debug\dominio.pdb
+C:\Users\darkz\source\repos\AdminProd\AdminProductos\negocio\obj\Debug\negocio.csprojAssemblyReference.cache
+C:\Users\darkz\source\repos\AdminProd\AdminProductos\negocio\obj\Debug\negocio.csproj.CoreCompileInputs.cache
+C:\Users\darkz\source\repos\AdminProd\AdminProductos\negocio\obj\Debug\negocio.csproj.CopyComplete
+C:\Users\darkz\source\repos\AdminProd\AdminProductos\negocio\obj\Debug\negocio.dll
+C:\Users\darkz\source\repos\AdminProd\AdminProductos\negocio\obj\Debug\negocio.pdb
