@@ -21,12 +21,13 @@ namespace negocio
 
             try
             {
-                datos.setearConsulta("select Codigo, Nombre, Descripcion, m.Nombre, c.Nombre , UrlImagen, Stock, Estado Precio from Articulos A, ELEMENTOS m, ELEMENTOS c Where A.IDMarca = m.ID and A.IDCategoria = c.ID ");
+                datos.setearConsulta("select ID, Codigo, Nombre, Descripcion, m.Nombre, c.Nombre , UrlImagen, Stock, Estado Precio from Articulos A, ELEMENTOS m, ELEMENTOS c Where A.IDMarca = m.ID and A.IDCategoria = c.ID ");
                 datos.ejecutarLectura();
 
                 while (datos.Lector.Read())
                 {
                     Producto aux = new Producto();
+                    aux.ID = (int)datos.Lector["ID"];
                     aux.Codigo = (string)datos.Lector["Codigo"];
                     aux.Nombre = (string)datos.Lector["Nombre"];
                     aux.Descripcion = datos.Lector.GetString(150);
@@ -72,7 +73,7 @@ namespace negocio
                     + nuevo.Stock + ", "
                     + nuevo.Estado + ")";
 
-                datos.setearConsulta("insert into Productos(" +
+                datos.setearConsulta("insert into Articulos(" +
                     "Codigo," +
                     " Nombre," +
                     " Descripcion," +
@@ -116,7 +117,7 @@ namespace negocio
                     + modificar.Estado + ")";*/
 
                 datos.setearConsulta(
-                    "update Productos" +
+                    "update Articulos" +
                     " set"+
                     "Codigo = '" + modificar.Codigo+"',"+
                     " Nombre = '" + modificar.Nombre + "'," +
@@ -127,7 +128,7 @@ namespace negocio
                     " Precio = " + modificar.Precio + "," +
                     " Stock = " + modificar.Stock + "," +
                     " Estado = " + modificar.Estado+
-                    "where Codigo = '"+modificar.Codigo+ "'"
+                    "where ID = '"+modificar.ID+ "'"
                     );
 
                 datos.ejectutarAccion();
@@ -167,10 +168,10 @@ namespace negocio
                 }
 
                 datos.setearConsulta(
-                    "update Productos" +
+                    "update Articulos" +
                     " set" +
                     " Estado = " + aux.Estado +
-                    "where Codigo = '" + aux.Codigo + "'"
+                    "where ID = '" + aux.ID + "'"
                     );
 
                 datos.ejectutarAccion();
