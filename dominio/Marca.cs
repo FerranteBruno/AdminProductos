@@ -11,5 +11,10 @@ namespace dominio
         public int ID { get; set; }
 
         public string Nombre { get; set; }
+
+        public Marca(string Nombre)
+        {
+            this.Nombre = Nombre;
+        }
     }
 }

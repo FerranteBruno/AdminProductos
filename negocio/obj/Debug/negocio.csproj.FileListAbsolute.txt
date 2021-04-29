@@ -1,0 +1,2 @@
+C:\Users\darkz\source\repos\AdminProd\AdminProductos\negocio\obj\Debug\negocio.csprojAssemblyReference.cache
+C:\Users\darkz\source\repos\AdminProd\AdminProductos\negocio\obj\Debug\negocio.csproj.CoreCompileInputs.cache

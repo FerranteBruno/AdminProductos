@@ -9,24 +9,15 @@ namespace dominio
     public class Producto
     {
         public int ID { get; set; }
-
-        public int codigo { get; set; }
-
-        public string nombre { get; set; }
-
-        public string descripcion { get; set; }
-
-        public float stock { get; set; }
-
-        public Marca marca { get; set; }
-
-        public Categoria categoria { get; set; }
-
-        public string urlImagen { get; set; }
-
-        public float precio { get; set; }
-
-        public bool estado { get; set; }
+        public int Codigo { get; set; }
+        public string Nombre { get; set; }
+        public string Descripcion { get; set; }
+        public Marca Marca { get; set; }
+        public Categoria Categoria { get; set; }
+        public string UrlImagen { get; set; }
+        public float Precio { get; set; }
+        public float Stock { get; set; }
+        public bool Estado { get; set; }
 
 
     }
