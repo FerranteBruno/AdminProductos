@@ -1,2 +1,6 @@
-C:\Users\darkz\source\repos\AdminProd\AdminProductos\negocio\obj\Debug\negocio.csprojAssemblyReference.cache
-C:\Users\darkz\source\repos\AdminProd\AdminProductos\negocio\obj\Debug\negocio.csproj.CoreCompileInputs.cache
+E:\Git\Pointer-Bucks\AdminProductos\negocio\bin\Debug\negocio.dll
+E:\Git\Pointer-Bucks\AdminProductos\negocio\bin\Debug\negocio.pdb
+E:\Git\Pointer-Bucks\AdminProductos\negocio\obj\Debug\negocio.csprojAssemblyReference.cache
+E:\Git\Pointer-Bucks\AdminProductos\negocio\obj\Debug\negocio.csproj.CoreCompileInputs.cache
+E:\Git\Pointer-Bucks\AdminProductos\negocio\obj\Debug\negocio.dll
+E:\Git\Pointer-Bucks\AdminProductos\negocio\obj\Debug\negocio.pdb
