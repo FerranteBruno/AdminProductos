@@ -55,7 +55,6 @@ namespace presentacion
             this.panel2 = new System.Windows.Forms.Panel();
             this.panel3 = new System.Windows.Forms.Panel();
             this.pnlImagen = new System.Windows.Forms.Panel();
-            this.button1 = new System.Windows.Forms.Button();
             this.pbImagenProducto = new System.Windows.Forms.PictureBox();
             this.panel4 = new System.Windows.Forms.Panel();
             this.label2 = new System.Windows.Forms.Label();
@@ -134,7 +133,7 @@ namespace presentacion
             this.label5.AutoSize = true;
             this.label5.BackColor = System.Drawing.Color.Transparent;
             this.label5.ForeColor = System.Drawing.SystemColors.ActiveCaption;
-            this.label5.Location = new System.Drawing.Point(26, 184);
+            this.label5.Location = new System.Drawing.Point(37, 180);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(58, 15);
             this.label5.TabIndex = 11;
@@ -147,7 +146,7 @@ namespace presentacion
             this.label4.AutoSize = true;
             this.label4.BackColor = System.Drawing.Color.Transparent;
             this.label4.ForeColor = System.Drawing.SystemColors.ActiveCaption;
-            this.label4.Location = new System.Drawing.Point(26, 130);
+            this.label4.Location = new System.Drawing.Point(37, 126);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(40, 15);
             this.label4.TabIndex = 12;
@@ -157,14 +156,15 @@ namespace presentacion
             // btnNuevaCategoria
             // 
             this.btnNuevaCategoria.Anchor = System.Windows.Forms.AnchorStyles.Left;
+            this.btnNuevaCategoria.BackgroundImage = global::presentacion.Properties.Resources.more;
+            this.btnNuevaCategoria.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.btnNuevaCategoria.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnNuevaCategoria.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnNuevaCategoria.ForeColor = System.Drawing.Color.Lime;
-            this.btnNuevaCategoria.Location = new System.Drawing.Point(292, 202);
+            this.btnNuevaCategoria.Location = new System.Drawing.Point(244, 198);
             this.btnNuevaCategoria.Name = "btnNuevaCategoria";
-            this.btnNuevaCategoria.Size = new System.Drawing.Size(35, 23);
+            this.btnNuevaCategoria.Size = new System.Drawing.Size(28, 23);
             this.btnNuevaCategoria.TabIndex = 23;
-            this.btnNuevaCategoria.Text = "+";
             this.btnNuevaCategoria.UseVisualStyleBackColor = true;
             this.btnNuevaCategoria.Click += new System.EventHandler(this.btnNuevaCategoria_Click);
             // 
@@ -174,7 +174,7 @@ namespace presentacion
             this.label6.AutoSize = true;
             this.label6.BackColor = System.Drawing.Color.Transparent;
             this.label6.ForeColor = System.Drawing.SystemColors.ActiveCaption;
-            this.label6.Location = new System.Drawing.Point(26, 238);
+            this.label6.Location = new System.Drawing.Point(37, 234);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(87, 15);
             this.label6.TabIndex = 10;
@@ -184,14 +184,15 @@ namespace presentacion
             // btnNuevaMarca
             // 
             this.btnNuevaMarca.Anchor = System.Windows.Forms.AnchorStyles.Left;
+            this.btnNuevaMarca.BackgroundImage = global::presentacion.Properties.Resources.more;
+            this.btnNuevaMarca.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.btnNuevaMarca.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnNuevaMarca.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnNuevaMarca.ForeColor = System.Drawing.Color.Lime;
-            this.btnNuevaMarca.Location = new System.Drawing.Point(292, 148);
+            this.btnNuevaMarca.Location = new System.Drawing.Point(244, 144);
             this.btnNuevaMarca.Name = "btnNuevaMarca";
-            this.btnNuevaMarca.Size = new System.Drawing.Size(35, 23);
+            this.btnNuevaMarca.Size = new System.Drawing.Size(28, 23);
             this.btnNuevaMarca.TabIndex = 23;
-            this.btnNuevaMarca.Text = "+";
             this.btnNuevaMarca.UseVisualStyleBackColor = true;
             this.btnNuevaMarca.Click += new System.EventHandler(this.btnNuevaMarca_Click);
             // 
@@ -201,7 +202,7 @@ namespace presentacion
             this.label3.AutoSize = true;
             this.label3.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.label3.ForeColor = System.Drawing.SystemColors.ActiveCaption;
-            this.label3.Location = new System.Drawing.Point(26, 76);
+            this.label3.Location = new System.Drawing.Point(37, 72);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(36, 15);
             this.label3.TabIndex = 13;
@@ -214,7 +215,7 @@ namespace presentacion
             this.label1.AutoSize = true;
             this.label1.BackColor = System.Drawing.Color.Transparent;
             this.label1.ForeColor = System.Drawing.SystemColors.ActiveCaption;
-            this.label1.Location = new System.Drawing.Point(26, 25);
+            this.label1.Location = new System.Drawing.Point(37, 21);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(51, 15);
             this.label1.TabIndex = 15;
@@ -227,7 +228,7 @@ namespace presentacion
             this.label7.AutoSize = true;
             this.label7.BackColor = System.Drawing.Color.Transparent;
             this.label7.ForeColor = System.Drawing.SystemColors.ActiveCaption;
-            this.label7.Location = new System.Drawing.Point(26, 292);
+            this.label7.Location = new System.Drawing.Point(37, 288);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(40, 15);
             this.label7.TabIndex = 9;
@@ -237,27 +238,27 @@ namespace presentacion
             // txtNombre
             // 
             this.txtNombre.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.txtNombre.Location = new System.Drawing.Point(26, 43);
+            this.txtNombre.Location = new System.Drawing.Point(37, 39);
             this.txtNombre.Name = "txtNombre";
-            this.txtNombre.Size = new System.Drawing.Size(254, 23);
+            this.txtNombre.Size = new System.Drawing.Size(279, 23);
             this.txtNombre.TabIndex = 8;
             this.txtNombre.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtNombre_KeyPress);
             // 
             // txtPrecio
             // 
             this.txtPrecio.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.txtPrecio.Location = new System.Drawing.Point(26, 310);
+            this.txtPrecio.Location = new System.Drawing.Point(37, 306);
             this.txtPrecio.Name = "txtPrecio";
-            this.txtPrecio.Size = new System.Drawing.Size(279, 23);
+            this.txtPrecio.Size = new System.Drawing.Size(101, 23);
             this.txtPrecio.TabIndex = 2;
             this.txtPrecio.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtPrecio_KeyPress);
             // 
             // txtStock
             // 
             this.txtStock.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.txtStock.Location = new System.Drawing.Point(26, 94);
+            this.txtStock.Location = new System.Drawing.Point(37, 90);
             this.txtStock.Name = "txtStock";
-            this.txtStock.Size = new System.Drawing.Size(121, 23);
+            this.txtStock.Size = new System.Drawing.Size(101, 23);
             this.txtStock.TabIndex = 6;
             this.txtStock.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtStock_KeyPress);
             // 
@@ -265,9 +266,9 @@ namespace presentacion
             // 
             this.cbxMarca.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.cbxMarca.FormattingEnabled = true;
-            this.cbxMarca.Location = new System.Drawing.Point(26, 148);
+            this.cbxMarca.Location = new System.Drawing.Point(37, 144);
             this.cbxMarca.Name = "cbxMarca";
-            this.cbxMarca.Size = new System.Drawing.Size(254, 23);
+            this.cbxMarca.Size = new System.Drawing.Size(201, 23);
             this.cbxMarca.TabIndex = 16;
             this.cbxMarca.Text = "--Seleccione Marca--";
             this.cbxMarca.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.cbxMarca_KeyPress);
@@ -276,9 +277,9 @@ namespace presentacion
             // 
             this.cbxCategoria.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.cbxCategoria.FormattingEnabled = true;
-            this.cbxCategoria.Location = new System.Drawing.Point(26, 202);
+            this.cbxCategoria.Location = new System.Drawing.Point(37, 198);
             this.cbxCategoria.Name = "cbxCategoria";
-            this.cbxCategoria.Size = new System.Drawing.Size(254, 23);
+            this.cbxCategoria.Size = new System.Drawing.Size(201, 23);
             this.cbxCategoria.TabIndex = 16;
             this.cbxCategoria.Text = "--Seleccione Categoria--";
             this.cbxCategoria.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.cbxCategoria_KeyPress);
@@ -286,7 +287,7 @@ namespace presentacion
             // txtUrlImagen
             // 
             this.txtUrlImagen.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.txtUrlImagen.Location = new System.Drawing.Point(26, 256);
+            this.txtUrlImagen.Location = new System.Drawing.Point(37, 252);
             this.txtUrlImagen.Name = "txtUrlImagen";
             this.txtUrlImagen.Size = new System.Drawing.Size(279, 23);
             this.txtUrlImagen.TabIndex = 3;
@@ -372,22 +373,12 @@ namespace presentacion
             // 
             // pnlImagen
             // 
-            this.pnlImagen.Controls.Add(this.button1);
+            this.pnlImagen.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.pnlImagen.Controls.Add(this.pbImagenProducto);
-            this.pnlImagen.Location = new System.Drawing.Point(72, 41);
+            this.pnlImagen.Location = new System.Drawing.Point(48, 23);
             this.pnlImagen.Name = "pnlImagen";
-            this.pnlImagen.Size = new System.Drawing.Size(279, 179);
+            this.pnlImagen.Size = new System.Drawing.Size(327, 214);
             this.pnlImagen.TabIndex = 0;
-            // 
-            // button1
-            // 
-            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button1.Location = new System.Drawing.Point(235, 142);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(34, 32);
-            this.button1.TabIndex = 0;
-            this.button1.Text = "?";
-            this.button1.UseVisualStyleBackColor = true;
             // 
             // pbImagenProducto
             // 
@@ -401,7 +392,7 @@ namespace presentacion
             this.pbImagenProducto.InitialImage = global::presentacion.Properties.Resources.logo1;
             this.pbImagenProducto.Location = new System.Drawing.Point(0, 0);
             this.pbImagenProducto.Name = "pbImagenProducto";
-            this.pbImagenProducto.Size = new System.Drawing.Size(279, 179);
+            this.pbImagenProducto.Size = new System.Drawing.Size(327, 214);
             this.pbImagenProducto.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pbImagenProducto.TabIndex = 0;
             this.pbImagenProducto.TabStop = false;
@@ -506,7 +497,6 @@ namespace presentacion
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Panel panel5;
         private System.Windows.Forms.Panel pnlImagen;
-        private System.Windows.Forms.Button button1;
         private System.Windows.Forms.ComboBox cbxCategoria;
         private System.Windows.Forms.ComboBox cbxMarca;
         private System.Windows.Forms.Panel panel9;

@@ -62,6 +62,10 @@ namespace presentacion
         private void button1_Click(object sender, EventArgs e)
         {
             ocultarMostrarPaneles(pnlVer);
+            if (pnlVer.Visible == true)
+            {
+                pnlAdministracion.Visible = false;
+            }
             
         }
 
@@ -110,6 +114,10 @@ namespace presentacion
         private void btnAdministracion_Click(object sender, EventArgs e)
         {
             ocultarMostrarPaneles(pnlAdministracion);
+            if (pnlAdministracion.Visible == true)
+            {
+                pnlVer.Visible = false;
+            }
         }
 
         private void btnNuevaCategoria_Click(object sender, EventArgs e)
