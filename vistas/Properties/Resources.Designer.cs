@@ -63,6 +63,16 @@ namespace vistas.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap earth_globe {
+            get {
+                object obj = ResourceManager.GetObject("earth-globe", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap giferror2 {
             get {
                 object obj = ResourceManager.GetObject("giferror2", resourceCulture);

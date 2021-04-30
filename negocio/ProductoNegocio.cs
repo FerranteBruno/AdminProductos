@@ -21,7 +21,7 @@ namespace negocio
 
             try
             {
-                datos.setearConsulta("select ID, Codigo, Nombre, Descripcion, m.Nombre, c.Nombre , UrlImagen, Stock, Estado Precio from Articulos A, ELEMENTOS m, ELEMENTOS c Where A.IDMarca = m.ID and A.IDCategoria = c.ID ");
+                datos.setearConsulta("select a.id ID, Codigo, Nombre, a.Descripcion Descripcion, m.Descripcion Marca, c.Descripcion Categoria , ImagenUrl, a.Stock Stock, a.Estado Estado ,Precio from Articulos A, Marcas M, Categorias C where a.IDMarca = m.id and a.IDCategoria = c.ID");
                 datos.ejecutarLectura();
 
                 while (datos.Lector.Read())
@@ -30,14 +30,15 @@ namespace negocio
                     aux.ID = (int)datos.Lector["ID"];
                     aux.Codigo = (string)datos.Lector["Codigo"];
                     aux.Nombre = (string)datos.Lector["Nombre"];
-                    aux.Descripcion = datos.Lector.GetString(150);
+                    aux.Descripcion = (string)datos.Lector["Descripcion"];
 
-                    aux.Marca = new Marca((string)datos.Lector["m.Nombre"]);
-                    aux.Categoria = new Categoria((string)datos.Lector["c.Nombre"]);
+                    aux.Marca = new Marca((string)datos.Lector["Marca"]);
 
-                    aux.UrlImagen = (string)datos.Lector["UrlImagen"];
-                    aux.Precio = (float)datos.Lector["Precio"];
-                    aux.Stock = (float)datos.Lector["Stock"];
+                    aux.Categoria = new Categoria((string)datos.Lector["Categoria"]);
+
+                    aux.UrlImagen = (string)datos.Lector["ImagenUrl"];
+                    aux.Precio = float.Parse( datos.Lector["Precio"].ToString());
+                    aux.Stock = float.Parse(datos.Lector["Stock"].ToString());
                     aux.Estado = (bool)datos.Lector["Estado"];
 
                     lista.Add(aux);
@@ -45,6 +46,7 @@ namespace negocio
 
                 return lista;
             }
+           
             catch (Exception ex)
             {
                 throw ex;
@@ -61,29 +63,17 @@ namespace negocio
             AccesoDatos datos = new AccesoDatos();
             try
             {
-                string valores = "values("
-                    + nuevo.Codigo + ", '"
+                string valores = "values('"
+                    + nuevo.Codigo + "', '"
                     + nuevo.Nombre + "', '"
-                    + nuevo.Descripcion + "', '" 
-                    + nuevo.UrlImagen + "', '" 
+                    + nuevo.Descripcion + "', " 
                     + nuevo.Marca.ID + ", "
                     + nuevo.Categoria.ID + ", '"
                     + nuevo.UrlImagen + "', "
                     + nuevo.Precio+ ", "
-                    + nuevo.Stock + ", "
-                    + nuevo.Estado + ")";
+                    + nuevo.Stock + ", 1 )";
 
-                datos.setearConsulta("insert into Articulos(" +
-                    "Codigo," +
-                    " Nombre," +
-                    " Descripcion," +
-                    " IDMarca," +
-                    " IDCategoria," +
-                    " UrlImagen," +
-                    " Precio," +
-                    " Stock," +
-                    " Estado) " 
-                    + valores);
+                datos.setearConsulta("insert into Articulos(Codigo, Nombre, Descripcion,IDMarca,IDCategoria,ImagenUrl,Precio,Stock,Estado)"+ valores);
 
                 datos.ejectutarAccion();
 

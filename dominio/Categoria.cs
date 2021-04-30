@@ -23,5 +23,9 @@ namespace dominio
         {
             this.Nombre = Nombre;
         }
+        public override string ToString()
+        {
+            return Nombre;
+        }
     }
 }

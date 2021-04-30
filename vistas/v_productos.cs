@@ -1,4 +1,5 @@
-﻿using System;
+﻿using negocio;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -51,6 +52,23 @@ namespace vistas
         private void label4_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void v_productos_Load(object sender, EventArgs e)
+        {
+            ProductoNegocio prod = new ProductoNegocio();
+            dgvProductos.AutoGenerateColumns = true;
+            dgvProductos.DataSource = prod.listar();
+        }
+
+        private void dgvProductos_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            lblNombre.Text= dgvProductos.CurrentRow.Cells[2].Value.ToString();
+            lblMarca.Text = dgvProductos.CurrentRow.Cells[4].Value.ToString();
+            lblCategoria.Text = dgvProductos.CurrentRow.Cells[5].Value.ToString();
+            lblPrecio.Text = dgvProductos.CurrentRow.Cells[7].Value.ToString();
+            lblDescripcion.Text = dgvProductos.CurrentRow.Cells[3].Value.ToString();
+            picProducto.ImageLocation= dgvProductos.CurrentRow.Cells[6].Value.ToString();
         }
     }
 }

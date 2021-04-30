@@ -1,4 +1,6 @@
-﻿using System;
+﻿using dominio;
+using negocio;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -13,6 +15,8 @@ namespace vistas
     public partial class v_nuevoProducto : Form
     {
         private List<Control> Controles = new List<Control>();
+        private Producto prod = null;
+        
         public v_nuevoProducto()
         {
             InitializeComponent();
@@ -25,12 +29,44 @@ namespace vistas
             Controles.Add(txtPrecio);
             Controles.Add(txtDescripcion);
         }
+        public v_nuevoProducto(Producto aux)
+        {
+            if (aux != null)
+            { 
+                prod = aux;
+            }
+        }
 
         private void v_nuevoProducto_Load(object sender, EventArgs e)
         {
             txtCodigo.Focus();
+            MarcaNegocio marc = new MarcaNegocio();
+            CategoriaNegocio cate = new CategoriaNegocio();
+
+            cbxCategoria.DataSource = cate.listar();
+            cbxCategoria.ValueMember = "id";
+            cbxCategoria.DisplayMember = "Nombre";
+
+            cbxMarca.DataSource = marc.listar();
+            cbxMarca.ValueMember = "id";
+            cbxMarca.DisplayMember = "Nombre";
+            cbxCategoria.Text = "--Seleccione Categoria--";
+            cbxMarca.Text = "--Seleccione Marca--";
+
+            if (prod != null)
+            {
+                txtCodigo.Text = prod.Codigo;
+                txtNombre.Text = prod.Nombre;
+                txtUrlImagen.Text = prod.UrlImagen;
+
+                cbxMarca.SelectedValue = prod.Marca.ID;
+                cbxCategoria.SelectedValue = prod.Categoria.ID;
+
+                txtPrecio.Text = prod.Precio.ToString();
+                txtDescripcion.Text = prod.Descripcion;
+            }
         }
-        public bool  checkControles(List<Control> listado)
+        public bool checkControles(List<Control> listado)
         {
             int cont = 0;
             Control aux = new Control();
@@ -113,7 +149,22 @@ namespace vistas
 
         private void guardarProducto()
         {
+            Producto prod = new Producto();
+            ProductoNegocio datos = new ProductoNegocio();
 
+            prod.Codigo = txtCodigo.Text;
+            prod.Nombre = txtNombre.Text;
+            prod.Descripcion = txtDescripcion.Text;
+            prod.Marca = (Marca)cbxMarca.SelectedItem;
+            prod.Categoria = (Categoria)cbxCategoria.SelectedItem;
+            prod.UrlImagen = txtUrlImagen.Text;
+            prod.Precio = float.Parse(txtPrecio.Text);
+            prod.Stock = float.Parse(txtStock.Text);
+            prod.Estado = true;
+
+            datos.agregar(prod);
+            MessageBox.Show("Producto Guardado");
+            limpiarCampos(Controles);
         }
 
         private void textBox6_TextChanged(object sender, EventArgs e)
@@ -123,14 +174,14 @@ namespace vistas
 
         private void txtStock_KeyPress(object sender, KeyPressEventArgs e)
         {
-           
+
 
             if ((e.KeyChar < 48 || e.KeyChar > 59) && e.KeyChar != 8)
             {
                 e.Handled = true;
                 FondoRojoBlanco(ref txtStock);
             }
-           
+
             saltoDeCampo(e, cbxMarca);
         }
 
@@ -142,7 +193,7 @@ namespace vistas
                 FondoRojoBlanco(ref txtStock);
                 e.Handled = true;
             }
-            
+
             saltoDeCampo(e, txtDescripcion);
         }
 
@@ -150,7 +201,7 @@ namespace vistas
         {
             if (checkControles(Controles))
             {
-                MessageBox.Show("todo cool");
+                guardarProducto();                
             }
         }
 
@@ -177,9 +228,7 @@ namespace vistas
             FondoRojoBlanco(ref txtDescripcion);
             if (e.KeyChar == (char)Keys.Enter)
             {
-                guardarProducto();
-                MessageBox.Show("Producto Guardado");
-                limpiarCampos(Controles);
+                btnGuardar.PerformClick();         
             }
         }
 
@@ -191,7 +240,7 @@ namespace vistas
         private void txtNombre_KeyPress(object sender, KeyPressEventArgs e)
         {
             FondoRojoBlanco(ref txtNombre);
-            saltoDeCampo(e,txtStock);
+            saltoDeCampo(e, txtStock);
         }
 
         private void btnNuevaMarca_Click(object sender, EventArgs e)
@@ -209,7 +258,7 @@ namespace vistas
         private void txtCodigo_KeyPress(object sender, KeyPressEventArgs e)
         {
             FondoRojoBlanco(ref txtCodigo);
-            saltoDeCampo(e,txtNombre);
+            saltoDeCampo(e, txtNombre);
         }
     }
 }

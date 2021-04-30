@@ -30,28 +30,25 @@ namespace vistas
         private void InitializeComponent()
         {
             this.panel2 = new System.Windows.Forms.Panel();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.c_codigo = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.c_nombre = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dgvProductos = new System.Windows.Forms.DataGridView();
             this.panel3 = new System.Windows.Forms.Panel();
             this.pnlDatosProducto = new System.Windows.Forms.Panel();
             this.panel8 = new System.Windows.Forms.Panel();
-            this.label15 = new System.Windows.Forms.Label();
-            this.label9 = new System.Windows.Forms.Label();
+            this.lblPrecio = new System.Windows.Forms.Label();
+            this.lblMarca = new System.Windows.Forms.Label();
             this.label16 = new System.Windows.Forms.Label();
             this.label10 = new System.Windows.Forms.Label();
-            this.label18 = new System.Windows.Forms.Label();
+            this.lblDescripcion = new System.Windows.Forms.Label();
             this.label17 = new System.Windows.Forms.Label();
-            this.label11 = new System.Windows.Forms.Label();
+            this.lblCategoria = new System.Windows.Forms.Label();
             this.label13 = new System.Windows.Forms.Label();
-            this.label14 = new System.Windows.Forms.Label();
+            this.lblNombre = new System.Windows.Forms.Label();
             this.label12 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.panel4 = new System.Windows.Forms.Panel();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.panel1 = new System.Windows.Forms.Panel();
             this.button1 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
@@ -65,51 +62,64 @@ namespace vistas
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.panel6 = new System.Windows.Forms.Panel();
             this.label1 = new System.Windows.Forms.Label();
+            this.picProducto = new System.Windows.Forms.PictureBox();
+            this.c_id = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.c_Codigo = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.c_nombre = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.c_descripcion = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.c_marca = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.c_categoria = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.c_url = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.c_precio = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.c_stock = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.c_estado = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.panel2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvProductos)).BeginInit();
             this.panel3.SuspendLayout();
             this.pnlDatosProducto.SuspendLayout();
             this.panel8.SuspendLayout();
             this.panel4.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.panel1.SuspendLayout();
             this.panel5.SuspendLayout();
             this.panel6.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.picProducto)).BeginInit();
             this.SuspendLayout();
             // 
             // panel2
             // 
-            this.panel2.Controls.Add(this.dataGridView1);
+            this.panel2.Controls.Add(this.dgvProductos);
             this.panel2.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel2.Location = new System.Drawing.Point(0, 62);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(544, 287);
             this.panel2.TabIndex = 1;
             // 
-            // dataGridView1
+            // dgvProductos
             // 
-            this.dataGridView1.BackgroundColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.c_codigo,
-            this.c_nombre});
-            this.dataGridView1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.dataGridView1.Location = new System.Drawing.Point(0, 0);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.RowTemplate.Height = 25;
-            this.dataGridView1.Size = new System.Drawing.Size(544, 287);
-            this.dataGridView1.TabIndex = 0;
-            // 
-            // c_codigo
-            // 
-            this.c_codigo.HeaderText = "Codigo";
-            this.c_codigo.Name = "c_codigo";
-            // 
-            // c_nombre
-            // 
-            this.c_nombre.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.c_nombre.HeaderText = "Nombre";
-            this.c_nombre.Name = "c_nombre";
+            this.dgvProductos.AllowUserToAddRows = false;
+            this.dgvProductos.AllowUserToDeleteRows = false;
+            this.dgvProductos.BackgroundColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.dgvProductos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvProductos.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.c_id,
+            this.c_Codigo,
+            this.c_nombre,
+            this.c_descripcion,
+            this.c_marca,
+            this.c_categoria,
+            this.c_url,
+            this.c_precio,
+            this.c_stock,
+            this.c_estado});
+            this.dgvProductos.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.dgvProductos.Location = new System.Drawing.Point(0, 0);
+            this.dgvProductos.Name = "dgvProductos";
+            this.dgvProductos.ReadOnly = true;
+            this.dgvProductos.RowTemplate.Height = 25;
+            this.dgvProductos.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.dgvProductos.Size = new System.Drawing.Size(544, 287);
+            this.dgvProductos.TabIndex = 0;
+            this.dgvProductos.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvProductos_CellClick);
             // 
             // panel3
             // 
@@ -138,15 +148,15 @@ namespace vistas
             // panel8
             // 
             this.panel8.BackColor = System.Drawing.SystemColors.ButtonShadow;
-            this.panel8.Controls.Add(this.label15);
-            this.panel8.Controls.Add(this.label9);
+            this.panel8.Controls.Add(this.lblPrecio);
+            this.panel8.Controls.Add(this.lblMarca);
             this.panel8.Controls.Add(this.label16);
             this.panel8.Controls.Add(this.label10);
-            this.panel8.Controls.Add(this.label18);
+            this.panel8.Controls.Add(this.lblDescripcion);
             this.panel8.Controls.Add(this.label17);
-            this.panel8.Controls.Add(this.label11);
+            this.panel8.Controls.Add(this.lblCategoria);
             this.panel8.Controls.Add(this.label13);
-            this.panel8.Controls.Add(this.label14);
+            this.panel8.Controls.Add(this.lblNombre);
             this.panel8.Controls.Add(this.label12);
             this.panel8.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel8.Location = new System.Drawing.Point(0, 0);
@@ -154,32 +164,32 @@ namespace vistas
             this.panel8.Size = new System.Drawing.Size(544, 108);
             this.panel8.TabIndex = 27;
             // 
-            // label15
+            // lblPrecio
             // 
-            this.label15.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.label15.BackColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.label15.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Bold);
-            this.label15.ForeColor = System.Drawing.SystemColors.ActiveCaption;
-            this.label15.Location = new System.Drawing.Point(183, 77);
-            this.label15.Name = "label15";
-            this.label15.Padding = new System.Windows.Forms.Padding(13, 0, 0, 0);
-            this.label15.Size = new System.Drawing.Size(153, 21);
-            this.label15.TabIndex = 38;
-            this.label15.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.lblPrecio.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.lblPrecio.BackColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.lblPrecio.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Bold);
+            this.lblPrecio.ForeColor = System.Drawing.SystemColors.ActiveCaption;
+            this.lblPrecio.Location = new System.Drawing.Point(183, 77);
+            this.lblPrecio.Name = "lblPrecio";
+            this.lblPrecio.Padding = new System.Windows.Forms.Padding(13, 0, 0, 0);
+            this.lblPrecio.Size = new System.Drawing.Size(153, 21);
+            this.lblPrecio.TabIndex = 38;
+            this.lblPrecio.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
-            // label9
+            // lblMarca
             // 
-            this.label9.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            this.lblMarca.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.label9.BackColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.label9.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Bold);
-            this.label9.ForeColor = System.Drawing.SystemColors.ActiveCaption;
-            this.label9.Location = new System.Drawing.Point(15, 76);
-            this.label9.Name = "label9";
-            this.label9.Padding = new System.Windows.Forms.Padding(13, 0, 0, 0);
-            this.label9.Size = new System.Drawing.Size(153, 21);
-            this.label9.TabIndex = 30;
-            this.label9.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.lblMarca.BackColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.lblMarca.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Bold);
+            this.lblMarca.ForeColor = System.Drawing.SystemColors.ActiveCaption;
+            this.lblMarca.Location = new System.Drawing.Point(15, 76);
+            this.lblMarca.Name = "lblMarca";
+            this.lblMarca.Padding = new System.Windows.Forms.Padding(13, 0, 0, 0);
+            this.lblMarca.Size = new System.Drawing.Size(153, 21);
+            this.lblMarca.TabIndex = 30;
+            this.lblMarca.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // label16
             // 
@@ -210,17 +220,17 @@ namespace vistas
             this.label10.Text = "Marca:";
             this.label10.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
-            // label18
+            // lblDescripcion
             // 
-            this.label18.Anchor = System.Windows.Forms.AnchorStyles.Right;
-            this.label18.BackColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.label18.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Bold);
-            this.label18.ForeColor = System.Drawing.SystemColors.ActiveCaption;
-            this.label18.Location = new System.Drawing.Point(352, 30);
-            this.label18.Name = "label18";
-            this.label18.Padding = new System.Windows.Forms.Padding(13, 0, 0, 0);
-            this.label18.Size = new System.Drawing.Size(177, 68);
-            this.label18.TabIndex = 36;
+            this.lblDescripcion.Anchor = System.Windows.Forms.AnchorStyles.Right;
+            this.lblDescripcion.BackColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.lblDescripcion.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Bold);
+            this.lblDescripcion.ForeColor = System.Drawing.SystemColors.ActiveCaption;
+            this.lblDescripcion.Location = new System.Drawing.Point(352, 30);
+            this.lblDescripcion.Name = "lblDescripcion";
+            this.lblDescripcion.Padding = new System.Windows.Forms.Padding(13, 0, 0, 0);
+            this.lblDescripcion.Size = new System.Drawing.Size(177, 68);
+            this.lblDescripcion.TabIndex = 36;
             // 
             // label17
             // 
@@ -233,21 +243,21 @@ namespace vistas
             this.label17.Padding = new System.Windows.Forms.Padding(9, 0, 0, 0);
             this.label17.Size = new System.Drawing.Size(177, 21);
             this.label17.TabIndex = 35;
-            this.label17.Text = "Categoria:";
+            this.label17.Text = "Descripcion";
             this.label17.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
-            // label11
+            // lblCategoria
             // 
-            this.label11.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.label11.BackColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.label11.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Bold);
-            this.label11.ForeColor = System.Drawing.SystemColors.ActiveCaption;
-            this.label11.Location = new System.Drawing.Point(183, 31);
-            this.label11.Name = "label11";
-            this.label11.Padding = new System.Windows.Forms.Padding(13, 0, 0, 0);
-            this.label11.Size = new System.Drawing.Size(153, 21);
-            this.label11.TabIndex = 36;
-            this.label11.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.lblCategoria.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.lblCategoria.BackColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.lblCategoria.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Bold);
+            this.lblCategoria.ForeColor = System.Drawing.SystemColors.ActiveCaption;
+            this.lblCategoria.Location = new System.Drawing.Point(183, 31);
+            this.lblCategoria.Name = "lblCategoria";
+            this.lblCategoria.Padding = new System.Windows.Forms.Padding(13, 0, 0, 0);
+            this.lblCategoria.Size = new System.Drawing.Size(153, 21);
+            this.lblCategoria.TabIndex = 36;
+            this.lblCategoria.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // label13
             // 
@@ -263,19 +273,19 @@ namespace vistas
             this.label13.Text = "Categoria:";
             this.label13.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
-            // label14
+            // lblNombre
             // 
-            this.label14.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            this.lblNombre.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.label14.BackColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.label14.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Bold);
-            this.label14.ForeColor = System.Drawing.SystemColors.ActiveCaption;
-            this.label14.Location = new System.Drawing.Point(15, 30);
-            this.label14.Name = "label14";
-            this.label14.Padding = new System.Windows.Forms.Padding(13, 0, 0, 0);
-            this.label14.Size = new System.Drawing.Size(153, 21);
-            this.label14.TabIndex = 28;
-            this.label14.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.lblNombre.BackColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.lblNombre.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Bold);
+            this.lblNombre.ForeColor = System.Drawing.SystemColors.ActiveCaption;
+            this.lblNombre.Location = new System.Drawing.Point(15, 30);
+            this.lblNombre.Name = "lblNombre";
+            this.lblNombre.Padding = new System.Windows.Forms.Padding(13, 0, 0, 0);
+            this.lblNombre.Size = new System.Drawing.Size(153, 21);
+            this.lblNombre.TabIndex = 28;
+            this.lblNombre.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // label12
             // 
@@ -338,24 +348,12 @@ namespace vistas
             // 
             // panel4
             // 
-            this.panel4.Controls.Add(this.pictureBox1);
+            this.panel4.Controls.Add(this.picProducto);
             this.panel4.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel4.Location = new System.Drawing.Point(0, 0);
             this.panel4.Name = "panel4";
             this.panel4.Size = new System.Drawing.Size(163, 335);
             this.panel4.TabIndex = 0;
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.pictureBox1.Image = global::vistas.Properties.Resources.logo;
-            this.pictureBox1.Location = new System.Drawing.Point(0, 86);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(163, 164);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox1.TabIndex = 0;
-            this.pictureBox1.TabStop = false;
             // 
             // panel1
             // 
@@ -497,6 +495,97 @@ namespace vistas
             this.label1.TabIndex = 6;
             this.label1.Text = "Listado de Productos";
             // 
+            // picProducto
+            // 
+            this.picProducto.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.picProducto.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.picProducto.ErrorImage = global::vistas.Properties.Resources.giferror2;
+            this.picProducto.Image = global::vistas.Properties.Resources.logo;
+            this.picProducto.InitialImage = global::vistas.Properties.Resources.earth_globe;
+            this.picProducto.Location = new System.Drawing.Point(0, 86);
+            this.picProducto.Name = "picProducto";
+            this.picProducto.Size = new System.Drawing.Size(163, 164);
+            this.picProducto.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.picProducto.TabIndex = 0;
+            this.picProducto.TabStop = false;
+            // 
+            // c_id
+            // 
+            this.c_id.DataPropertyName = "ID";
+            this.c_id.HeaderText = "ID";
+            this.c_id.Name = "c_id";
+            this.c_id.ReadOnly = true;
+            this.c_id.Visible = false;
+            // 
+            // c_Codigo
+            // 
+            this.c_Codigo.DataPropertyName = "Codigo";
+            this.c_Codigo.HeaderText = "Codigo";
+            this.c_Codigo.Name = "c_Codigo";
+            this.c_Codigo.ReadOnly = true;
+            this.c_Codigo.Visible = false;
+            // 
+            // c_nombre
+            // 
+            this.c_nombre.DataPropertyName = "Nombre";
+            this.c_nombre.HeaderText = "Nombre";
+            this.c_nombre.Name = "c_nombre";
+            this.c_nombre.ReadOnly = true;
+            // 
+            // c_descripcion
+            // 
+            this.c_descripcion.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.c_descripcion.DataPropertyName = "Descripcion";
+            this.c_descripcion.HeaderText = "Descripcion";
+            this.c_descripcion.Name = "c_descripcion";
+            this.c_descripcion.ReadOnly = true;
+            // 
+            // c_marca
+            // 
+            this.c_marca.DataPropertyName = "Marca";
+            this.c_marca.HeaderText = "Marca";
+            this.c_marca.Name = "c_marca";
+            this.c_marca.ReadOnly = true;
+            this.c_marca.Visible = false;
+            // 
+            // c_categoria
+            // 
+            this.c_categoria.DataPropertyName = "Categoria";
+            this.c_categoria.HeaderText = "Categoria";
+            this.c_categoria.Name = "c_categoria";
+            this.c_categoria.ReadOnly = true;
+            this.c_categoria.Visible = false;
+            // 
+            // c_url
+            // 
+            this.c_url.DataPropertyName = "UrlImagen";
+            this.c_url.HeaderText = "UrlImagen";
+            this.c_url.Name = "c_url";
+            this.c_url.ReadOnly = true;
+            this.c_url.Visible = false;
+            // 
+            // c_precio
+            // 
+            this.c_precio.DataPropertyName = "Precio";
+            this.c_precio.HeaderText = "Precio";
+            this.c_precio.Name = "c_precio";
+            this.c_precio.ReadOnly = true;
+            this.c_precio.Visible = false;
+            // 
+            // c_stock
+            // 
+            this.c_stock.DataPropertyName = "Stock";
+            this.c_stock.HeaderText = "Stock";
+            this.c_stock.Name = "c_stock";
+            this.c_stock.ReadOnly = true;
+            // 
+            // c_estado
+            // 
+            this.c_estado.DataPropertyName = "Estado";
+            this.c_estado.HeaderText = "Estado";
+            this.c_estado.Name = "c_estado";
+            this.c_estado.ReadOnly = true;
+            // 
             // v_productos
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -510,17 +599,18 @@ namespace vistas
             this.Controls.Add(this.panel6);
             this.Name = "v_productos";
             this.Text = "v_productos";
+            this.Load += new System.EventHandler(this.v_productos_Load);
             this.panel2.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvProductos)).EndInit();
             this.panel3.ResumeLayout(false);
             this.pnlDatosProducto.ResumeLayout(false);
             this.panel8.ResumeLayout(false);
             this.panel4.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.panel1.ResumeLayout(false);
             this.panel5.ResumeLayout(false);
             this.panel5.PerformLayout();
             this.panel6.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.picProducto)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -528,12 +618,10 @@ namespace vistas
         #endregion
 
         private System.Windows.Forms.Panel panel2;
-        private System.Windows.Forms.DataGridView dataGridView1;
-        private System.Windows.Forms.DataGridViewTextBoxColumn c_codigo;
-        private System.Windows.Forms.DataGridViewTextBoxColumn c_nombre;
+        private System.Windows.Forms.DataGridView dgvProductos;
         private System.Windows.Forms.Panel panel3;
         private System.Windows.Forms.Panel panel4;
-        private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.PictureBox picProducto;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Panel panel5;
         private System.Windows.Forms.TextBox textBox1;
@@ -547,21 +635,31 @@ namespace vistas
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.Label label15;
+        private System.Windows.Forms.Label lblPrecio;
         private System.Windows.Forms.Label label16;
-        private System.Windows.Forms.Label label11;
+        private System.Windows.Forms.Label lblCategoria;
         private System.Windows.Forms.Label label13;
         private System.Windows.Forms.Panel pnlDatosProducto;
         private System.Windows.Forms.Panel panel8;
-        private System.Windows.Forms.Label label9;
+        private System.Windows.Forms.Label lblMarca;
         private System.Windows.Forms.Label label10;
-        private System.Windows.Forms.Label label14;
+        private System.Windows.Forms.Label lblNombre;
         private System.Windows.Forms.Label label12;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.Label label18;
+        private System.Windows.Forms.Label lblDescripcion;
         private System.Windows.Forms.Label label17;
+        private System.Windows.Forms.DataGridViewTextBoxColumn c_id;
+        private System.Windows.Forms.DataGridViewTextBoxColumn c_Codigo;
+        private System.Windows.Forms.DataGridViewTextBoxColumn c_nombre;
+        private System.Windows.Forms.DataGridViewTextBoxColumn c_descripcion;
+        private System.Windows.Forms.DataGridViewTextBoxColumn c_marca;
+        private System.Windows.Forms.DataGridViewTextBoxColumn c_categoria;
+        private System.Windows.Forms.DataGridViewTextBoxColumn c_url;
+        private System.Windows.Forms.DataGridViewTextBoxColumn c_precio;
+        private System.Windows.Forms.DataGridViewTextBoxColumn c_stock;
+        private System.Windows.Forms.DataGridViewTextBoxColumn c_estado;
     }
 }

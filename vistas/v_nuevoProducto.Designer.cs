@@ -308,9 +308,9 @@ namespace vistas
             this.btnGuardar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
             this.btnGuardar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnGuardar.ForeColor = System.Drawing.SystemColors.ActiveCaption;
-            this.btnGuardar.Location = new System.Drawing.Point(75, 11);
+            this.btnGuardar.Location = new System.Drawing.Point(75, 10);
             this.btnGuardar.Name = "btnGuardar";
-            this.btnGuardar.Size = new System.Drawing.Size(81, 20);
+            this.btnGuardar.Size = new System.Drawing.Size(81, 23);
             this.btnGuardar.TabIndex = 22;
             this.btnGuardar.Text = "Guardar";
             this.btnGuardar.UseVisualStyleBackColor = true;
@@ -323,9 +323,9 @@ namespace vistas
             this.btnCancelar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
             this.btnCancelar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnCancelar.ForeColor = System.Drawing.SystemColors.ActiveCaption;
-            this.btnCancelar.Location = new System.Drawing.Point(189, 11);
+            this.btnCancelar.Location = new System.Drawing.Point(189, 10);
             this.btnCancelar.Name = "btnCancelar";
-            this.btnCancelar.Size = new System.Drawing.Size(81, 20);
+            this.btnCancelar.Size = new System.Drawing.Size(81, 23);
             this.btnCancelar.TabIndex = 21;
             this.btnCancelar.Text = "Cancelar";
             this.btnCancelar.UseVisualStyleBackColor = true;
