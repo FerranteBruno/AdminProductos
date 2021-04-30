@@ -51,11 +51,10 @@ namespace negocio
             AccesoDatos datos = new AccesoDatos();
             try
             {
-                string valores = "values("
-                    + nuevo.Nombre + ")";
+                string valores = "values('"
+                    + nuevo.Nombre + "')";
 
-                datos.setearConsulta("insert into Marcas(" +
-                    " Nombre) "
+                datos.setearConsulta("insert into Marcas(Descripcion) "
                     + valores);
 
                 datos.ejectutarAccion();
@@ -90,10 +89,7 @@ namespace negocio
                     + modificar.Estado + ")";*/
 
                 datos.setearConsulta(
-                    "update Marcas" +
-                    " set" +
-                    " Nombre = '" + modificar.Nombre + "'," +
-                    "where ID = " + modificar.ID + ""
+                    "update Marcas set Descripcion = '" + modificar.Nombre + "', where ID = " + modificar.ID
                     );
 
                 datos.ejectutarAccion();

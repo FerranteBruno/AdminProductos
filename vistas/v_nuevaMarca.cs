@@ -7,14 +7,24 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using dominio;
+using negocio;
 
 namespace vistas
 {
     public partial class v_nuevaMarca : Form
     {
+        private Marca marc = null;
         public v_nuevaMarca()
         {
             InitializeComponent();
+        }
+
+        public v_nuevaMarca(Marca aux)
+        {
+            InitializeComponent();
+            marc = aux;
+            label2.Text = "Modificar Marca";
         }
 
         private void label2_Click(object sender, EventArgs e)
@@ -30,6 +40,58 @@ namespace vistas
         private void btnCancelar_Click(object sender, EventArgs e)
         {
             this.Close();
+        }
+
+        private void v_nuevaMarca_Load(object sender, EventArgs e)
+        { 
+            txtNombre.Text = "--Ingrese una Marca--";
+
+            if(marc != null)
+            {
+                txtNombre.Text = marc.Nombre;
+            }
+        }
+
+        private void guardarMarca()
+        {
+            Marca marca = new Marca();
+            MarcaNegocio datos = new MarcaNegocio();
+
+            marca.Nombre = txtNombre.Text;
+            marca.Estado = true;
+
+            datos.agregar(marca);
+            MessageBox.Show("Marca Guardada");
+            txtNombre.Text = "";
+        }
+
+        private void modificarMarca()
+        {
+            Marca marca = new Marca();
+            MarcaNegocio datos = new MarcaNegocio();
+
+            if (marc.ID != null)
+            {
+                marca.ID = marc.ID;
+            }
+            marca.Nombre = txtNombre.Text;
+            marca.Estado = true;
+
+            datos.modificar(marca);
+            MessageBox.Show("Marca Modificada");
+            txtNombre.Text = "";
+        }
+
+        private void btnGuardar_Click(object sender, EventArgs e)
+        {
+            if (marc == null)
+            {
+                guardarMarca();
+            }
+            else
+            {
+                modificarMarca();
+            }
         }
     }
 }

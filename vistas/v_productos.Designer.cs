@@ -62,7 +62,7 @@ namespace vistas
             this.picProducto = new System.Windows.Forms.PictureBox();
             this.panel1 = new System.Windows.Forms.Panel();
             this.btnModificar = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
+            this.btnEliminar = new System.Windows.Forms.Button();
             this.panel5 = new System.Windows.Forms.Panel();
             this.comboBox3 = new System.Windows.Forms.ComboBox();
             this.label6 = new System.Windows.Forms.Label();
@@ -451,7 +451,7 @@ namespace vistas
             this.panel1.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.panel1.Controls.Add(this.panel4);
             this.panel1.Controls.Add(this.btnModificar);
-            this.panel1.Controls.Add(this.button2);
+            this.panel1.Controls.Add(this.btnEliminar);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Right;
             this.panel1.Location = new System.Drawing.Point(544, 62);
             this.panel1.Name = "panel1";
@@ -472,18 +472,19 @@ namespace vistas
             this.btnModificar.UseVisualStyleBackColor = true;
             this.btnModificar.Click += new System.EventHandler(this.btnModificar_Click);
             // 
-            // button2
+            // btnEliminar
             // 
-            this.button2.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.button2.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button2.ForeColor = System.Drawing.SystemColors.ActiveCaption;
-            this.button2.Location = new System.Drawing.Point(0, 365);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(163, 30);
-            this.button2.TabIndex = 21;
-            this.button2.Text = "Eliminar";
-            this.button2.UseVisualStyleBackColor = true;
+            this.btnEliminar.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnEliminar.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.btnEliminar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnEliminar.ForeColor = System.Drawing.SystemColors.ActiveCaption;
+            this.btnEliminar.Location = new System.Drawing.Point(0, 365);
+            this.btnEliminar.Name = "btnEliminar";
+            this.btnEliminar.Size = new System.Drawing.Size(163, 30);
+            this.btnEliminar.TabIndex = 21;
+            this.btnEliminar.Text = "Eliminar";
+            this.btnEliminar.UseVisualStyleBackColor = true;
+            this.btnEliminar.Click += new System.EventHandler(this.btnEliminar_Click);
             // 
             // panel5
             // 
@@ -634,7 +635,7 @@ namespace vistas
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.ComboBox comboBox2;
         private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Button btnEliminar;
         private System.Windows.Forms.Button btnModificar;
         private System.Windows.Forms.Label lblPrecio;
         private System.Windows.Forms.Label label16;

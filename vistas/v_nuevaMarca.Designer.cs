@@ -39,17 +39,17 @@ namespace vistas
             this.txtNombre = new System.Windows.Forms.TextBox();
             this.panel2 = new System.Windows.Forms.Panel();
             this.pnlImagen = new System.Windows.Forms.Panel();
-            this.panel5 = new System.Windows.Forms.Panel();
-            this.button3 = new System.Windows.Forms.Button();
-            this.label2 = new System.Windows.Forms.Label();
             this.pbImagenProducto = new System.Windows.Forms.PictureBox();
+            this.panel5 = new System.Windows.Forms.Panel();
+            this.btnNMarcaExit = new System.Windows.Forms.Button();
+            this.label2 = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             this.panel8.SuspendLayout();
             this.panel10.SuspendLayout();
             this.panel2.SuspendLayout();
             this.pnlImagen.SuspendLayout();
-            this.panel5.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pbImagenProducto)).BeginInit();
+            this.panel5.SuspendLayout();
             this.SuspendLayout();
             // 
             // panel6
@@ -107,6 +107,7 @@ namespace vistas
             this.btnGuardar.TabIndex = 22;
             this.btnGuardar.Text = "Guardar";
             this.btnGuardar.UseVisualStyleBackColor = true;
+            this.btnGuardar.Click += new System.EventHandler(this.btnGuardar_Click);
             // 
             // btnCancelar
             // 
@@ -160,43 +161,6 @@ namespace vistas
             this.pnlImagen.Size = new System.Drawing.Size(239, 155);
             this.pnlImagen.TabIndex = 0;
             // 
-            // panel5
-            // 
-            this.panel5.BackColor = System.Drawing.SystemColors.ControlDarkDark;
-            this.panel5.Controls.Add(this.button3);
-            this.panel5.Controls.Add(this.label2);
-            this.panel5.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel5.Location = new System.Drawing.Point(0, 0);
-            this.panel5.Name = "panel5";
-            this.panel5.Size = new System.Drawing.Size(707, 26);
-            this.panel5.TabIndex = 16;
-            // 
-            // button3
-            // 
-            this.button3.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.button3.Dock = System.Windows.Forms.DockStyle.Right;
-            this.button3.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
-            this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button3.ForeColor = System.Drawing.Color.OrangeRed;
-            this.button3.Location = new System.Drawing.Point(672, 0);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(35, 26);
-            this.button3.TabIndex = 22;
-            this.button3.Text = "X";
-            this.button3.UseVisualStyleBackColor = true;
-            this.button3.Click += new System.EventHandler(this.button3_Click);
-            // 
-            // label2
-            // 
-            this.label2.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Bold);
-            this.label2.ForeColor = System.Drawing.SystemColors.ActiveCaption;
-            this.label2.Location = new System.Drawing.Point(10, 8);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(103, 14);
-            this.label2.TabIndex = 4;
-            this.label2.Text = "Nueva Marca";
-            this.label2.Click += new System.EventHandler(this.label2_Click);
-            // 
             // pbImagenProducto
             // 
             this.pbImagenProducto.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
@@ -211,6 +175,43 @@ namespace vistas
             this.pbImagenProducto.TabIndex = 0;
             this.pbImagenProducto.TabStop = false;
             // 
+            // panel5
+            // 
+            this.panel5.BackColor = System.Drawing.SystemColors.ControlDarkDark;
+            this.panel5.Controls.Add(this.btnNMarcaExit);
+            this.panel5.Controls.Add(this.label2);
+            this.panel5.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel5.Location = new System.Drawing.Point(0, 0);
+            this.panel5.Name = "panel5";
+            this.panel5.Size = new System.Drawing.Size(707, 26);
+            this.panel5.TabIndex = 16;
+            // 
+            // btnNMarcaExit
+            // 
+            this.btnNMarcaExit.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnNMarcaExit.Dock = System.Windows.Forms.DockStyle.Right;
+            this.btnNMarcaExit.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
+            this.btnNMarcaExit.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnNMarcaExit.ForeColor = System.Drawing.Color.OrangeRed;
+            this.btnNMarcaExit.Location = new System.Drawing.Point(672, 0);
+            this.btnNMarcaExit.Name = "btnNMarcaExit";
+            this.btnNMarcaExit.Size = new System.Drawing.Size(35, 26);
+            this.btnNMarcaExit.TabIndex = 22;
+            this.btnNMarcaExit.Text = "X";
+            this.btnNMarcaExit.UseVisualStyleBackColor = true;
+            this.btnNMarcaExit.Click += new System.EventHandler(this.button3_Click);
+            // 
+            // label2
+            // 
+            this.label2.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Bold);
+            this.label2.ForeColor = System.Drawing.SystemColors.ActiveCaption;
+            this.label2.Location = new System.Drawing.Point(10, 8);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(103, 14);
+            this.label2.TabIndex = 4;
+            this.label2.Text = "Nueva Marca";
+            this.label2.Click += new System.EventHandler(this.label2_Click);
+            // 
             // v_nuevaMarca
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -224,14 +225,15 @@ namespace vistas
             this.Name = "v_nuevaMarca";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "v_nuevaMarca";
+            this.Load += new System.EventHandler(this.v_nuevaMarca_Load);
             this.panel1.ResumeLayout(false);
             this.panel8.ResumeLayout(false);
             this.panel8.PerformLayout();
             this.panel10.ResumeLayout(false);
             this.panel2.ResumeLayout(false);
             this.pnlImagen.ResumeLayout(false);
-            this.panel5.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pbImagenProducto)).EndInit();
+            this.panel5.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -247,7 +249,7 @@ namespace vistas
         private System.Windows.Forms.Panel pnlImagen;
         private System.Windows.Forms.PictureBox pbImagenProducto;
         private System.Windows.Forms.Panel panel5;
-        private System.Windows.Forms.Button button3;
+        private System.Windows.Forms.Button btnNMarcaExit;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Panel panel10;
         private System.Windows.Forms.Button btnGuardar;

@@ -43,7 +43,10 @@ namespace negocio
                     aux.Stock = float.Parse(datos.Lector["Stock"].ToString());
                     aux.Estado = (bool)datos.Lector["Estado"];
 
-                    lista.Add(aux);
+                    if (aux.Estado != false)
+                    {
+                        lista.Add(aux);
+                    }
                 }
 
                 return lista;
@@ -126,34 +129,18 @@ namespace negocio
             }
         }
 
-        public void eliminar(string codigo)
+        public void eliminar(int ID)
         {
             AccesoDatos datos = new AccesoDatos();
             try
             {
-                datos.setearConsulta("select ID, Codigo, Descripcion, m.Nombre, c.Nombre , UrlImagen, Stock, Estado Precio from Articulos A, ELEMENTOS m, ELEMENTOS c Where A.IDMarca = m.ID and A.IDCategoria = c.ID ");
-                datos.ejecutarLectura();
-
                 Producto aux = new Producto();
 
-                aux.Codigo = (string)datos.Lector["Codigo"];
-
-                if (aux.Codigo != codigo)
-                {
-                    datos.cerrarConexion();
-                    // return;???
-                }
-
-                if (aux.Codigo == codigo)
-                {
-                    aux.Estado = false;
-                }
+                    aux.ID = ID;
+                    aux.Estado = false;             
 
                 datos.setearConsulta(
-                    "update Articulos" +
-                    " set" +
-                    " Estado = " + aux.Estado +
-                    "where ID = '" + aux.ID + "'"
+                    "update Articulos set Estado = 0 where ID = " + aux.ID + ""
                     );
 
                 datos.ejectutarAccion();

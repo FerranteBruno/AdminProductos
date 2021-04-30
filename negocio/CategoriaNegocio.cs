@@ -50,12 +50,10 @@ namespace negocio
             AccesoDatos datos = new AccesoDatos();
             try
             {
-                string valores = "values("
-                    + nuevo.Nombre + ","
-                    + nuevo.Estado + ")";
+                string valores = "values('"
+                    + nuevo.Nombre + "')";
 
-                datos.setearConsulta("insert into Categorias(" +
-                    " Nombre) "
+                datos.setearConsulta("insert into Categorias(Descripcion) "
                     + valores);
 
                 datos.ejectutarAccion();
@@ -90,10 +88,7 @@ namespace negocio
                     + modificar.Estado + ")";*/
 
                 datos.setearConsulta(
-                    "update Categorias" +
-                    " set" +
-                    " Nombre = '" + modificar.Nombre + "'," +
-                    "where ID = " + modificar.ID + ""
+                    "update Categorias set Descripcion = '" + modificar.Nombre + "', where ID = " + modificar.ID
                     );
 
                 datos.ejectutarAccion();

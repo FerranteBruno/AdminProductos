@@ -68,5 +68,21 @@ namespace vistas
             
 
         }
+        private void eliminarProducto(Producto prod)
+        {
+            ProductoNegocio datos = new ProductoNegocio();
+
+            int eliminado = prod.ID;
+
+            datos.eliminar(eliminado);
+            MessageBox.Show("Producto Eliminado");
+
+        }
+        private void btnEliminar_Click(object sender, EventArgs e)
+        {
+            Producto prod = (Producto)dgvProductos.CurrentRow.DataBoundItem;
+
+            eliminarProducto(prod);
+        }
     }
 }

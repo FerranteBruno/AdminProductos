@@ -31,6 +31,7 @@ namespace vistas
         {
             this.panel2 = new System.Windows.Forms.Panel();
             this.pnlImagen = new System.Windows.Forms.Panel();
+            this.pbImagenProducto = new System.Windows.Forms.PictureBox();
             this.panel1 = new System.Windows.Forms.Panel();
             this.panel8 = new System.Windows.Forms.Panel();
             this.label1 = new System.Windows.Forms.Label();
@@ -43,14 +44,13 @@ namespace vistas
             this.label2 = new System.Windows.Forms.Label();
             this.panel6 = new System.Windows.Forms.Panel();
             this.panel3 = new System.Windows.Forms.Panel();
-            this.pbImagenProducto = new System.Windows.Forms.PictureBox();
             this.panel2.SuspendLayout();
             this.pnlImagen.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pbImagenProducto)).BeginInit();
             this.panel1.SuspendLayout();
             this.panel8.SuspendLayout();
             this.panel10.SuspendLayout();
             this.panel5.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pbImagenProducto)).BeginInit();
             this.SuspendLayout();
             // 
             // panel2
@@ -70,6 +70,20 @@ namespace vistas
             this.pnlImagen.Name = "pnlImagen";
             this.pnlImagen.Size = new System.Drawing.Size(239, 155);
             this.pnlImagen.TabIndex = 0;
+            // 
+            // pbImagenProducto
+            // 
+            this.pbImagenProducto.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.pbImagenProducto.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.pbImagenProducto.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.pbImagenProducto.Image = global::vistas.Properties.Resources.logo;
+            this.pbImagenProducto.ImageLocation = "";
+            this.pbImagenProducto.Location = new System.Drawing.Point(0, 0);
+            this.pbImagenProducto.Name = "pbImagenProducto";
+            this.pbImagenProducto.Size = new System.Drawing.Size(239, 155);
+            this.pbImagenProducto.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pbImagenProducto.TabIndex = 0;
+            this.pbImagenProducto.TabStop = false;
             // 
             // panel1
             // 
@@ -135,6 +149,7 @@ namespace vistas
             this.btnGuardar.TabIndex = 22;
             this.btnGuardar.Text = "Guardar";
             this.btnGuardar.UseVisualStyleBackColor = true;
+            this.btnGuardar.Click += new System.EventHandler(this.btnGuardar_Click);
             // 
             // btnCancelar
             // 
@@ -204,20 +219,6 @@ namespace vistas
             this.panel3.Size = new System.Drawing.Size(707, 167);
             this.panel3.TabIndex = 13;
             // 
-            // pbImagenProducto
-            // 
-            this.pbImagenProducto.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.pbImagenProducto.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.pbImagenProducto.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.pbImagenProducto.Image = global::vistas.Properties.Resources.logo;
-            this.pbImagenProducto.ImageLocation = "";
-            this.pbImagenProducto.Location = new System.Drawing.Point(0, 0);
-            this.pbImagenProducto.Name = "pbImagenProducto";
-            this.pbImagenProducto.Size = new System.Drawing.Size(239, 155);
-            this.pbImagenProducto.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pbImagenProducto.TabIndex = 0;
-            this.pbImagenProducto.TabStop = false;
-            // 
             // v_nuevaCategoria
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -232,14 +233,15 @@ namespace vistas
             this.Name = "v_nuevaCategoria";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "v_nuevaCategoria";
+            this.Load += new System.EventHandler(this.v_nuevaCategoria_Load);
             this.panel2.ResumeLayout(false);
             this.pnlImagen.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.pbImagenProducto)).EndInit();
             this.panel1.ResumeLayout(false);
             this.panel8.ResumeLayout(false);
             this.panel8.PerformLayout();
             this.panel10.ResumeLayout(false);
             this.panel5.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.pbImagenProducto)).EndInit();
             this.ResumeLayout(false);
 
         }
