@@ -19,6 +19,7 @@ namespace vistas
             InitializeComponent();
         }
 
+
         private void ocultarMostrarPaneles(Panel aux)
         {
             if (aux.Visible == true)
@@ -30,37 +31,20 @@ namespace vistas
                 aux.Visible = true;
             }
         }
-
-        private void btnVer_Click(object sender, EventArgs e)
+        private void cargarProductos()
         {
-            
+            ProductoNegocio prod = new ProductoNegocio();
+            dgvProductos.DataSource = null;
+            dgvProductos.Rows.Clear();
+            dgvProductos.AutoGenerateColumns = false;
+            dgvProductos.ClearSelection();
+            dgvProductos.DataSource = prod.listar();
         }
 
-        private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label3_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void cbxMarca_SelectedIndexChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label4_Click(object sender, EventArgs e)
-        {
-
-        }
 
         private void v_productos_Load(object sender, EventArgs e)
         {
-            ProductoNegocio prod = new ProductoNegocio();
-            dgvProductos.AutoGenerateColumns = true;
-            dgvProductos.DataSource = prod.listar();
+            cargarProductos();
         }
 
         private void dgvProductos_CellClick(object sender, DataGridViewCellEventArgs e)
@@ -78,7 +62,10 @@ namespace vistas
             Producto prod = (Producto)dgvProductos.CurrentRow.DataBoundItem;
 
             v_nuevoProducto modificar = new v_nuevoProducto(prod);
-            modificar.ShowDialog(); 
+
+            modificar.ShowDialog();
+            cargarProductos();
+            
 
         }
     }

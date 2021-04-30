@@ -35,7 +35,9 @@ namespace vistas
             this.panel8 = new System.Windows.Forms.Panel();
             this.label5 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
+            this.btnNuevaCategoria = new System.Windows.Forms.Button();
             this.label6 = new System.Windows.Forms.Label();
+            this.btnNuevaMarca = new System.Windows.Forms.Button();
             this.label3 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
@@ -55,14 +57,12 @@ namespace vistas
             this.panel2 = new System.Windows.Forms.Panel();
             this.panel3 = new System.Windows.Forms.Panel();
             this.pnlImagen = new System.Windows.Forms.Panel();
+            this.pbImagenProducto = new System.Windows.Forms.PictureBox();
             this.panel4 = new System.Windows.Forms.Panel();
             this.label2 = new System.Windows.Forms.Label();
             this.panel5 = new System.Windows.Forms.Panel();
             this.panel6 = new System.Windows.Forms.Panel();
-            this.label9 = new System.Windows.Forms.Label();
-            this.pbImagenProducto = new System.Windows.Forms.PictureBox();
-            this.btnNuevaCategoria = new System.Windows.Forms.Button();
-            this.btnNuevaMarca = new System.Windows.Forms.Button();
+            this.lblTitulo = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             this.panel9.SuspendLayout();
             this.panel11.SuspendLayout();
@@ -70,9 +70,9 @@ namespace vistas
             this.panel10.SuspendLayout();
             this.panel3.SuspendLayout();
             this.pnlImagen.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pbImagenProducto)).BeginInit();
             this.panel4.SuspendLayout();
             this.panel6.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pbImagenProducto)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
@@ -157,6 +157,21 @@ namespace vistas
             this.label4.Text = "Marca";
             this.label4.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
+            // btnNuevaCategoria
+            // 
+            this.btnNuevaCategoria.Anchor = System.Windows.Forms.AnchorStyles.Left;
+            this.btnNuevaCategoria.BackgroundImage = global::vistas.Properties.Resources.more;
+            this.btnNuevaCategoria.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.btnNuevaCategoria.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnNuevaCategoria.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnNuevaCategoria.ForeColor = System.Drawing.Color.Lime;
+            this.btnNuevaCategoria.Location = new System.Drawing.Point(209, 218);
+            this.btnNuevaCategoria.Name = "btnNuevaCategoria";
+            this.btnNuevaCategoria.Size = new System.Drawing.Size(24, 21);
+            this.btnNuevaCategoria.TabIndex = 23;
+            this.btnNuevaCategoria.UseVisualStyleBackColor = true;
+            this.btnNuevaCategoria.Click += new System.EventHandler(this.btnNuevaCategoria_Click);
+            // 
             // label6
             // 
             this.label6.Anchor = System.Windows.Forms.AnchorStyles.None;
@@ -169,6 +184,21 @@ namespace vistas
             this.label6.TabIndex = 10;
             this.label6.Text = "URL de Imagen";
             this.label6.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
+            // btnNuevaMarca
+            // 
+            this.btnNuevaMarca.Anchor = System.Windows.Forms.AnchorStyles.Left;
+            this.btnNuevaMarca.BackgroundImage = global::vistas.Properties.Resources.more;
+            this.btnNuevaMarca.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.btnNuevaMarca.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnNuevaMarca.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnNuevaMarca.ForeColor = System.Drawing.Color.Lime;
+            this.btnNuevaMarca.Location = new System.Drawing.Point(209, 174);
+            this.btnNuevaMarca.Name = "btnNuevaMarca";
+            this.btnNuevaMarca.Size = new System.Drawing.Size(24, 21);
+            this.btnNuevaMarca.TabIndex = 23;
+            this.btnNuevaMarca.UseVisualStyleBackColor = true;
+            this.btnNuevaMarca.Click += new System.EventHandler(this.btnNuevaMarca_Click);
             // 
             // label3
             // 
@@ -376,6 +406,22 @@ namespace vistas
             this.pnlImagen.Size = new System.Drawing.Size(280, 185);
             this.pnlImagen.TabIndex = 0;
             // 
+            // pbImagenProducto
+            // 
+            this.pbImagenProducto.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.pbImagenProducto.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.pbImagenProducto.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.pbImagenProducto.ErrorImage = global::vistas.Properties.Resources.giferror2;
+            this.pbImagenProducto.Image = global::vistas.Properties.Resources.logo;
+            this.pbImagenProducto.ImageLocation = "";
+            this.pbImagenProducto.InitialImage = global::vistas.Properties.Resources.logo;
+            this.pbImagenProducto.Location = new System.Drawing.Point(0, 0);
+            this.pbImagenProducto.Name = "pbImagenProducto";
+            this.pbImagenProducto.Size = new System.Drawing.Size(280, 185);
+            this.pbImagenProducto.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pbImagenProducto.TabIndex = 0;
+            this.pbImagenProducto.TabStop = false;
+            // 
             // panel4
             // 
             this.panel4.BackColor = System.Drawing.Color.Gainsboro;
@@ -408,67 +454,21 @@ namespace vistas
             // panel6
             // 
             this.panel6.BackColor = System.Drawing.SystemColors.ControlDarkDark;
-            this.panel6.Controls.Add(this.label9);
+            this.panel6.Controls.Add(this.lblTitulo);
             this.panel6.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel6.Location = new System.Drawing.Point(0, 0);
             this.panel6.Name = "panel6";
             this.panel6.Size = new System.Drawing.Size(707, 31);
             this.panel6.TabIndex = 8;
             // 
-            // label9
+            // lblTitulo
             // 
-            this.label9.ForeColor = System.Drawing.SystemColors.ActiveCaption;
-            this.label9.Location = new System.Drawing.Point(21, 10);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(109, 13);
-            this.label9.TabIndex = 16;
-            this.label9.Text = "Nuevo Producto";
-            // 
-            // pbImagenProducto
-            // 
-            this.pbImagenProducto.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.pbImagenProducto.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.pbImagenProducto.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.pbImagenProducto.ErrorImage = global::vistas.Properties.Resources.giferror2;
-            this.pbImagenProducto.Image = global::vistas.Properties.Resources.logo;
-            this.pbImagenProducto.ImageLocation = "";
-            this.pbImagenProducto.InitialImage = global::vistas.Properties.Resources.logo;
-            this.pbImagenProducto.Location = new System.Drawing.Point(0, 0);
-            this.pbImagenProducto.Name = "pbImagenProducto";
-            this.pbImagenProducto.Size = new System.Drawing.Size(280, 185);
-            this.pbImagenProducto.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pbImagenProducto.TabIndex = 0;
-            this.pbImagenProducto.TabStop = false;
-            // 
-            // btnNuevaCategoria
-            // 
-            this.btnNuevaCategoria.Anchor = System.Windows.Forms.AnchorStyles.Left;
-            this.btnNuevaCategoria.BackgroundImage = global::vistas.Properties.Resources.more;
-            this.btnNuevaCategoria.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.btnNuevaCategoria.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnNuevaCategoria.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnNuevaCategoria.ForeColor = System.Drawing.Color.Lime;
-            this.btnNuevaCategoria.Location = new System.Drawing.Point(209, 218);
-            this.btnNuevaCategoria.Name = "btnNuevaCategoria";
-            this.btnNuevaCategoria.Size = new System.Drawing.Size(24, 21);
-            this.btnNuevaCategoria.TabIndex = 23;
-            this.btnNuevaCategoria.UseVisualStyleBackColor = true;
-            this.btnNuevaCategoria.Click += new System.EventHandler(this.btnNuevaCategoria_Click);
-            // 
-            // btnNuevaMarca
-            // 
-            this.btnNuevaMarca.Anchor = System.Windows.Forms.AnchorStyles.Left;
-            this.btnNuevaMarca.BackgroundImage = global::vistas.Properties.Resources.more;
-            this.btnNuevaMarca.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.btnNuevaMarca.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnNuevaMarca.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnNuevaMarca.ForeColor = System.Drawing.Color.Lime;
-            this.btnNuevaMarca.Location = new System.Drawing.Point(209, 174);
-            this.btnNuevaMarca.Name = "btnNuevaMarca";
-            this.btnNuevaMarca.Size = new System.Drawing.Size(24, 21);
-            this.btnNuevaMarca.TabIndex = 23;
-            this.btnNuevaMarca.UseVisualStyleBackColor = true;
-            this.btnNuevaMarca.Click += new System.EventHandler(this.btnNuevaMarca_Click);
+            this.lblTitulo.ForeColor = System.Drawing.SystemColors.ActiveCaption;
+            this.lblTitulo.Location = new System.Drawing.Point(21, 10);
+            this.lblTitulo.Name = "lblTitulo";
+            this.lblTitulo.Size = new System.Drawing.Size(109, 13);
+            this.lblTitulo.TabIndex = 16;
+            this.lblTitulo.Text = "Nuevo Producto";
             // 
             // v_nuevoProducto
             // 
@@ -483,6 +483,7 @@ namespace vistas
             this.Controls.Add(this.panel6);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "v_nuevoProducto";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "v_nuevoProducto";
             this.Load += new System.EventHandler(this.v_nuevoProducto_Load);
             this.panel1.ResumeLayout(false);
@@ -493,10 +494,10 @@ namespace vistas
             this.panel10.ResumeLayout(false);
             this.panel3.ResumeLayout(false);
             this.pnlImagen.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.pbImagenProducto)).EndInit();
             this.panel4.ResumeLayout(false);
             this.panel4.PerformLayout();
             this.panel6.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.pbImagenProducto)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -534,7 +535,7 @@ namespace vistas
         private System.Windows.Forms.Panel panel11;
         private System.Windows.Forms.Panel panel8;
         private System.Windows.Forms.Panel panel6;
-        private System.Windows.Forms.Label label9;
+        private System.Windows.Forms.Label lblTitulo;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.TextBox txtNombre;
     }

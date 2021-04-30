@@ -39,7 +39,7 @@ namespace negocio
                     aux.Categoria.ID = ((int)datos.Lector["IDCategoria"]);
 
                     aux.UrlImagen = (string)datos.Lector["ImagenUrl"];
-                    aux.Precio = float.Parse( datos.Lector["Precio"].ToString());
+                    aux.Precio = float.Parse(datos.Lector["Precio"].ToString());
                     aux.Stock = float.Parse(datos.Lector["Stock"].ToString());
                     aux.Estado = (bool)datos.Lector["Estado"];
 
@@ -48,7 +48,7 @@ namespace negocio
 
                 return lista;
             }
-           
+
             catch (Exception ex)
             {
                 throw ex;
@@ -68,14 +68,15 @@ namespace negocio
                 string valores = "values('"
                     + nuevo.Codigo + "', '"
                     + nuevo.Nombre + "', '"
-                    + nuevo.Descripcion + "', " 
+                    + nuevo.Descripcion + "', "
                     + nuevo.Marca.ID + ", "
                     + nuevo.Categoria.ID + ", '"
                     + nuevo.UrlImagen + "', "
-                    + nuevo.Precio+ ", "
+                    + nuevo.Precio + ", "
                     + nuevo.Stock + ", 1 )";
 
-                datos.setearConsulta("insert into Articulos(Codigo, Nombre, Descripcion,IDMarca,IDCategoria,ImagenUrl,Precio,Stock,Estado)"+ valores);
+                datos.setearConsulta("insert into Articulos(Codigo, Nombre, Descripcion,IDMarca,IDCategoria,ImagenUrl,Precio,Stock,Estado)" + valores);
+
 
                 datos.ejectutarAccion();
 
@@ -95,8 +96,12 @@ namespace negocio
             AccesoDatos datos = new AccesoDatos();
             try
             {
+                
 
-                datos.setearConsulta("update Articulos set codigo = @codigo, nombre = @nombre, Descripcion = @descripcion, IdMarca = @IDMarca, IdCategoria = @IDCategoria, ImagenUrl = @imagenUrl, Precio = @precio, Stock = @stock, Estado = 1");
+                //datos.setearConsulta("update Articulos set codigo = '" + modificar.Codigo + "', nombre = '" + modificar.Nombre + "', Descripcion = '" + modificar.Descripcion +
+                //    "', IdMarca = " + modificar.Marca.ID + ", IdCategoria = " + modificar.Categoria.ID + ", ImagenUrl = '" + modificar.UrlImagen + "', Precio = " + modificar.Precio + ", Stock = " + modificar.Stock + ", Estado = 1 WhERE id = " + modificar.ID + ";");
+
+                datos.setearConsulta("update Articulos set codigo = @codigo, nombre = @nombre, Descripcion = @descripcion, IdMarca = @IDMarca, IdCategoria = @IDCategoria, ImagenUrl = @imagenUrl, Precio = @precio, Stock = @stock, Estado = 1 WhERE Id = "+modificar.ID+"");
 
                 datos.agregarParametro("@codigo", modificar.Codigo);
                 datos.agregarParametro("@nombre", modificar.Nombre);
@@ -107,20 +112,6 @@ namespace negocio
                 datos.agregarParametro("@precio", modificar.Precio);
                 datos.agregarParametro("@stock", modificar.Stock);
 
-
-                /*datos.setearConsulta(
-                    "update Articulos" +
-                    " set"+
-                    "Codigo = '" + modificar.Codigo+"',"+
-                    " Nombre = '" + modificar.Nombre + "'," +
-                    " Descripcion = '" + modificar.Descripcion + "'," +
-                    " IdMarca = '" + modificar.Marca.ID + "'," +
-                    " IDCategoria = '" + modificar.Categoria.ID + "'," +
-                    " ImagenUrl = '" + modificar.UrlImagen + "'," +
-                    " Precio = " + modificar.Precio + "," +
-                    " Stock = " + modificar.Stock + "," +
-                    " Estado = 1 where ID = '"+modificar.ID+ "'"
-                    );*/
 
                 datos.ejectutarAccion();
 
@@ -139,7 +130,7 @@ namespace negocio
         {
             AccesoDatos datos = new AccesoDatos();
             try
-            { 
+            {
                 datos.setearConsulta("select ID, Codigo, Descripcion, m.Nombre, c.Nombre , UrlImagen, Stock, Estado Precio from Articulos A, ELEMENTOS m, ELEMENTOS c Where A.IDMarca = m.ID and A.IDCategoria = c.ID ");
                 datos.ejecutarLectura();
 
@@ -147,13 +138,13 @@ namespace negocio
 
                 aux.Codigo = (string)datos.Lector["Codigo"];
 
-                if(aux.Codigo != codigo)
+                if (aux.Codigo != codigo)
                 {
                     datos.cerrarConexion();
-                   // return;???
+                    // return;???
                 }
 
-                if(aux.Codigo == codigo)
+                if (aux.Codigo == codigo)
                 {
                     aux.Estado = false;
                 }
@@ -179,4 +170,4 @@ namespace negocio
         }
     }
 
-    }
+}

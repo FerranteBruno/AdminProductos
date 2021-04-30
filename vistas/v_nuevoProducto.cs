@@ -15,7 +15,7 @@ namespace vistas
     public partial class v_nuevoProducto : Form
     {
         private List<Control> Controles = new List<Control>();
-        private Producto prod;
+        private Producto prod=null;
         
         public v_nuevoProducto()
         {
@@ -29,51 +29,22 @@ namespace vistas
             Controles.Add(txtPrecio);
             Controles.Add(txtDescripcion);
         }
-        public v_nuevoProducto(Producto prod)
+        public v_nuevoProducto(Producto aux)
         {
             InitializeComponent();
-            Text = "Modificar Producto";
+            Controles.Add(txtCodigo);
+            Controles.Add(txtNombre);
+            Controles.Add(txtStock);
+            Controles.Add(cbxMarca);
+            Controles.Add(cbxCategoria);
+            Controles.Add(txtUrlImagen);
+            Controles.Add(txtPrecio);
+            Controles.Add(txtDescripcion);
+            prod = aux;
+            lblTitulo.Text= "Modificar Producto";
         }
-       /* public v_nuevoProducto(Producto aux)
-        {
-            if (aux != null)
-            { 
-                prod = aux;
-            }
-        }*/
 
-        private void v_nuevoProducto_Load(object sender, EventArgs e)
-        {
-            //txtCodigo.Focus();
-            MarcaNegocio marc = new MarcaNegocio();
-            CategoriaNegocio cate = new CategoriaNegocio();
-
-            cbxCategoria.DataSource = cate.listar();
-            cbxCategoria.ValueMember = "id";
-            cbxCategoria.DisplayMember = "Nombre";
-
-            cbxMarca.DataSource = marc.listar();
-            cbxMarca.ValueMember = "id";
-            cbxMarca.DisplayMember = "Nombre";
-            cbxCategoria.Text = "--Seleccione Categoria--";
-            cbxMarca.Text = "--Seleccione Marca--";
-
-            
-
-            if (prod != null)
-            {
-                txtCodigo.Text = prod.Codigo;
-                txtNombre.Text = prod.Nombre;
-                txtUrlImagen.Text = prod.UrlImagen;
-
-                cbxMarca.SelectedValue = prod.Marca.ID;
-                cbxCategoria.SelectedValue = prod.Categoria.ID;
-
-                txtPrecio.Text = prod.Precio.ToString();
-                txtPrecio.Text = prod.Stock.ToString();
-                txtDescripcion.Text = prod.Descripcion;
-            }
-        }
+        #region --Funciones--
         public bool checkControles(List<Control> listado)
         {
             int cont = 0;
@@ -174,6 +145,63 @@ namespace vistas
             MessageBox.Show("Producto Guardado");
             limpiarCampos(Controles);
         }
+        private void modificarProducto()
+        {
+            Producto produ = new Producto();
+            ProductoNegocio datos = new ProductoNegocio();
+
+            produ.ID = prod.ID;
+            produ.Codigo = txtCodigo.Text;
+            produ.Nombre = txtNombre.Text;
+            produ.Descripcion = txtDescripcion.Text;
+            produ.Marca = (Marca)cbxMarca.SelectedItem;
+            produ.Categoria = (Categoria)cbxCategoria.SelectedItem;
+            produ.UrlImagen = txtUrlImagen.Text;
+            produ.Precio = float.Parse(txtPrecio.Text);
+            produ.Stock = float.Parse(txtStock.Text);
+            produ.Estado = true;
+
+            datos.modificar(produ);
+            MessageBox.Show("Producto Modificado");
+            limpiarCampos(Controles);
+            this.Close();
+        }
+        
+        #endregion
+
+        private void v_nuevoProducto_Load(object sender, EventArgs e)
+        {
+            
+            MarcaNegocio marc = new MarcaNegocio();
+            CategoriaNegocio cate = new CategoriaNegocio();
+
+            cbxCategoria.DataSource = cate.listar();
+            cbxCategoria.ValueMember = "id";
+            cbxCategoria.DisplayMember = "Nombre";
+
+            cbxMarca.DataSource = marc.listar();
+            cbxMarca.ValueMember = "id";
+            cbxMarca.DisplayMember = "Nombre";
+            cbxCategoria.Text = "--Seleccione Categoria--";
+            cbxMarca.Text = "--Seleccione Marca--";
+
+            
+
+            if (prod != null)
+            {
+                txtCodigo.Text = prod.Codigo;
+                txtNombre.Text = prod.Nombre;
+                txtUrlImagen.Text = prod.UrlImagen;
+
+                cbxMarca.SelectedValue = prod.Marca.ID;
+                cbxCategoria.SelectedValue = prod.Categoria.ID;
+
+                txtPrecio.Text = prod.Precio.ToString();
+                txtStock.Text = prod.Stock.ToString();
+                txtDescripcion.Text = prod.Descripcion;
+            }
+            txtCodigo.Select();
+        }        
 
         private void textBox6_TextChanged(object sender, EventArgs e)
         {
@@ -209,7 +237,15 @@ namespace vistas
         {
             if (checkControles(Controles))
             {
-                guardarProducto();                
+                if (prod == null)
+                {
+                    guardarProducto();
+                }
+                else
+                {
+                    modificarProducto();
+
+                }
             }
         }
 
@@ -243,6 +279,7 @@ namespace vistas
         private void btnCancelar_Click(object sender, EventArgs e)
         {
             limpiarCampos(Controles);
+            this.Close();
         }
 
         private void txtNombre_KeyPress(object sender, KeyPressEventArgs e)
@@ -268,5 +305,6 @@ namespace vistas
             FondoRojoBlanco(ref txtCodigo);
             saltoDeCampo(e, txtNombre);
         }
+
     }
 }
