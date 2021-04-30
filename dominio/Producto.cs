@@ -19,6 +19,5 @@ namespace dominio
         public float Stock { get; set; }
         public bool Estado { get; set; }
 
-
     }
 }

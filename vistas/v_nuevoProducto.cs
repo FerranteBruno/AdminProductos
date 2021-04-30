@@ -15,7 +15,7 @@ namespace vistas
     public partial class v_nuevoProducto : Form
     {
         private List<Control> Controles = new List<Control>();
-        private Producto prod = null;
+        private Producto prod;
         
         public v_nuevoProducto()
         {
@@ -29,17 +29,22 @@ namespace vistas
             Controles.Add(txtPrecio);
             Controles.Add(txtDescripcion);
         }
-        public v_nuevoProducto(Producto aux)
+        public v_nuevoProducto(Producto prod)
+        {
+            InitializeComponent();
+            Text = "Modificar Producto";
+        }
+       /* public v_nuevoProducto(Producto aux)
         {
             if (aux != null)
             { 
                 prod = aux;
             }
-        }
+        }*/
 
         private void v_nuevoProducto_Load(object sender, EventArgs e)
         {
-            txtCodigo.Focus();
+            //txtCodigo.Focus();
             MarcaNegocio marc = new MarcaNegocio();
             CategoriaNegocio cate = new CategoriaNegocio();
 
@@ -53,6 +58,8 @@ namespace vistas
             cbxCategoria.Text = "--Seleccione Categoria--";
             cbxMarca.Text = "--Seleccione Marca--";
 
+            
+
             if (prod != null)
             {
                 txtCodigo.Text = prod.Codigo;
@@ -63,6 +70,7 @@ namespace vistas
                 cbxCategoria.SelectedValue = prod.Categoria.ID;
 
                 txtPrecio.Text = prod.Precio.ToString();
+                txtPrecio.Text = prod.Stock.ToString();
                 txtDescripcion.Text = prod.Descripcion;
             }
         }

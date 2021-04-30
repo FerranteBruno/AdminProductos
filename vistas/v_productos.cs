@@ -8,6 +8,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using dominio;
 
 namespace vistas
 {
@@ -17,6 +18,7 @@ namespace vistas
         {
             InitializeComponent();
         }
+
         private void ocultarMostrarPaneles(Panel aux)
         {
             if (aux.Visible == true)
@@ -69,6 +71,15 @@ namespace vistas
             lblPrecio.Text = dgvProductos.CurrentRow.Cells[7].Value.ToString();
             lblDescripcion.Text = dgvProductos.CurrentRow.Cells[3].Value.ToString();
             picProducto.ImageLocation= dgvProductos.CurrentRow.Cells[6].Value.ToString();
+        }
+
+        private void btnModificar_Click(object sender, EventArgs e)
+        {
+            Producto prod = (Producto)dgvProductos.CurrentRow.DataBoundItem;
+
+            v_nuevoProducto modificar = new v_nuevoProducto(prod);
+            modificar.ShowDialog(); 
+
         }
     }
 }

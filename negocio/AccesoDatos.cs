@@ -25,6 +25,11 @@ namespace negocio
             comando.CommandText = consulta;
         }
 
+        public void agregarParametro(string nombre, Object valor)
+        {
+            comando.Parameters.AddWithValue(nombre,valor);
+        }
+
         public void ejecutarLectura()
         {
             comando.Connection = conexion;

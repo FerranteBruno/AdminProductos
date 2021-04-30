@@ -21,7 +21,7 @@ namespace negocio
 
             try
             {
-                datos.setearConsulta("select a.id ID, Codigo, Nombre, a.Descripcion Descripcion, m.Descripcion Marca, c.Descripcion Categoria , ImagenUrl, a.Stock Stock, a.Estado Estado ,Precio from Articulos A, Marcas M, Categorias C where a.IDMarca = m.id and a.IDCategoria = c.ID");
+                datos.setearConsulta("select a.id ID, Codigo, Nombre, a.Descripcion Descripcion, m.Descripcion Marca, c.Descripcion Categoria , ImagenUrl, a.Stock Stock, a.Estado Estado ,Precio, M.ID as IDMarca, C.ID as IDCategoria from Articulos A, Marcas M, Categorias C where a.IDMarca = m.id and a.IDCategoria = c.ID");
                 datos.ejecutarLectura();
 
                 while (datos.Lector.Read())
@@ -33,8 +33,10 @@ namespace negocio
                     aux.Descripcion = (string)datos.Lector["Descripcion"];
 
                     aux.Marca = new Marca((string)datos.Lector["Marca"]);
+                    aux.Marca.ID = ((int)datos.Lector["IDMarca"]);
 
                     aux.Categoria = new Categoria((string)datos.Lector["Categoria"]);
+                    aux.Categoria.ID = ((int)datos.Lector["IDCategoria"]);
 
                     aux.UrlImagen = (string)datos.Lector["ImagenUrl"];
                     aux.Precio = float.Parse( datos.Lector["Precio"].ToString());
@@ -94,19 +96,19 @@ namespace negocio
             try
             {
 
-                /*string valores = "values("
-                    + modificar.Codigo + ", '"
-                    + modificar.Nombre + "', '"
-                    + modificar.Descripcion + "', '"
-                    + modificar.UrlImagen + "', "
-                    + modificar.Marca.ID + "', '"
-                    + modificar.Categoria.ID + "', '"
-                    + modificar.UrlImagen + "', '"
-                    + modificar.Precio + "', '"
-                    + modificar.Stock + "', '"
-                    + modificar.Estado + ")";*/
+                datos.setearConsulta("update Articulos set codigo = @codigo, nombre = @nombre, Descripcion = @descripcion, IdMarca = @IDMarca, IdCategoria = @IDCategoria, ImagenUrl = @imagenUrl, Precio = @precio, Stock = @stock, Estado = 1");
 
-                datos.setearConsulta(
+                datos.agregarParametro("@codigo", modificar.Codigo);
+                datos.agregarParametro("@nombre", modificar.Nombre);
+                datos.agregarParametro("@descripcion", modificar.Descripcion);
+                datos.agregarParametro("@IDMarca", modificar.Marca.ID);
+                datos.agregarParametro("@IDCategoria", modificar.Categoria.ID);
+                datos.agregarParametro("@imagenUrl", modificar.UrlImagen);
+                datos.agregarParametro("@precio", modificar.Precio);
+                datos.agregarParametro("@stock", modificar.Stock);
+
+
+                /*datos.setearConsulta(
                     "update Articulos" +
                     " set"+
                     "Codigo = '" + modificar.Codigo+"',"+
@@ -114,12 +116,11 @@ namespace negocio
                     " Descripcion = '" + modificar.Descripcion + "'," +
                     " IdMarca = '" + modificar.Marca.ID + "'," +
                     " IDCategoria = '" + modificar.Categoria.ID + "'," +
-                    " UrlImagen = '" + modificar.UrlImagen + "'," +
+                    " ImagenUrl = '" + modificar.UrlImagen + "'," +
                     " Precio = " + modificar.Precio + "," +
                     " Stock = " + modificar.Stock + "," +
-                    " Estado = " + modificar.Estado+
-                    "where ID = '"+modificar.ID+ "'"
-                    );
+                    " Estado = 1 where ID = '"+modificar.ID+ "'"
+                    );*/
 
                 datos.ejectutarAccion();
 
