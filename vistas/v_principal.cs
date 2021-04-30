@@ -129,5 +129,10 @@ namespace vistas
         {
             abrirYcomprobarForm(new v_nuevaMarca());
         }
+
+        private void btnModMarca_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

@@ -38,18 +38,16 @@ namespace vistas
             this.label1 = new System.Windows.Forms.Label();
             this.txtNombre = new System.Windows.Forms.TextBox();
             this.panel2 = new System.Windows.Forms.Panel();
-            this.pnlImagen = new System.Windows.Forms.Panel();
-            this.pbImagenProducto = new System.Windows.Forms.PictureBox();
             this.panel5 = new System.Windows.Forms.Panel();
             this.btnNMarcaExit = new System.Windows.Forms.Button();
             this.label2 = new System.Windows.Forms.Label();
+            this.dgvMarcas = new System.Windows.Forms.DataGridView();
             this.panel1.SuspendLayout();
             this.panel8.SuspendLayout();
             this.panel10.SuspendLayout();
             this.panel2.SuspendLayout();
-            this.pnlImagen.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pbImagenProducto)).BeginInit();
             this.panel5.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvMarcas)).BeginInit();
             this.SuspendLayout();
             // 
             // panel6
@@ -82,6 +80,7 @@ namespace vistas
             this.panel8.Name = "panel8";
             this.panel8.Size = new System.Drawing.Size(345, 144);
             this.panel8.TabIndex = 19;
+            this.panel8.Paint += new System.Windows.Forms.PaintEventHandler(this.panel8_Paint);
             // 
             // panel10
             // 
@@ -145,35 +144,13 @@ namespace vistas
             // 
             // panel2
             // 
-            this.panel2.Controls.Add(this.pnlImagen);
+            this.panel2.Controls.Add(this.dgvMarcas);
             this.panel2.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel2.Location = new System.Drawing.Point(345, 26);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(362, 144);
             this.panel2.TabIndex = 15;
-            // 
-            // pnlImagen
-            // 
-            this.pnlImagen.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.pnlImagen.Controls.Add(this.pbImagenProducto);
-            this.pnlImagen.Location = new System.Drawing.Point(62, -5);
-            this.pnlImagen.Name = "pnlImagen";
-            this.pnlImagen.Size = new System.Drawing.Size(239, 155);
-            this.pnlImagen.TabIndex = 0;
-            // 
-            // pbImagenProducto
-            // 
-            this.pbImagenProducto.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.pbImagenProducto.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.pbImagenProducto.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.pbImagenProducto.Image = global::vistas.Properties.Resources.logo;
-            this.pbImagenProducto.ImageLocation = "";
-            this.pbImagenProducto.Location = new System.Drawing.Point(0, 0);
-            this.pbImagenProducto.Name = "pbImagenProducto";
-            this.pbImagenProducto.Size = new System.Drawing.Size(239, 155);
-            this.pbImagenProducto.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pbImagenProducto.TabIndex = 0;
-            this.pbImagenProducto.TabStop = false;
+            this.panel2.Paint += new System.Windows.Forms.PaintEventHandler(this.panel2_Paint);
             // 
             // panel5
             // 
@@ -212,6 +189,16 @@ namespace vistas
             this.label2.Text = "Nueva Marca";
             this.label2.Click += new System.EventHandler(this.label2_Click);
             // 
+            // dgvMarcas
+            // 
+            this.dgvMarcas.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvMarcas.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.dgvMarcas.Location = new System.Drawing.Point(0, 0);
+            this.dgvMarcas.Name = "dgvMarcas";
+            this.dgvMarcas.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.dgvMarcas.Size = new System.Drawing.Size(362, 144);
+            this.dgvMarcas.TabIndex = 0;
+            // 
             // v_nuevaMarca
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -231,9 +218,8 @@ namespace vistas
             this.panel8.PerformLayout();
             this.panel10.ResumeLayout(false);
             this.panel2.ResumeLayout(false);
-            this.pnlImagen.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.pbImagenProducto)).EndInit();
             this.panel5.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.dgvMarcas)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -246,13 +232,12 @@ namespace vistas
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.TextBox txtNombre;
         private System.Windows.Forms.Panel panel2;
-        private System.Windows.Forms.Panel pnlImagen;
-        private System.Windows.Forms.PictureBox pbImagenProducto;
         private System.Windows.Forms.Panel panel5;
         private System.Windows.Forms.Button btnNMarcaExit;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Panel panel10;
         private System.Windows.Forms.Button btnGuardar;
         private System.Windows.Forms.Button btnCancelar;
+        private System.Windows.Forms.DataGridView dgvMarcas;
     }
 }

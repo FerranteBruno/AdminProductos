@@ -30,7 +30,10 @@ namespace negocio
                     aux.Nombre = (string)datos.Lector["Descripcion"];
                     aux.Estado = (bool)datos.Lector["Estado"];
 
-                    lista.Add(aux);
+                    if (aux.Estado != false)
+                    {
+                        lista.Add(aux);
+                    }
                 }
 
                 return lista;

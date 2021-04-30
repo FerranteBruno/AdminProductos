@@ -27,6 +27,16 @@ namespace vistas
             label2.Text = "Modificar Marca";
         }
 
+        private void cargarMarcas()
+        {
+            MarcaNegocio marc = new MarcaNegocio();
+            dgvMarcas.DataSource = null;
+            dgvMarcas.Rows.Clear();
+            dgvMarcas.AutoGenerateColumns = true;
+            dgvMarcas.ClearSelection();
+            dgvMarcas.DataSource = marc.listar();
+        }
+
         private void label2_Click(object sender, EventArgs e)
         {
 
@@ -43,7 +53,8 @@ namespace vistas
         }
 
         private void v_nuevaMarca_Load(object sender, EventArgs e)
-        { 
+        {
+            cargarMarcas();
             txtNombre.Text = "--Ingrese una Marca--";
 
             if(marc != null)
@@ -92,6 +103,16 @@ namespace vistas
             {
                 modificarMarca();
             }
+        }
+
+        private void panel2_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void panel8_Paint(object sender, PaintEventArgs e)
+        {
+
         }
     }
 }

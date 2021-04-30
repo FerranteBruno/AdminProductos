@@ -76,6 +76,7 @@ namespace vistas
 
             datos.eliminar(eliminado);
             MessageBox.Show("Producto Eliminado");
+            cargarProductos();
 
         }
         private void btnEliminar_Click(object sender, EventArgs e)
