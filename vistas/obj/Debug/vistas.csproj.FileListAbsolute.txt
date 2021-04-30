@@ -1,0 +1,13 @@
+C:\Users\darkz\source\33\AdminProd\vistas\obj\Debug\vistas.Properties.Resources.resources
+C:\Users\darkz\source\33\AdminProd\vistas\obj\Debug\vistas.v_nuevaCategoria.resources
+C:\Users\darkz\source\33\AdminProd\vistas\obj\Debug\vistas.v_nuevaMarca.resources
+C:\Users\darkz\source\33\AdminProd\vistas\obj\Debug\vistas.v_nuevoProducto.resources
+C:\Users\darkz\source\33\AdminProd\vistas\obj\Debug\vistas.v_principal.resources
+C:\Users\darkz\source\33\AdminProd\vistas\obj\Debug\vistas.v_productos.resources
+C:\Users\darkz\source\33\AdminProd\vistas\obj\Debug\vistas.csproj.GenerateResource.cache
+C:\Users\darkz\source\33\AdminProd\vistas\obj\Debug\vistas.csproj.CoreCompileInputs.cache
+C:\Users\darkz\source\33\AdminProd\vistas\bin\Debug\vistas.exe.config
+C:\Users\darkz\source\33\AdminProd\vistas\bin\Debug\vistas.exe
+C:\Users\darkz\source\33\AdminProd\vistas\bin\Debug\vistas.pdb
+C:\Users\darkz\source\33\AdminProd\vistas\obj\Debug\vistas.exe
+C:\Users\darkz\source\33\AdminProd\vistas\obj\Debug\vistas.pdb
