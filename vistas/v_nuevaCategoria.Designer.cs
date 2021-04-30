@@ -57,33 +57,30 @@ namespace vistas
             // 
             this.panel2.Controls.Add(this.pnlImagen);
             this.panel2.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel2.Location = new System.Drawing.Point(403, 30);
+            this.panel2.Location = new System.Drawing.Point(345, 26);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(422, 167);
+            this.panel2.Size = new System.Drawing.Size(362, 144);
             this.panel2.TabIndex = 9;
             // 
             // pnlImagen
             // 
             this.pnlImagen.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.pnlImagen.Controls.Add(this.pbImagenProducto);
-            this.pnlImagen.Location = new System.Drawing.Point(72, -6);
+            this.pnlImagen.Location = new System.Drawing.Point(62, -5);
             this.pnlImagen.Name = "pnlImagen";
-            this.pnlImagen.Size = new System.Drawing.Size(279, 179);
+            this.pnlImagen.Size = new System.Drawing.Size(239, 155);
             this.pnlImagen.TabIndex = 0;
             // 
             // pbImagenProducto
             // 
             this.pbImagenProducto.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
-            //this.pbImagenProducto.BackgroundImage = global::vistas.Properties.Resources.logo1;
             this.pbImagenProducto.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.pbImagenProducto.Dock = System.Windows.Forms.DockStyle.Fill;
-            //this.pbImagenProducto.ErrorImage = global::vistas.Properties.Resources.giferror;
-            //this.pbImagenProducto.Image = global::vistas.Properties.Resources.logo1;
+            this.pbImagenProducto.Image = global::vistas.Properties.Resources.logo;
             this.pbImagenProducto.ImageLocation = "";
-            //this.pbImagenProducto.InitialImage = global::vistas.Properties.Resources.logo1;
             this.pbImagenProducto.Location = new System.Drawing.Point(0, 0);
             this.pbImagenProducto.Name = "pbImagenProducto";
-            this.pbImagenProducto.Size = new System.Drawing.Size(279, 179);
+            this.pbImagenProducto.Size = new System.Drawing.Size(239, 155);
             this.pbImagenProducto.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pbImagenProducto.TabIndex = 0;
             this.pbImagenProducto.TabStop = false;
@@ -94,9 +91,9 @@ namespace vistas
             this.panel1.Controls.Add(this.panel8);
             this.panel1.Controls.Add(this.panel10);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Left;
-            this.panel1.Location = new System.Drawing.Point(0, 30);
+            this.panel1.Location = new System.Drawing.Point(0, 26);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(403, 167);
+            this.panel1.Size = new System.Drawing.Size(345, 144);
             this.panel1.TabIndex = 8;
             // 
             // panel8
@@ -106,7 +103,7 @@ namespace vistas
             this.panel8.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel8.Location = new System.Drawing.Point(0, 0);
             this.panel8.Name = "panel8";
-            this.panel8.Size = new System.Drawing.Size(403, 124);
+            this.panel8.Size = new System.Drawing.Size(345, 107);
             this.panel8.TabIndex = 19;
             // 
             // label1
@@ -114,18 +111,18 @@ namespace vistas
             this.label1.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label1.AutoSize = true;
             this.label1.ForeColor = System.Drawing.SystemColors.ActiveCaption;
-            this.label1.Location = new System.Drawing.Point(35, 42);
+            this.label1.Location = new System.Drawing.Point(30, 36);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(51, 15);
+            this.label1.Size = new System.Drawing.Size(44, 13);
             this.label1.TabIndex = 18;
             this.label1.Text = "Nombre";
             // 
             // txtNombre
             // 
             this.txtNombre.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.txtNombre.Location = new System.Drawing.Point(35, 60);
+            this.txtNombre.Location = new System.Drawing.Point(30, 52);
             this.txtNombre.Name = "txtNombre";
-            this.txtNombre.Size = new System.Drawing.Size(333, 23);
+            this.txtNombre.Size = new System.Drawing.Size(286, 20);
             this.txtNombre.TabIndex = 17;
             // 
             // panel10
@@ -134,9 +131,9 @@ namespace vistas
             this.panel10.Controls.Add(this.btnGuardar);
             this.panel10.Controls.Add(this.btnCancelar);
             this.panel10.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.panel10.Location = new System.Drawing.Point(0, 124);
+            this.panel10.Location = new System.Drawing.Point(0, 107);
             this.panel10.Name = "panel10";
-            this.panel10.Size = new System.Drawing.Size(403, 43);
+            this.panel10.Size = new System.Drawing.Size(345, 37);
             this.panel10.TabIndex = 25;
             // 
             // btnGuardar
@@ -146,9 +143,9 @@ namespace vistas
             this.btnGuardar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
             this.btnGuardar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnGuardar.ForeColor = System.Drawing.SystemColors.ActiveCaption;
-            this.btnGuardar.Location = new System.Drawing.Point(88, 9);
+            this.btnGuardar.Location = new System.Drawing.Point(75, 8);
             this.btnGuardar.Name = "btnGuardar";
-            this.btnGuardar.Size = new System.Drawing.Size(95, 23);
+            this.btnGuardar.Size = new System.Drawing.Size(81, 20);
             this.btnGuardar.TabIndex = 22;
             this.btnGuardar.Text = "Guardar";
             this.btnGuardar.UseVisualStyleBackColor = true;
@@ -160,9 +157,9 @@ namespace vistas
             this.btnCancelar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
             this.btnCancelar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnCancelar.ForeColor = System.Drawing.SystemColors.ActiveCaption;
-            this.btnCancelar.Location = new System.Drawing.Point(220, 9);
+            this.btnCancelar.Location = new System.Drawing.Point(189, 8);
             this.btnCancelar.Name = "btnCancelar";
-            this.btnCancelar.Size = new System.Drawing.Size(95, 23);
+            this.btnCancelar.Size = new System.Drawing.Size(81, 20);
             this.btnCancelar.TabIndex = 21;
             this.btnCancelar.Text = "Cancelar";
             this.btnCancelar.UseVisualStyleBackColor = true;
@@ -176,7 +173,7 @@ namespace vistas
             this.panel5.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel5.Location = new System.Drawing.Point(0, 0);
             this.panel5.Name = "panel5";
-            this.panel5.Size = new System.Drawing.Size(825, 30);
+            this.panel5.Size = new System.Drawing.Size(707, 26);
             this.panel5.TabIndex = 12;
             // 
             // button1
@@ -186,9 +183,9 @@ namespace vistas
             this.button1.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
             this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button1.ForeColor = System.Drawing.Color.OrangeRed;
-            this.button1.Location = new System.Drawing.Point(784, 0);
+            this.button1.Location = new System.Drawing.Point(672, 0);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(41, 30);
+            this.button1.Size = new System.Drawing.Size(35, 26);
             this.button1.TabIndex = 22;
             this.button1.Text = "X";
             this.button1.UseVisualStyleBackColor = true;
@@ -196,11 +193,11 @@ namespace vistas
             // 
             // label2
             // 
-            this.label2.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.label2.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Bold);
             this.label2.ForeColor = System.Drawing.SystemColors.ActiveCaption;
-            this.label2.Location = new System.Drawing.Point(12, 9);
+            this.label2.Location = new System.Drawing.Point(10, 8);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(120, 16);
+            this.label2.Size = new System.Drawing.Size(103, 14);
             this.label2.TabIndex = 4;
             this.label2.Text = "Nueva Categoria";
             // 
@@ -208,24 +205,24 @@ namespace vistas
             // 
             this.panel6.BackColor = System.Drawing.SystemColors.ControlDarkDark;
             this.panel6.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.panel6.Location = new System.Drawing.Point(0, 197);
+            this.panel6.Location = new System.Drawing.Point(0, 170);
             this.panel6.Name = "panel6";
-            this.panel6.Size = new System.Drawing.Size(825, 26);
+            this.panel6.Size = new System.Drawing.Size(707, 23);
             this.panel6.TabIndex = 11;
             // 
             // panel3
             // 
             this.panel3.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel3.Location = new System.Drawing.Point(0, 30);
+            this.panel3.Location = new System.Drawing.Point(0, 26);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(825, 193);
+            this.panel3.Size = new System.Drawing.Size(707, 167);
             this.panel3.TabIndex = 13;
             // 
             // v_nuevaCategoria
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(825, 223);
+            this.ClientSize = new System.Drawing.Size(707, 193);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.panel6);

@@ -11,3 +11,17 @@ C:\Users\darkz\source\33\AdminProd\vistas\bin\Debug\vistas.exe
 C:\Users\darkz\source\33\AdminProd\vistas\bin\Debug\vistas.pdb
 C:\Users\darkz\source\33\AdminProd\vistas\obj\Debug\vistas.exe
 C:\Users\darkz\source\33\AdminProd\vistas\obj\Debug\vistas.pdb
+E:\Git\Pointer-Bucks\AdminProductos\vistas\bin\Debug\vistas.exe.config
+E:\Git\Pointer-Bucks\AdminProductos\vistas\bin\Debug\vistas.exe
+E:\Git\Pointer-Bucks\AdminProductos\vistas\bin\Debug\vistas.pdb
+E:\Git\Pointer-Bucks\AdminProductos\vistas\obj\Debug\vistas.csprojAssemblyReference.cache
+E:\Git\Pointer-Bucks\AdminProductos\vistas\obj\Debug\vistas.Properties.Resources.resources
+E:\Git\Pointer-Bucks\AdminProductos\vistas\obj\Debug\vistas.v_nuevaCategoria.resources
+E:\Git\Pointer-Bucks\AdminProductos\vistas\obj\Debug\vistas.v_nuevaMarca.resources
+E:\Git\Pointer-Bucks\AdminProductos\vistas\obj\Debug\vistas.v_nuevoProducto.resources
+E:\Git\Pointer-Bucks\AdminProductos\vistas\obj\Debug\vistas.v_principal.resources
+E:\Git\Pointer-Bucks\AdminProductos\vistas\obj\Debug\vistas.v_productos.resources
+E:\Git\Pointer-Bucks\AdminProductos\vistas\obj\Debug\vistas.csproj.GenerateResource.cache
+E:\Git\Pointer-Bucks\AdminProductos\vistas\obj\Debug\vistas.csproj.CoreCompileInputs.cache
+E:\Git\Pointer-Bucks\AdminProductos\vistas\obj\Debug\vistas.exe
+E:\Git\Pointer-Bucks\AdminProductos\vistas\obj\Debug\vistas.pdb
