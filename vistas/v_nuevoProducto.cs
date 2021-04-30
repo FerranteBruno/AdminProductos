@@ -45,7 +45,8 @@ namespace vistas
         }
 
         #region --Funciones--
-        public bool checkControles(List<Control> listado)
+
+        public bool  checkControles(List<Control> listado)
         {
             int cont = 0;
             Control aux = new Control();

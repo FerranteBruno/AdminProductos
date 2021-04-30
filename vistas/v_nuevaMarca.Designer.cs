@@ -38,16 +38,22 @@ namespace vistas
             this.label1 = new System.Windows.Forms.Label();
             this.txtNombre = new System.Windows.Forms.TextBox();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.dgvMarcas = new System.Windows.Forms.DataGridView();
+            this.c_id = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.c_nombre = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.panel3 = new System.Windows.Forms.Panel();
+            this.btnEliminar = new System.Windows.Forms.Button();
+            this.panel4 = new System.Windows.Forms.Panel();
             this.panel5 = new System.Windows.Forms.Panel();
             this.btnNMarcaExit = new System.Windows.Forms.Button();
             this.label2 = new System.Windows.Forms.Label();
-            this.dgvMarcas = new System.Windows.Forms.DataGridView();
             this.panel1.SuspendLayout();
             this.panel8.SuspendLayout();
             this.panel10.SuspendLayout();
             this.panel2.SuspendLayout();
-            this.panel5.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvMarcas)).BeginInit();
+            this.panel3.SuspendLayout();
+            this.panel5.SuspendLayout();
             this.SuspendLayout();
             // 
             // panel6
@@ -141,16 +147,91 @@ namespace vistas
             this.txtNombre.Name = "txtNombre";
             this.txtNombre.Size = new System.Drawing.Size(286, 20);
             this.txtNombre.TabIndex = 17;
+            this.txtNombre.Click += new System.EventHandler(this.txtNombre_Click);
+            this.txtNombre.Leave += new System.EventHandler(this.txtNombre_Leave);
             // 
             // panel2
             // 
             this.panel2.Controls.Add(this.dgvMarcas);
+            this.panel2.Controls.Add(this.panel3);
+            this.panel2.Controls.Add(this.panel4);
             this.panel2.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel2.Location = new System.Drawing.Point(345, 26);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(362, 144);
             this.panel2.TabIndex = 15;
             this.panel2.Paint += new System.Windows.Forms.PaintEventHandler(this.panel2_Paint);
+            // 
+            // dgvMarcas
+            // 
+            this.dgvMarcas.AllowUserToAddRows = false;
+            this.dgvMarcas.AllowUserToDeleteRows = false;
+            this.dgvMarcas.BackgroundColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.dgvMarcas.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvMarcas.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.c_id,
+            this.c_nombre});
+            this.dgvMarcas.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.dgvMarcas.GridColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.dgvMarcas.Location = new System.Drawing.Point(0, 30);
+            this.dgvMarcas.Name = "dgvMarcas";
+            this.dgvMarcas.ReadOnly = true;
+            this.dgvMarcas.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.dgvMarcas.Size = new System.Drawing.Size(362, 77);
+            this.dgvMarcas.TabIndex = 0;
+            this.dgvMarcas.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvMarcas_CellClick);
+            this.dgvMarcas.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvMarcas_CellContentClick);
+            this.dgvMarcas.Leave += new System.EventHandler(this.dgvMarcas_Leave);
+            // 
+            // c_id
+            // 
+            this.c_id.DataPropertyName = "id";
+            this.c_id.HeaderText = "Id";
+            this.c_id.Name = "c_id";
+            this.c_id.ReadOnly = true;
+            // 
+            // c_nombre
+            // 
+            this.c_nombre.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.c_nombre.DataPropertyName = "Nombre";
+            this.c_nombre.HeaderText = "Nombre";
+            this.c_nombre.Name = "c_nombre";
+            this.c_nombre.ReadOnly = true;
+            // 
+            // panel3
+            // 
+            this.panel3.BackColor = System.Drawing.SystemColors.Desktop;
+            this.panel3.Controls.Add(this.btnEliminar);
+            this.panel3.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.panel3.Location = new System.Drawing.Point(0, 107);
+            this.panel3.Name = "panel3";
+            this.panel3.Size = new System.Drawing.Size(362, 37);
+            this.panel3.TabIndex = 13;
+            // 
+            // btnEliminar
+            // 
+            this.btnEliminar.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.btnEliminar.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnEliminar.Enabled = false;
+            this.btnEliminar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
+            this.btnEliminar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnEliminar.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.btnEliminar.Location = new System.Drawing.Point(122, 7);
+            this.btnEliminar.Name = "btnEliminar";
+            this.btnEliminar.Size = new System.Drawing.Size(119, 23);
+            this.btnEliminar.TabIndex = 21;
+            this.btnEliminar.Text = "Eliminar Marca";
+            this.btnEliminar.UseVisualStyleBackColor = true;
+            this.btnEliminar.Click += new System.EventHandler(this.btnEliminar_Click);
+            // 
+            // panel4
+            // 
+            this.panel4.BackColor = System.Drawing.SystemColors.Desktop;
+            this.panel4.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel4.Location = new System.Drawing.Point(0, 0);
+            this.panel4.Name = "panel4";
+            this.panel4.Size = new System.Drawing.Size(362, 30);
+            this.panel4.TabIndex = 14;
             // 
             // panel5
             // 
@@ -189,16 +270,6 @@ namespace vistas
             this.label2.Text = "Nueva Marca";
             this.label2.Click += new System.EventHandler(this.label2_Click);
             // 
-            // dgvMarcas
-            // 
-            this.dgvMarcas.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvMarcas.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.dgvMarcas.Location = new System.Drawing.Point(0, 0);
-            this.dgvMarcas.Name = "dgvMarcas";
-            this.dgvMarcas.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgvMarcas.Size = new System.Drawing.Size(362, 144);
-            this.dgvMarcas.TabIndex = 0;
-            // 
             // v_nuevaMarca
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -218,8 +289,9 @@ namespace vistas
             this.panel8.PerformLayout();
             this.panel10.ResumeLayout(false);
             this.panel2.ResumeLayout(false);
-            this.panel5.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dgvMarcas)).EndInit();
+            this.panel3.ResumeLayout(false);
+            this.panel5.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -239,5 +311,10 @@ namespace vistas
         private System.Windows.Forms.Button btnGuardar;
         private System.Windows.Forms.Button btnCancelar;
         private System.Windows.Forms.DataGridView dgvMarcas;
+        private System.Windows.Forms.DataGridViewTextBoxColumn c_id;
+        private System.Windows.Forms.DataGridViewTextBoxColumn c_nombre;
+        private System.Windows.Forms.Panel panel4;
+        private System.Windows.Forms.Panel panel3;
+        private System.Windows.Forms.Button btnEliminar;
     }
 }

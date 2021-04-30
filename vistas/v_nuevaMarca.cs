@@ -32,7 +32,7 @@ namespace vistas
             MarcaNegocio marc = new MarcaNegocio();
             dgvMarcas.DataSource = null;
             dgvMarcas.Rows.Clear();
-            dgvMarcas.AutoGenerateColumns = true;
+            dgvMarcas.AutoGenerateColumns = false;
             dgvMarcas.ClearSelection();
             dgvMarcas.DataSource = marc.listar();
         }
@@ -113,6 +113,48 @@ namespace vistas
         private void panel8_Paint(object sender, PaintEventArgs e)
         {
 
+        }
+
+        private void txtNombre_Click(object sender, EventArgs e)
+        {
+            txtNombre.Text = "";
+        }
+
+        private void txtNombre_Leave(object sender, EventArgs e)
+        {
+            if (txtNombre.Text == "")
+            {
+                txtNombre.Text = "--Ingrese una Marca--";
+            }
+        }
+
+        private void dgvMarcas_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+            
+        }
+
+        private void dgvMarcas_Leave(object sender, EventArgs e)
+        {
+            if (btnEliminar.Focused == false)
+            {
+                btnEliminar.Enabled = false;
+            }
+        }
+
+        private void dgvMarcas_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            btnEliminar.Enabled = true;
+        }
+
+        private void btnEliminar_Click(object sender, EventArgs e)
+        {
+            MarcaNegocio datos = new MarcaNegocio();
+
+            int eliminado = int.Parse(dgvMarcas.CurrentRow.Cells[0].Value.ToString());
+
+            datos.eliminar(eliminado);
+            MessageBox.Show("Marca Eliminada");
+            cargarMarcas();
         }
     }
 }

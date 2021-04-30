@@ -108,34 +108,18 @@ namespace negocio
             }
         }
 
-        public void eliminar(int id)
+        public void eliminar(int ID)
         {
             AccesoDatos datos = new AccesoDatos();
             try
             {
-                datos.setearConsulta("select ID, Nombre, Estado from Marcas");
-                datos.ejecutarLectura();
-
                 Marca aux = new Marca();
 
-                aux.ID = (int)datos.Lector["ID"];
-
-                if (aux.ID != id)
-                {
-                    datos.cerrarConexion();
-                    // return;???
-                }
-
-                if (aux.ID == id)
-                {
-                    aux.Estado = false;
-                }
+                aux.ID = ID;
+                aux.Estado = false;
 
                 datos.setearConsulta(
-                    "update Marcas" +
-                    " set" +
-                    " Estado = " + aux.Estado +
-                    "where ID = " + aux.ID
+                    "update Marcas set Estado = 0 where ID = " + aux.ID + ""
                     );
 
                 datos.ejectutarAccion();
