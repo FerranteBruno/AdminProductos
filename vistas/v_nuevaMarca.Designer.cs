@@ -39,17 +39,17 @@ namespace vistas
             this.txtNombre = new System.Windows.Forms.TextBox();
             this.panel2 = new System.Windows.Forms.Panel();
             this.pnlImagen = new System.Windows.Forms.Panel();
-            this.pbImagenProducto = new System.Windows.Forms.PictureBox();
             this.panel5 = new System.Windows.Forms.Panel();
             this.button3 = new System.Windows.Forms.Button();
             this.label2 = new System.Windows.Forms.Label();
+            this.pbImagenProducto = new System.Windows.Forms.PictureBox();
             this.panel1.SuspendLayout();
             this.panel8.SuspendLayout();
             this.panel10.SuspendLayout();
             this.panel2.SuspendLayout();
             this.pnlImagen.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pbImagenProducto)).BeginInit();
             this.panel5.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pbImagenProducto)).BeginInit();
             this.SuspendLayout();
             // 
             // panel6
@@ -101,9 +101,9 @@ namespace vistas
             this.btnGuardar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
             this.btnGuardar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnGuardar.ForeColor = System.Drawing.SystemColors.ActiveCaption;
-            this.btnGuardar.Location = new System.Drawing.Point(75, 8);
+            this.btnGuardar.Location = new System.Drawing.Point(75, 7);
             this.btnGuardar.Name = "btnGuardar";
-            this.btnGuardar.Size = new System.Drawing.Size(81, 20);
+            this.btnGuardar.Size = new System.Drawing.Size(81, 23);
             this.btnGuardar.TabIndex = 22;
             this.btnGuardar.Text = "Guardar";
             this.btnGuardar.UseVisualStyleBackColor = true;
@@ -115,9 +115,9 @@ namespace vistas
             this.btnCancelar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
             this.btnCancelar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnCancelar.ForeColor = System.Drawing.SystemColors.ActiveCaption;
-            this.btnCancelar.Location = new System.Drawing.Point(189, 8);
+            this.btnCancelar.Location = new System.Drawing.Point(189, 7);
             this.btnCancelar.Name = "btnCancelar";
-            this.btnCancelar.Size = new System.Drawing.Size(81, 20);
+            this.btnCancelar.Size = new System.Drawing.Size(81, 23);
             this.btnCancelar.TabIndex = 21;
             this.btnCancelar.Text = "Cancelar";
             this.btnCancelar.UseVisualStyleBackColor = true;
@@ -160,20 +160,6 @@ namespace vistas
             this.pnlImagen.Size = new System.Drawing.Size(239, 155);
             this.pnlImagen.TabIndex = 0;
             // 
-            // pbImagenProducto
-            // 
-            this.pbImagenProducto.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.pbImagenProducto.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.pbImagenProducto.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.pbImagenProducto.Image = global::vistas.Properties.Resources.logo;
-            this.pbImagenProducto.ImageLocation = "";
-            this.pbImagenProducto.Location = new System.Drawing.Point(0, 0);
-            this.pbImagenProducto.Name = "pbImagenProducto";
-            this.pbImagenProducto.Size = new System.Drawing.Size(239, 155);
-            this.pbImagenProducto.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pbImagenProducto.TabIndex = 0;
-            this.pbImagenProducto.TabStop = false;
-            // 
             // panel5
             // 
             this.panel5.BackColor = System.Drawing.SystemColors.ControlDarkDark;
@@ -211,6 +197,20 @@ namespace vistas
             this.label2.Text = "Nueva Marca";
             this.label2.Click += new System.EventHandler(this.label2_Click);
             // 
+            // pbImagenProducto
+            // 
+            this.pbImagenProducto.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.pbImagenProducto.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.pbImagenProducto.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.pbImagenProducto.Image = global::vistas.Properties.Resources.logo;
+            this.pbImagenProducto.ImageLocation = "";
+            this.pbImagenProducto.Location = new System.Drawing.Point(0, 0);
+            this.pbImagenProducto.Name = "pbImagenProducto";
+            this.pbImagenProducto.Size = new System.Drawing.Size(239, 155);
+            this.pbImagenProducto.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pbImagenProducto.TabIndex = 0;
+            this.pbImagenProducto.TabStop = false;
+            // 
             // v_nuevaMarca
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -230,8 +230,8 @@ namespace vistas
             this.panel10.ResumeLayout(false);
             this.panel2.ResumeLayout(false);
             this.pnlImagen.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.pbImagenProducto)).EndInit();
             this.panel5.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.pbImagenProducto)).EndInit();
             this.ResumeLayout(false);
 
         }

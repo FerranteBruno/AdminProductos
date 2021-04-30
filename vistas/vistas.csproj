@@ -122,5 +122,11 @@
   <ItemGroup>
     <None Include="Resources\logo1.png" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\more1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\giferror21.gif" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
