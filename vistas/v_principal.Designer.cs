@@ -260,7 +260,7 @@ namespace vistas
             this.btnNuevaMarca.Padding = new System.Windows.Forms.Padding(30, 0, 0, 0);
             this.btnNuevaMarca.Size = new System.Drawing.Size(200, 33);
             this.btnNuevaMarca.TabIndex = 4;
-            this.btnNuevaMarca.Text = "Nueva Marca";
+            this.btnNuevaMarca.Text = "Marcas";
             this.btnNuevaMarca.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnNuevaMarca.UseVisualStyleBackColor = true;
             this.btnNuevaMarca.Click += new System.EventHandler(this.btnNuevaMarca_Click);
@@ -277,7 +277,7 @@ namespace vistas
             this.btnNuevaCategoria.Padding = new System.Windows.Forms.Padding(30, 0, 0, 0);
             this.btnNuevaCategoria.Size = new System.Drawing.Size(200, 33);
             this.btnNuevaCategoria.TabIndex = 3;
-            this.btnNuevaCategoria.Text = "Nueva Categoría";
+            this.btnNuevaCategoria.Text = "Categorías";
             this.btnNuevaCategoria.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnNuevaCategoria.UseVisualStyleBackColor = true;
             this.btnNuevaCategoria.Click += new System.EventHandler(this.btnNuevaCategoria_Click);
