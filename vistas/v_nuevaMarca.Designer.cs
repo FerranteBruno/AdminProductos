@@ -263,11 +263,11 @@ namespace vistas
             // 
             this.label2.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Bold);
             this.label2.ForeColor = System.Drawing.SystemColors.ActiveCaption;
-            this.label2.Location = new System.Drawing.Point(10, 8);
+            this.label2.Location = new System.Drawing.Point(3, 5);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(103, 14);
             this.label2.TabIndex = 4;
-            this.label2.Text = "Nueva Marca";
+            this.label2.Text = "Marca";
             this.label2.Click += new System.EventHandler(this.label2_Click);
             // 
             // v_nuevaMarca

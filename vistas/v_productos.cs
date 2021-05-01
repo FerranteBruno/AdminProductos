@@ -83,7 +83,11 @@ namespace vistas
         {
             Producto prod = (Producto)dgvProductos.CurrentRow.DataBoundItem;
 
-            eliminarProducto(prod);
+            var result = MessageBox.Show("Eliminar producto?", "Eliminar Producto", MessageBoxButtons.YesNo);
+            if (result == DialogResult.Yes)
+            {
+                eliminarProducto(prod);
+            }
         }
     }
 }

@@ -152,8 +152,11 @@ namespace vistas
 
             int eliminado = int.Parse(dgvMarcas.CurrentRow.Cells[0].Value.ToString());
 
-            datos.eliminar(eliminado);
-            MessageBox.Show("Marca Eliminada");
+            var result = MessageBox.Show("Eliminar marca?", "Eliminar Marca", MessageBoxButtons.YesNo);
+            if ( result == DialogResult.Yes)
+            {
+                datos.eliminar(eliminado);
+            }
             cargarMarcas();
         }
     }

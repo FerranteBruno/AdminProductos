@@ -1,11 +1,10 @@
-C:\Users\darkz\source\repos\AdminProd\AdminProductos\dominio\bin\Debug\dominio.dll
-C:\Users\darkz\source\repos\AdminProd\AdminProductos\dominio\bin\Debug\dominio.pdb
-C:\Users\darkz\source\repos\AdminProd\AdminProductos\dominio\obj\Debug\dominio.csprojAssemblyReference.cache
-C:\Users\darkz\source\repos\AdminProd\AdminProductos\dominio\obj\Debug\dominio.csproj.CoreCompileInputs.cache
-C:\Users\darkz\source\repos\AdminProd\AdminProductos\dominio\obj\Debug\dominio.dll
-C:\Users\darkz\source\repos\AdminProd\AdminProductos\dominio\obj\Debug\dominio.pdb
 E:\Git\Pointer-Bucks\AdminProductos\dominio\bin\Debug\dominio.dll
 E:\Git\Pointer-Bucks\AdminProductos\dominio\bin\Debug\dominio.pdb
 E:\Git\Pointer-Bucks\AdminProductos\dominio\obj\Debug\dominio.csproj.CoreCompileInputs.cache
 E:\Git\Pointer-Bucks\AdminProductos\dominio\obj\Debug\dominio.dll
 E:\Git\Pointer-Bucks\AdminProductos\dominio\obj\Debug\dominio.pdb
+C:\Users\darkz\source\repos\AdminProd\AdminProductos\dominio\bin\Debug\dominio.dll
+C:\Users\darkz\source\repos\AdminProd\AdminProductos\dominio\bin\Debug\dominio.pdb
+C:\Users\darkz\source\repos\AdminProd\AdminProductos\dominio\obj\Debug\dominio.csproj.CoreCompileInputs.cache
+C:\Users\darkz\source\repos\AdminProd\AdminProductos\dominio\obj\Debug\dominio.dll
+C:\Users\darkz\source\repos\AdminProd\AdminProductos\dominio\obj\Debug\dominio.pdb

@@ -28,8 +28,12 @@ namespace negocio
 
                     aux.ID = (int)datos.Lector["ID"];
                     aux.Nombre = (string)datos.Lector["Descripcion"];
+                    aux.Estado = (bool)datos.Lector["Estado"];
 
-                    lista.Add(aux);
+                    if (aux.Estado != false)
+                    {
+                        lista.Add(aux);
+                    }
                 }
 
                 return lista;
@@ -104,35 +108,18 @@ namespace negocio
             }
         }
 
-        public void eliminar(int id)
+        public void eliminar(int ID)
         {
             AccesoDatos datos = new AccesoDatos();
             try
             {
-                datos.setearConsulta("select ID, Nombre, Estado from Categorias");
-                datos.ejecutarLectura();
-
                 Categoria aux = new Categoria();
 
-                aux.ID = (int)datos.Lector["ID"];
-
-                if (aux.ID != id)
-                {
-                    datos.cerrarConexion();
-                    // return;???
-                }
-
-                if (aux.ID == id)
-                {
-                    aux.Estado = false;
-                }
+                aux.ID = ID;
+                aux.Estado = false;
 
                 datos.setearConsulta(
-                    "update Categorias" +
-                    " set" +
-                    " Estado = " + aux.Estado +
-                    "where ID = " + aux.ID
-                    );
+                    "update Categorias set Estado = 0 where ID = " + aux.ID );
 
                 datos.ejectutarAccion();
 

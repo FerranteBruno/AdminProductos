@@ -119,8 +119,7 @@ namespace negocio
                 aux.Estado = false;
 
                 datos.setearConsulta(
-                    "update Marcas set Estado = 0 where ID = " + aux.ID + ""
-                    );
+                    "update Marcas set Estado = 0 where ID = " + aux.ID );
 
                 datos.ejectutarAccion();
 

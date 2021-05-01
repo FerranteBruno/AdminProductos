@@ -24,6 +24,17 @@ namespace vistas
         {
             InitializeComponent();
             cat = aux;
+            label2.Text = "Modificar Categoría";
+        }
+
+        private void cargarCategorias()
+        {
+            CategoriaNegocio cat = new CategoriaNegocio();
+            dgvCategorias.DataSource = null;
+            dgvCategorias.Rows.Clear();
+            dgvCategorias.AutoGenerateColumns = false;
+            dgvCategorias.ClearSelection();
+            dgvCategorias.DataSource = cat.listar();
         }
 
         private void button1_Click(object sender, EventArgs e)
@@ -39,7 +50,8 @@ namespace vistas
 
         private void v_nuevaCategoria_Load(object sender, EventArgs e)
         {
-            txtNombre.Text = "--Ingrese una Categoria--";
+            cargarCategorias();
+            txtNombre.Text = "--Ingrese una Categoría--";
 
             if (cat != null)
             {
@@ -55,7 +67,7 @@ namespace vistas
             categoria.Estado = true;
 
             datos.agregar(categoria);
-            MessageBox.Show("Categoria Guardada");
+            MessageBox.Show("Categoría Guardada");
             txtNombre.Text = "";
         }
 
@@ -72,7 +84,7 @@ namespace vistas
             categoria.Estado = true;
 
             datos.modificar(categoria);
-            MessageBox.Show("Categoria Modificada");
+            MessageBox.Show("Categoría Modificada");
             txtNombre.Text = "";
         }
 
@@ -86,6 +98,60 @@ namespace vistas
             {
                 modificarCategoria();
             }
+        }
+
+        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
+
+        private void panel2_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void label2_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txtNombre_Leave(object sender, EventArgs e)
+        {
+            if (txtNombre.Text == "")
+            {
+                txtNombre.Text = "--Ingrese una Categoría--";
+            }
+        }
+
+        private void dgvCategorias_Leave(object sender, EventArgs e)
+        {
+            if (btnEliminar.Focused == false)
+            {
+                btnEliminar.Enabled = false;
+            }
+        }
+
+        private void txtNombre_Click(object sender, EventArgs e)
+        {
+            txtNombre.Text = "";
+        }
+
+        private void btnEliminar_Click(object sender, EventArgs e)
+        {
+            CategoriaNegocio datos = new CategoriaNegocio();
+
+            int eliminado = int.Parse(dgvCategorias.CurrentRow.Cells[0].Value.ToString());
+
+            var result = MessageBox.Show("Eliminar categoría?", "Eliminar Categoría", MessageBoxButtons.YesNo);
+            if (result == DialogResult.Yes)
+            {
+                datos.eliminar(eliminado);
+            }
+        }
+
+        private void dgvCategorias_Click(object sender, EventArgs e)
+        {
+            btnEliminar.Enabled = true;
         }
     }
 }
