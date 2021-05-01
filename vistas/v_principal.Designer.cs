@@ -100,7 +100,7 @@ namespace vistas
             this.panel3.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel3.Location = new System.Drawing.Point(0, 0);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(200, 163);
+            this.panel3.Size = new System.Drawing.Size(160, 163);
             this.panel3.TabIndex = 0;
             // 
             // pictureBox1
@@ -110,7 +110,7 @@ namespace vistas
             this.pictureBox1.Image = global::vistas.Properties.Resources.logo1;
             this.pictureBox1.Location = new System.Drawing.Point(0, 0);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(200, 163);
+            this.pictureBox1.Size = new System.Drawing.Size(160, 163);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox1.TabIndex = 0;
             this.pictureBox1.TabStop = false;
@@ -127,7 +127,7 @@ namespace vistas
             this.btnVer.Location = new System.Drawing.Point(0, 163);
             this.btnVer.Name = "btnVer";
             this.btnVer.Padding = new System.Windows.Forms.Padding(13, 0, 0, 0);
-            this.btnVer.Size = new System.Drawing.Size(200, 33);
+            this.btnVer.Size = new System.Drawing.Size(160, 33);
             this.btnVer.TabIndex = 1;
             this.btnVer.Text = "Ver";
             this.btnVer.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -142,7 +142,7 @@ namespace vistas
             this.pnlVer.Dock = System.Windows.Forms.DockStyle.Top;
             this.pnlVer.Location = new System.Drawing.Point(0, 196);
             this.pnlVer.Name = "pnlVer";
-            this.pnlVer.Size = new System.Drawing.Size(200, 34);
+            this.pnlVer.Size = new System.Drawing.Size(160, 34);
             this.pnlVer.TabIndex = 2;
             this.pnlVer.Visible = false;
             this.pnlVer.Paint += new System.Windows.Forms.PaintEventHandler(this.panel4_Paint);
@@ -157,7 +157,7 @@ namespace vistas
             this.btnProductos.Location = new System.Drawing.Point(0, 0);
             this.btnProductos.Name = "btnProductos";
             this.btnProductos.Padding = new System.Windows.Forms.Padding(30, 0, 0, 0);
-            this.btnProductos.Size = new System.Drawing.Size(200, 33);
+            this.btnProductos.Size = new System.Drawing.Size(160, 33);
             this.btnProductos.TabIndex = 2;
             this.btnProductos.Text = "Productos";
             this.btnProductos.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -175,7 +175,7 @@ namespace vistas
             this.panel1.Dock = System.Windows.Forms.DockStyle.Left;
             this.panel1.Location = new System.Drawing.Point(0, 24);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(200, 501);
+            this.panel1.Size = new System.Drawing.Size(160, 501);
             this.panel1.TabIndex = 0;
             // 
             // pnlAdministracion
@@ -188,7 +188,7 @@ namespace vistas
             this.pnlAdministracion.Dock = System.Windows.Forms.DockStyle.Top;
             this.pnlAdministracion.Location = new System.Drawing.Point(0, 263);
             this.pnlAdministracion.Name = "pnlAdministracion";
-            this.pnlAdministracion.Size = new System.Drawing.Size(200, 99);
+            this.pnlAdministracion.Size = new System.Drawing.Size(160, 99);
             this.pnlAdministracion.TabIndex = 4;
             this.pnlAdministracion.Visible = false;
             // 
@@ -202,7 +202,7 @@ namespace vistas
             this.btnNuevoProducto.Location = new System.Drawing.Point(0, 0);
             this.btnNuevoProducto.Name = "btnNuevoProducto";
             this.btnNuevoProducto.Padding = new System.Windows.Forms.Padding(30, 0, 0, 0);
-            this.btnNuevoProducto.Size = new System.Drawing.Size(200, 33);
+            this.btnNuevoProducto.Size = new System.Drawing.Size(160, 33);
             this.btnNuevoProducto.TabIndex = 2;
             this.btnNuevoProducto.Text = "Nuevo Producto";
             this.btnNuevoProducto.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -220,7 +220,7 @@ namespace vistas
             this.btnAdministracion.Location = new System.Drawing.Point(0, 230);
             this.btnAdministracion.Name = "btnAdministracion";
             this.btnAdministracion.Padding = new System.Windows.Forms.Padding(13, 0, 0, 0);
-            this.btnAdministracion.Size = new System.Drawing.Size(200, 33);
+            this.btnAdministracion.Size = new System.Drawing.Size(160, 33);
             this.btnAdministracion.TabIndex = 3;
             this.btnAdministracion.Text = "Administracion";
             this.btnAdministracion.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -231,9 +231,9 @@ namespace vistas
             // 
             this.pnlContenedor.Controls.Add(this.pictureBox2);
             this.pnlContenedor.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.pnlContenedor.Location = new System.Drawing.Point(200, 24);
+            this.pnlContenedor.Location = new System.Drawing.Point(160, 24);
             this.pnlContenedor.Name = "pnlContenedor";
-            this.pnlContenedor.Size = new System.Drawing.Size(720, 501);
+            this.pnlContenedor.Size = new System.Drawing.Size(760, 501);
             this.pnlContenedor.TabIndex = 2;
             // 
             // pictureBox2
@@ -241,7 +241,7 @@ namespace vistas
             this.pictureBox2.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.pictureBox2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.pictureBox2.Image = global::vistas.Properties.Resources.logo;
-            this.pictureBox2.Location = new System.Drawing.Point(161, 105);
+            this.pictureBox2.Location = new System.Drawing.Point(181, 105);
             this.pictureBox2.Name = "pictureBox2";
             this.pictureBox2.Size = new System.Drawing.Size(398, 270);
             this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -258,7 +258,7 @@ namespace vistas
             this.btnNuevaMarca.Location = new System.Drawing.Point(0, 66);
             this.btnNuevaMarca.Name = "btnNuevaMarca";
             this.btnNuevaMarca.Padding = new System.Windows.Forms.Padding(30, 0, 0, 0);
-            this.btnNuevaMarca.Size = new System.Drawing.Size(200, 33);
+            this.btnNuevaMarca.Size = new System.Drawing.Size(160, 33);
             this.btnNuevaMarca.TabIndex = 4;
             this.btnNuevaMarca.Text = "Marcas";
             this.btnNuevaMarca.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -275,7 +275,7 @@ namespace vistas
             this.btnNuevaCategoria.Location = new System.Drawing.Point(0, 33);
             this.btnNuevaCategoria.Name = "btnNuevaCategoria";
             this.btnNuevaCategoria.Padding = new System.Windows.Forms.Padding(30, 0, 0, 0);
-            this.btnNuevaCategoria.Size = new System.Drawing.Size(200, 33);
+            this.btnNuevaCategoria.Size = new System.Drawing.Size(160, 33);
             this.btnNuevaCategoria.TabIndex = 3;
             this.btnNuevaCategoria.Text = "Categorías";
             this.btnNuevaCategoria.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;

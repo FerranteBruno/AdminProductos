@@ -91,7 +91,7 @@ namespace vistas
             this.panel2.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel2.Location = new System.Drawing.Point(0, 62);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(544, 287);
+            this.panel2.Size = new System.Drawing.Size(597, 287);
             this.panel2.TabIndex = 1;
             // 
             // dgvProductos
@@ -117,7 +117,7 @@ namespace vistas
             this.dgvProductos.ReadOnly = true;
             this.dgvProductos.RowTemplate.Height = 25;
             this.dgvProductos.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgvProductos.Size = new System.Drawing.Size(544, 287);
+            this.dgvProductos.Size = new System.Drawing.Size(597, 287);
             this.dgvProductos.TabIndex = 0;
             this.dgvProductos.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvProductos_CellClick);
             // 
@@ -205,7 +205,7 @@ namespace vistas
             this.panel3.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.panel3.Location = new System.Drawing.Point(0, 349);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(544, 108);
+            this.panel3.Size = new System.Drawing.Size(597, 108);
             this.panel3.TabIndex = 2;
             // 
             // pnlDatosProducto
@@ -219,7 +219,7 @@ namespace vistas
             this.pnlDatosProducto.Dock = System.Windows.Forms.DockStyle.Fill;
             this.pnlDatosProducto.Location = new System.Drawing.Point(0, 0);
             this.pnlDatosProducto.Name = "pnlDatosProducto";
-            this.pnlDatosProducto.Size = new System.Drawing.Size(544, 108);
+            this.pnlDatosProducto.Size = new System.Drawing.Size(597, 108);
             this.pnlDatosProducto.TabIndex = 24;
             // 
             // panel8
@@ -238,7 +238,7 @@ namespace vistas
             this.panel8.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel8.Location = new System.Drawing.Point(0, 0);
             this.panel8.Name = "panel8";
-            this.panel8.Size = new System.Drawing.Size(544, 108);
+            this.panel8.Size = new System.Drawing.Size(597, 108);
             this.panel8.TabIndex = 27;
             // 
             // lblPrecio
@@ -247,7 +247,7 @@ namespace vistas
             this.lblPrecio.BackColor = System.Drawing.SystemColors.ButtonHighlight;
             this.lblPrecio.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Bold);
             this.lblPrecio.ForeColor = System.Drawing.SystemColors.ActiveCaption;
-            this.lblPrecio.Location = new System.Drawing.Point(183, 77);
+            this.lblPrecio.Location = new System.Drawing.Point(236, 77);
             this.lblPrecio.Name = "lblPrecio";
             this.lblPrecio.Padding = new System.Windows.Forms.Padding(13, 0, 0, 0);
             this.lblPrecio.Size = new System.Drawing.Size(153, 21);
@@ -264,7 +264,7 @@ namespace vistas
             this.lblMarca.Location = new System.Drawing.Point(15, 76);
             this.lblMarca.Name = "lblMarca";
             this.lblMarca.Padding = new System.Windows.Forms.Padding(13, 0, 0, 0);
-            this.lblMarca.Size = new System.Drawing.Size(153, 21);
+            this.lblMarca.Size = new System.Drawing.Size(206, 21);
             this.lblMarca.TabIndex = 30;
             this.lblMarca.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
@@ -274,7 +274,7 @@ namespace vistas
             this.label16.BackColor = System.Drawing.SystemColors.ActiveBorder;
             this.label16.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Bold);
             this.label16.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.label16.Location = new System.Drawing.Point(183, 56);
+            this.label16.Location = new System.Drawing.Point(236, 56);
             this.label16.Name = "label16";
             this.label16.Padding = new System.Windows.Forms.Padding(9, 0, 0, 0);
             this.label16.Size = new System.Drawing.Size(153, 21);
@@ -292,7 +292,7 @@ namespace vistas
             this.label10.Location = new System.Drawing.Point(15, 55);
             this.label10.Name = "label10";
             this.label10.Padding = new System.Windows.Forms.Padding(9, 0, 0, 0);
-            this.label10.Size = new System.Drawing.Size(153, 21);
+            this.label10.Size = new System.Drawing.Size(206, 21);
             this.label10.TabIndex = 29;
             this.label10.Text = "Marca:";
             this.label10.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -303,7 +303,7 @@ namespace vistas
             this.lblDescripcion.BackColor = System.Drawing.SystemColors.ButtonHighlight;
             this.lblDescripcion.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Bold);
             this.lblDescripcion.ForeColor = System.Drawing.SystemColors.ActiveCaption;
-            this.lblDescripcion.Location = new System.Drawing.Point(352, 30);
+            this.lblDescripcion.Location = new System.Drawing.Point(405, 30);
             this.lblDescripcion.Name = "lblDescripcion";
             this.lblDescripcion.Padding = new System.Windows.Forms.Padding(13, 0, 0, 0);
             this.lblDescripcion.Size = new System.Drawing.Size(177, 68);
@@ -315,7 +315,7 @@ namespace vistas
             this.label17.BackColor = System.Drawing.SystemColors.ActiveBorder;
             this.label17.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Bold);
             this.label17.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.label17.Location = new System.Drawing.Point(352, 10);
+            this.label17.Location = new System.Drawing.Point(405, 10);
             this.label17.Name = "label17";
             this.label17.Padding = new System.Windows.Forms.Padding(9, 0, 0, 0);
             this.label17.Size = new System.Drawing.Size(177, 21);
@@ -329,7 +329,7 @@ namespace vistas
             this.lblCategoria.BackColor = System.Drawing.SystemColors.ButtonHighlight;
             this.lblCategoria.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Bold);
             this.lblCategoria.ForeColor = System.Drawing.SystemColors.ActiveCaption;
-            this.lblCategoria.Location = new System.Drawing.Point(183, 31);
+            this.lblCategoria.Location = new System.Drawing.Point(236, 31);
             this.lblCategoria.Name = "lblCategoria";
             this.lblCategoria.Padding = new System.Windows.Forms.Padding(13, 0, 0, 0);
             this.lblCategoria.Size = new System.Drawing.Size(153, 21);
@@ -342,7 +342,7 @@ namespace vistas
             this.label13.BackColor = System.Drawing.SystemColors.ActiveBorder;
             this.label13.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Bold);
             this.label13.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.label13.Location = new System.Drawing.Point(183, 10);
+            this.label13.Location = new System.Drawing.Point(236, 10);
             this.label13.Name = "label13";
             this.label13.Padding = new System.Windows.Forms.Padding(9, 0, 0, 0);
             this.label13.Size = new System.Drawing.Size(153, 21);
@@ -360,7 +360,7 @@ namespace vistas
             this.lblNombre.Location = new System.Drawing.Point(15, 30);
             this.lblNombre.Name = "lblNombre";
             this.lblNombre.Padding = new System.Windows.Forms.Padding(13, 0, 0, 0);
-            this.lblNombre.Size = new System.Drawing.Size(153, 21);
+            this.lblNombre.Size = new System.Drawing.Size(206, 21);
             this.lblNombre.TabIndex = 28;
             this.lblNombre.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
@@ -374,7 +374,7 @@ namespace vistas
             this.label12.Location = new System.Drawing.Point(15, 10);
             this.label12.Name = "label12";
             this.label12.Padding = new System.Windows.Forms.Padding(9, 0, 0, 0);
-            this.label12.Size = new System.Drawing.Size(153, 21);
+            this.label12.Size = new System.Drawing.Size(206, 21);
             this.label12.TabIndex = 25;
             this.label12.Text = "Nombre:";
             this.label12.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -453,7 +453,7 @@ namespace vistas
             this.panel1.Controls.Add(this.btnModificar);
             this.panel1.Controls.Add(this.btnEliminar);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Right;
-            this.panel1.Location = new System.Drawing.Point(544, 62);
+            this.panel1.Location = new System.Drawing.Point(597, 62);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(163, 395);
             this.panel1.TabIndex = 0;
@@ -499,13 +499,13 @@ namespace vistas
             this.panel5.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel5.Location = new System.Drawing.Point(0, 26);
             this.panel5.Name = "panel5";
-            this.panel5.Size = new System.Drawing.Size(707, 36);
+            this.panel5.Size = new System.Drawing.Size(760, 36);
             this.panel5.TabIndex = 3;
             // 
             // comboBox3
             // 
             this.comboBox3.FormattingEnabled = true;
-            this.comboBox3.Location = new System.Drawing.Point(593, 8);
+            this.comboBox3.Location = new System.Drawing.Point(644, 8);
             this.comboBox3.Name = "comboBox3";
             this.comboBox3.Size = new System.Drawing.Size(104, 21);
             this.comboBox3.TabIndex = 27;
@@ -514,16 +514,16 @@ namespace vistas
             // 
             this.label6.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Bold);
             this.label6.ForeColor = System.Drawing.SystemColors.ControlDark;
-            this.label6.Location = new System.Drawing.Point(529, 10);
+            this.label6.Location = new System.Drawing.Point(558, 8);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(59, 14);
+            this.label6.Size = new System.Drawing.Size(80, 19);
             this.label6.TabIndex = 26;
             this.label6.Text = "Categoria";
             // 
             // comboBox2
             // 
             this.comboBox2.FormattingEnabled = true;
-            this.comboBox2.Location = new System.Drawing.Point(400, 8);
+            this.comboBox2.Location = new System.Drawing.Point(447, 9);
             this.comboBox2.Name = "comboBox2";
             this.comboBox2.Size = new System.Drawing.Size(104, 21);
             this.comboBox2.TabIndex = 25;
@@ -532,11 +532,12 @@ namespace vistas
             // 
             this.label5.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Bold);
             this.label5.ForeColor = System.Drawing.SystemColors.ControlDark;
-            this.label5.Location = new System.Drawing.Point(357, 10);
+            this.label5.Location = new System.Drawing.Point(377, 9);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(47, 14);
+            this.label5.Size = new System.Drawing.Size(47, 19);
             this.label5.TabIndex = 24;
             this.label5.Text = "Marca";
+            this.label5.Click += new System.EventHandler(this.label5_Click);
             // 
             // btnGuardar
             // 
@@ -544,12 +545,13 @@ namespace vistas
             this.btnGuardar.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnGuardar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnGuardar.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.btnGuardar.Location = new System.Drawing.Point(280, 8);
+            this.btnGuardar.Location = new System.Drawing.Point(280, 6);
             this.btnGuardar.Name = "btnGuardar";
-            this.btnGuardar.Size = new System.Drawing.Size(64, 20);
+            this.btnGuardar.Size = new System.Drawing.Size(64, 25);
             this.btnGuardar.TabIndex = 23;
             this.btnGuardar.Text = "Buscar";
             this.btnGuardar.UseVisualStyleBackColor = true;
+            this.btnGuardar.Click += new System.EventHandler(this.btnGuardar_Click);
             // 
             // label2
             // 
@@ -575,7 +577,7 @@ namespace vistas
             this.panel6.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel6.Location = new System.Drawing.Point(0, 0);
             this.panel6.Name = "panel6";
-            this.panel6.Size = new System.Drawing.Size(707, 26);
+            this.panel6.Size = new System.Drawing.Size(760, 26);
             this.panel6.TabIndex = 4;
             // 
             // label1
@@ -593,7 +595,7 @@ namespace vistas
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.ClientSize = new System.Drawing.Size(707, 457);
+            this.ClientSize = new System.Drawing.Size(760, 457);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel3);
             this.Controls.Add(this.panel1);
