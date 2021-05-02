@@ -36,6 +36,9 @@ namespace vistas
         {
             InitializeComponent();
             cat = aux;
+            pnlGrid.Visible = false;
+            this.Width = 345;
+            this.Height = 177;
             label2.Text = "Modificar Categoría";
         }
 
@@ -187,7 +190,7 @@ namespace vistas
         {
             if (btnModificar.Enabled)
             {
-                btnModificar.BackColor = Color.DarkViolet;
+                btnModificar.BackColor = Color.Black;
                 btnModificar.ForeColor = Color.DeepSkyBlue;
             }
             else
@@ -195,6 +198,18 @@ namespace vistas
                 btnModificar.BackColor = Color.White;
                 btnModificar.ForeColor = SystemColors.ControlText;
             }
+        }
+
+        private void btnModificar_Click(object sender, EventArgs e)
+        {
+            Categoria cat = (Categoria)dgvCategorias.CurrentRow.DataBoundItem;
+
+            v_nuevaCategoria catmod = new v_nuevaCategoria(cat);
+
+            catmod.ShowDialog();
+            cargarCategorias();
+
+
         }
     }
 }

@@ -372,6 +372,8 @@ namespace vistas
             // 
             // txtDescripcion
             // 
+            this.txtDescripcion.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.txtDescripcion.Location = new System.Drawing.Point(21, 24);
             this.txtDescripcion.Multiline = true;
             this.txtDescripcion.Name = "txtDescripcion";
@@ -424,7 +426,7 @@ namespace vistas
             // 
             // panel4
             // 
-            this.panel4.BackColor = System.Drawing.Color.Gainsboro;
+            this.panel4.BackColor = System.Drawing.SystemColors.ControlDarkDark;
             this.panel4.Controls.Add(this.label2);
             this.panel4.Controls.Add(this.txtDescripcion);
             this.panel4.Dock = System.Windows.Forms.DockStyle.Bottom;
@@ -444,7 +446,7 @@ namespace vistas
             // 
             // panel5
             // 
-            this.panel5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(69)))), ((int)(((byte)(15)))), ((int)(((byte)(4)))));
+            this.panel5.BackColor = System.Drawing.Color.Black;
             this.panel5.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.panel5.Location = new System.Drawing.Point(345, 415);
             this.panel5.Name = "panel5";
@@ -453,7 +455,7 @@ namespace vistas
             // 
             // panel6
             // 
-            this.panel6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(69)))), ((int)(((byte)(15)))), ((int)(((byte)(4)))));
+            this.panel6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(45)))), ((int)(((byte)(48)))));
             this.panel6.Controls.Add(this.lblTitulo);
             this.panel6.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel6.Location = new System.Drawing.Point(0, 0);
@@ -463,16 +465,16 @@ namespace vistas
             // 
             // lblTitulo
             // 
-            this.lblTitulo.Dock = System.Windows.Forms.DockStyle.Left;
+            this.lblTitulo.Dock = System.Windows.Forms.DockStyle.Fill;
             this.lblTitulo.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblTitulo.ForeColor = System.Drawing.SystemColors.ActiveCaption;
             this.lblTitulo.Location = new System.Drawing.Point(0, 0);
             this.lblTitulo.Name = "lblTitulo";
             this.lblTitulo.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
-            this.lblTitulo.Size = new System.Drawing.Size(140, 31);
+            this.lblTitulo.Size = new System.Drawing.Size(707, 31);
             this.lblTitulo.TabIndex = 16;
             this.lblTitulo.Text = "Nuevo Producto";
-            this.lblTitulo.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.lblTitulo.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // v_nuevoProducto
             // 

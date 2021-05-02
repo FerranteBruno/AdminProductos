@@ -43,10 +43,10 @@ namespace vistas
             this.c_ID = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.c_Nombre = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.panel4 = new System.Windows.Forms.Panel();
+            this.btnModificar = new System.Windows.Forms.Button();
             this.btnEliminar = new System.Windows.Forms.Button();
             this.pnlGrid = new System.Windows.Forms.Panel();
             this.panel7 = new System.Windows.Forms.Panel();
-            this.btnModificar = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             this.panel8.SuspendLayout();
             this.panel10.SuspendLayout();
@@ -219,6 +219,24 @@ namespace vistas
             this.panel4.Size = new System.Drawing.Size(224, 153);
             this.panel4.TabIndex = 26;
             // 
+            // btnModificar
+            // 
+            this.btnModificar.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.btnModificar.BackColor = System.Drawing.Color.White;
+            this.btnModificar.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnModificar.Enabled = false;
+            this.btnModificar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Fuchsia;
+            this.btnModificar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnModificar.ForeColor = System.Drawing.Color.DeepSkyBlue;
+            this.btnModificar.Location = new System.Drawing.Point(44, 88);
+            this.btnModificar.Name = "btnModificar";
+            this.btnModificar.Size = new System.Drawing.Size(133, 23);
+            this.btnModificar.TabIndex = 22;
+            this.btnModificar.Text = "Modificar Categoría";
+            this.btnModificar.UseVisualStyleBackColor = false;
+            this.btnModificar.EnabledChanged += new System.EventHandler(this.btnModificar_EnabledChanged);
+            this.btnModificar.Click += new System.EventHandler(this.btnModificar_Click);
+            // 
             // btnEliminar
             // 
             this.btnEliminar.Anchor = System.Windows.Forms.AnchorStyles.None;
@@ -258,24 +276,6 @@ namespace vistas
             this.panel7.Name = "panel7";
             this.panel7.Size = new System.Drawing.Size(793, 30);
             this.panel7.TabIndex = 27;
-            // 
-            // btnModificar
-            // 
-            this.btnModificar.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.btnModificar.BackColor = System.Drawing.Color.White;
-            this.btnModificar.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnModificar.Enabled = false;
-            this.btnModificar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Lime;
-            this.btnModificar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnModificar.ForeColor = System.Drawing.Color.Black;
-            this.btnModificar.Location = new System.Drawing.Point(44, 88);
-            this.btnModificar.Name = "btnModificar";
-            this.btnModificar.Size = new System.Drawing.Size(133, 23);
-            this.btnModificar.TabIndex = 22;
-            this.btnModificar.Text = "Modificar Categoría";
-            this.btnModificar.UseVisualStyleBackColor = false;
-            this.btnModificar.EnabledChanged += new System.EventHandler(this.btnModificar_EnabledChanged);
-            this.btnModificar.Click += new System.EventHandler(this.btnEliminar_Click);
             // 
             // v_nuevaCategoria
             // 

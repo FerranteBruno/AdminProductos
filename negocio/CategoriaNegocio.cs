@@ -92,8 +92,7 @@ namespace negocio
                     + modificar.Estado + ")";*/
 
                 datos.setearConsulta(
-                    "update Categorias set Descripcion = '" + modificar.Nombre + "', where ID = " + modificar.ID
-                    );
+                    "update Categorias set Descripcion = '" + modificar.Nombre + "' where ID = " + modificar.ID);
 
                 datos.ejectutarAccion();
 

@@ -79,21 +79,8 @@ namespace negocio
             try
             {
 
-                /*string valores = "values("
-                    + modificar.Codigo + ", '"
-                    + modificar.Nombre + "', '"
-                    + modificar.Descripcion + "', '"
-                    + modificar.UrlImagen + "', "
-                    + modificar.Marca.ID + "', '"
-                    + modificar.Categoria.ID + "', '"
-                    + modificar.UrlImagen + "', '"
-                    + modificar.Precio + "', '"
-                    + modificar.Stock + "', '"
-                    + modificar.Estado + ")";*/
-
                 datos.setearConsulta(
-                    "update Marcas set Descripcion = '" + modificar.Nombre + "', where ID = " + modificar.ID
-                    );
+                    "update Marcas set Descripcion = '" + modificar.Nombre + "'where ID = " + modificar.ID);
 
                 datos.ejectutarAccion();
 

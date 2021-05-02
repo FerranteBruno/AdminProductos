@@ -36,6 +36,9 @@ namespace vistas
         {
             InitializeComponent();
             marc = aux;
+            pnlGrid.Visible = false;
+            this.Width = 345;
+            this.Height = 177;
             label2.Text = "Modificar Marca";
         }
 
@@ -194,6 +197,50 @@ namespace vistas
                     e.Handled = true;
                     this.Close();
                 }
+            }
+        }
+
+        private void btnModificar_Click(object sender, EventArgs e)
+        {
+            Marca marc = (Marca)dgvMarcas.CurrentRow.DataBoundItem;
+
+            v_nuevaMarca marcmod = new v_nuevaMarca(marc);
+
+            marcmod.ShowDialog();
+            cargarMarcas();
+        }
+
+        private void dgvMarcas_Click(object sender, EventArgs e)
+        {
+            btnEliminar.Enabled = true;
+            btnModificar.Enabled = true;
+        }
+
+        private void btnEliminar_EnabledChanged(object sender, EventArgs e)
+        {
+            if (btnEliminar.Enabled)
+            {
+                btnEliminar.BackColor = Color.Black;
+                btnEliminar.ForeColor = Color.DeepSkyBlue;
+            }
+            else
+            {
+                btnEliminar.BackColor = Color.White;
+                btnEliminar.ForeColor = SystemColors.ControlText;
+            }
+        }
+
+        private void btnModificar_EnabledChanged(object sender, EventArgs e)
+        {
+            if (btnModificar.Enabled)
+            {
+                btnModificar.BackColor = Color.Black;
+                btnModificar.ForeColor = Color.DeepSkyBlue;
+            }
+            else
+            {
+                btnModificar.BackColor = Color.White;
+                btnModificar.ForeColor = SystemColors.ControlText;
             }
         }
     }

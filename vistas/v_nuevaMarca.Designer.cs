@@ -41,11 +41,11 @@ namespace vistas
             this.c_id = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.c_nombre = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.panel3 = new System.Windows.Forms.Panel();
+            this.btnModificar = new System.Windows.Forms.Button();
             this.btnEliminar = new System.Windows.Forms.Button();
             this.panel4 = new System.Windows.Forms.Panel();
             this.panel5 = new System.Windows.Forms.Panel();
             this.label2 = new System.Windows.Forms.Label();
-            this.btnModificar = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             this.panel8.SuspendLayout();
             this.panel10.SuspendLayout();
@@ -171,6 +171,7 @@ namespace vistas
             this.dgvMarcas.TabIndex = 0;
             this.dgvMarcas.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvMarcas_CellClick);
             this.dgvMarcas.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvMarcas_CellContentClick);
+            this.dgvMarcas.Click += new System.EventHandler(this.dgvMarcas_Click);
             this.dgvMarcas.Leave += new System.EventHandler(this.dgvMarcas_Leave);
             // 
             // c_id
@@ -199,12 +200,29 @@ namespace vistas
             this.panel3.Size = new System.Drawing.Size(246, 153);
             this.panel3.TabIndex = 13;
             // 
+            // btnModificar
+            // 
+            this.btnModificar.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.btnModificar.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnModificar.Enabled = false;
+            this.btnModificar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Fuchsia;
+            this.btnModificar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnModificar.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.btnModificar.Location = new System.Drawing.Point(64, 87);
+            this.btnModificar.Name = "btnModificar";
+            this.btnModificar.Size = new System.Drawing.Size(119, 23);
+            this.btnModificar.TabIndex = 21;
+            this.btnModificar.Text = "Modificar Marca";
+            this.btnModificar.UseVisualStyleBackColor = true;
+            this.btnModificar.EnabledChanged += new System.EventHandler(this.btnModificar_EnabledChanged);
+            this.btnModificar.Click += new System.EventHandler(this.btnModificar_Click);
+            // 
             // btnEliminar
             // 
             this.btnEliminar.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.btnEliminar.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnEliminar.Enabled = false;
-            this.btnEliminar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
+            this.btnEliminar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
             this.btnEliminar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnEliminar.ForeColor = System.Drawing.SystemColors.ControlLightLight;
             this.btnEliminar.Location = new System.Drawing.Point(64, 42);
@@ -213,6 +231,7 @@ namespace vistas
             this.btnEliminar.TabIndex = 21;
             this.btnEliminar.Text = "Eliminar Marca";
             this.btnEliminar.UseVisualStyleBackColor = true;
+            this.btnEliminar.EnabledChanged += new System.EventHandler(this.btnEliminar_EnabledChanged);
             this.btnEliminar.Click += new System.EventHandler(this.btnEliminar_Click);
             // 
             // panel4
@@ -247,22 +266,6 @@ namespace vistas
             this.label2.Text = "Marca";
             this.label2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.label2.Click += new System.EventHandler(this.label2_Click);
-            // 
-            // btnModificar
-            // 
-            this.btnModificar.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.btnModificar.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnModificar.Enabled = false;
-            this.btnModificar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
-            this.btnModificar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnModificar.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.btnModificar.Location = new System.Drawing.Point(64, 87);
-            this.btnModificar.Name = "btnModificar";
-            this.btnModificar.Size = new System.Drawing.Size(119, 23);
-            this.btnModificar.TabIndex = 21;
-            this.btnModificar.Text = "Modificar Marca";
-            this.btnModificar.UseVisualStyleBackColor = true;
-            this.btnModificar.Click += new System.EventHandler(this.btnEliminar_Click);
             // 
             // v_nuevaMarca
             // 
