@@ -110,14 +110,7 @@ namespace vistas
             {
                 modificarCategoria();
             }
-        }
-
-        private void txtNombre_Leave(object sender, EventArgs e)
-        {
-            if (txtNombre.Text == "")
-            {
-                txtNombre.Text = "--Ingrese una Categoría--";
-            }
+            cargarCategorias();
         }
 
         private void dgvCategorias_Leave(object sender, EventArgs e)
@@ -148,6 +141,7 @@ namespace vistas
             {
                 datos.eliminar(eliminado);
             }
+            cargarCategorias();
         }
 
         private void dgvCategorias_Click(object sender, EventArgs e)

@@ -297,6 +297,7 @@ namespace vistas
             this.cbxMarca.Size = new System.Drawing.Size(173, 21);
             this.cbxMarca.TabIndex = 16;
             this.cbxMarca.Text = "--Seleccione Marca--";
+            this.cbxMarca.Enter += new System.EventHandler(this.cbxMarca_Enter);
             this.cbxMarca.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.cbxMarca_KeyPress);
             // 
             // cbxCategoria
@@ -308,6 +309,7 @@ namespace vistas
             this.cbxCategoria.Size = new System.Drawing.Size(173, 21);
             this.cbxCategoria.TabIndex = 16;
             this.cbxCategoria.Text = "--Seleccione Categoria--";
+            this.cbxCategoria.Enter += new System.EventHandler(this.cbxCategoria_Enter);
             this.cbxCategoria.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.cbxCategoria_KeyPress);
             // 
             // txtUrlImagen

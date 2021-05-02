@@ -121,6 +121,7 @@ namespace vistas
                 MessageBox.Show("Por favor ingrese el nombre de la marca");
                 txtNombre.Focus();
             }
+            cargarMarcas();
         }
 
         private void txtNombre_Click(object sender, EventArgs e)

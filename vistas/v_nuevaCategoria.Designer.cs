@@ -97,7 +97,6 @@ namespace vistas
             this.txtNombre.Size = new System.Drawing.Size(286, 20);
             this.txtNombre.TabIndex = 17;
             this.txtNombre.Click += new System.EventHandler(this.txtNombre_Click);
-            this.txtNombre.Leave += new System.EventHandler(this.txtNombre_Leave);
             // 
             // panel10
             // 

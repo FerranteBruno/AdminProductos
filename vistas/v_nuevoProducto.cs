@@ -73,7 +73,7 @@ namespace vistas
                 {
                     ComboBox b = (ComboBox)a;
 
-                    if (b.SelectedIndex == -1)
+                    if (b.Text == "--Seleccione Categoria--" || b.Text == "--Seleccione Marca--")
                     {
                         cont++;
                         a.BackColor = Color.Red;
@@ -85,6 +85,8 @@ namespace vistas
                         a.BackColor = Color.White;
                     }
                 }
+
+
             }
             aux.Focus();//Hace focus al primer control vacio
             return ok;
@@ -313,5 +315,14 @@ namespace vistas
             saltoDeCampo(e, txtNombre);
         }
 
+        private void cbxMarca_Enter(object sender, EventArgs e)
+        {
+            cbxMarca.BackColor = Color.White;
+        }
+
+        private void cbxCategoria_Enter(object sender, EventArgs e)
+        {
+            cbxCategoria.BackColor = Color.White;
+        }
     }
 }
