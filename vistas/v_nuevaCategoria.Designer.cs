@@ -162,7 +162,6 @@ namespace vistas
             this.label2.TabIndex = 4;
             this.label2.Text = "Categoria";
             this.label2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.label2.Click += new System.EventHandler(this.label2_Click);
             // 
             // panel3
             // 
@@ -189,7 +188,6 @@ namespace vistas
             this.dgvCategorias.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgvCategorias.Size = new System.Drawing.Size(569, 153);
             this.dgvCategorias.TabIndex = 0;
-            this.dgvCategorias.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
             this.dgvCategorias.Click += new System.EventHandler(this.dgvCategorias_Click);
             this.dgvCategorias.Leave += new System.EventHandler(this.dgvCategorias_Leave);
             // 
@@ -266,7 +264,6 @@ namespace vistas
             this.pnlGrid.Name = "pnlGrid";
             this.pnlGrid.Size = new System.Drawing.Size(793, 183);
             this.pnlGrid.TabIndex = 9;
-            this.pnlGrid.Paint += new System.Windows.Forms.PaintEventHandler(this.panel2_Paint);
             // 
             // panel7
             // 

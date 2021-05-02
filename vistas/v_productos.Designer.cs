@@ -474,7 +474,6 @@ namespace vistas
             this.label5.Size = new System.Drawing.Size(47, 19);
             this.label5.TabIndex = 24;
             this.label5.Text = "Marca";
-            this.label5.Click += new System.EventHandler(this.label5_Click);
             // 
             // label2
             // 

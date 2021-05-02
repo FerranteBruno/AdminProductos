@@ -116,7 +116,6 @@ namespace vistas
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox1.TabIndex = 0;
             this.pictureBox1.TabStop = false;
-            this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
             // 
             // btnVer
             // 
@@ -150,7 +149,6 @@ namespace vistas
             this.pnlVer.Size = new System.Drawing.Size(160, 34);
             this.pnlVer.TabIndex = 2;
             this.pnlVer.Visible = false;
-            this.pnlVer.Paint += new System.Windows.Forms.PaintEventHandler(this.panel4_Paint);
             // 
             // btnProductos
             // 

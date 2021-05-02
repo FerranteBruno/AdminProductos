@@ -107,8 +107,6 @@ namespace vistas
 
             modificar.ShowDialog();
             cargarProductos();
-
-
         }
         private void eliminarProducto(Producto prod)
         {
@@ -131,15 +129,9 @@ namespace vistas
                 eliminarProducto(prod);
             }
         }
-        private void label5_Click(object sender, EventArgs e)
-        {
-
-        }
         private void txtBuscar_TextChanged(object sender, EventArgs e)
         {
             cargarProductos(armaConsultaFiltro());
-
-
         }
         private void cbxMarca_SelectedIndexChanged(object sender, EventArgs e)
         {
@@ -148,7 +140,6 @@ namespace vistas
         private void cbxCategoria_SelectedIndexChanged(object sender, EventArgs e)
         {
             cargarProductos(armaConsultaFiltro());
-
         }
         private void button1_Click(object sender, EventArgs e)
         {

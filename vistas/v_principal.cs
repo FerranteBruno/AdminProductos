@@ -62,27 +62,12 @@ namespace vistas
         private void button1_Click(object sender, EventArgs e)
         {
             ocultarMostrarPaneles(pnlVer);
-            if (pnlVer.Visible == true)
-            {
-                pnlAdministracion.Visible = false;
-            }
-            
-        }
-
-        private void panel4_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
-
-        private void pictureBox1_Click(object sender, EventArgs e)
-        {
-
+                        
         }
 
         private void btnProductos_Click(object sender, EventArgs e)
         {
             abrirYcomprobarForm(new v_productos());
-
         }
 
         private void button1_Click_1(object sender, EventArgs e)
@@ -114,10 +99,6 @@ namespace vistas
         private void btnAdministracion_Click(object sender, EventArgs e)
         {
             ocultarMostrarPaneles(pnlAdministracion);
-            if (pnlAdministracion.Visible == true)
-            {
-                pnlVer.Visible = false;
-            }
         }
 
         private void btnNuevaCategoria_Click(object sender, EventArgs e)
@@ -128,11 +109,6 @@ namespace vistas
         private void btnNuevaMarca_Click(object sender, EventArgs e)
         {
             abrirYcomprobarForm(new v_nuevaMarca());
-        }
-
-        private void btnModMarca_Click(object sender, EventArgs e)
-        {
-
         }
 
         private void btnVer_MouseEnter(object sender, EventArgs e)

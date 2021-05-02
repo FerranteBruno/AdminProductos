@@ -13,7 +13,6 @@ namespace negocio
         public List<Marca> listar()
         {
             List<Marca> lista = new List<Marca>();
-            //SqlConnection conexion = new SqlConnection();
 
             AccesoDatos datos = new AccesoDatos();
 

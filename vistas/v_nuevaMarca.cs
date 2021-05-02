@@ -52,16 +52,6 @@ namespace vistas
             dgvMarcas.DataSource = marc.listar();
         }
 
-        private void label2_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void button3_Click(object sender, EventArgs e)
-        {
-            this.Close();
-        }
-
         private void btnCancelar_Click(object sender, EventArgs e)
         {
             this.Close();
@@ -89,6 +79,7 @@ namespace vistas
             datos.agregar(marca);
             MessageBox.Show("Marca Guardada");
             txtNombre.Text = "";
+            cargarMarcas();
         }
 
         private void modificarMarca()
@@ -132,32 +123,9 @@ namespace vistas
             }
         }
 
-        private void panel2_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
-
-        private void panel8_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
-
         private void txtNombre_Click(object sender, EventArgs e)
         {
             txtNombre.Text = "";
-        }
-
-        private void txtNombre_Leave(object sender, EventArgs e)
-        {
-        //    if (txtNombre.Text == "")
-        //    {
-        //        txtNombre.Text = "--Ingrese una Marca--";
-        //    }
-        }
-
-        private void dgvMarcas_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        {
-            
         }
 
         private void dgvMarcas_Leave(object sender, EventArgs e)

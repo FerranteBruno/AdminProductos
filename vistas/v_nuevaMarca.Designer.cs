@@ -76,7 +76,6 @@ namespace vistas
             this.panel8.Name = "panel8";
             this.panel8.Size = new System.Drawing.Size(793, 144);
             this.panel8.TabIndex = 19;
-            this.panel8.Paint += new System.Windows.Forms.PaintEventHandler(this.panel8_Paint);
             // 
             // panel10
             // 
@@ -139,7 +138,6 @@ namespace vistas
             this.txtNombre.TabIndex = 17;
             this.txtNombre.Click += new System.EventHandler(this.txtNombre_Click);
             this.txtNombre.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtNombre_KeyPress);
-            this.txtNombre.Leave += new System.EventHandler(this.txtNombre_Leave);
             // 
             // pnlGrid
             // 
@@ -170,7 +168,6 @@ namespace vistas
             this.dgvMarcas.Size = new System.Drawing.Size(547, 153);
             this.dgvMarcas.TabIndex = 0;
             this.dgvMarcas.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvMarcas_CellClick);
-            this.dgvMarcas.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvMarcas_CellContentClick);
             this.dgvMarcas.Click += new System.EventHandler(this.dgvMarcas_Click);
             this.dgvMarcas.Leave += new System.EventHandler(this.dgvMarcas_Leave);
             // 
@@ -265,7 +262,6 @@ namespace vistas
             this.label2.TabIndex = 4;
             this.label2.Text = "Marca";
             this.label2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.label2.Click += new System.EventHandler(this.label2_Click);
             // 
             // v_nuevaMarca
             // 

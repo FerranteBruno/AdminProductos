@@ -13,7 +13,6 @@ namespace negocio
         public List<Categoria> listar()
         {
             List<Categoria> lista = new List<Categoria>();
-            //SqlConnection conexion = new SqlConnection();
 
             AccesoDatos datos = new AccesoDatos();
 
@@ -78,19 +77,6 @@ namespace negocio
             AccesoDatos datos = new AccesoDatos();
             try
             {
-
-                /*string valores = "values("
-                    + modificar.Codigo + ", '"
-                    + modificar.Nombre + "', '"
-                    + modificar.Descripcion + "', '"
-                    + modificar.UrlImagen + "', "
-                    + modificar.Categoria.ID + "', '"
-                    + modificar.Categoria.ID + "', '"
-                    + modificar.UrlImagen + "', '"
-                    + modificar.Precio + "', '"
-                    + modificar.Stock + "', '"
-                    + modificar.Estado + ")";*/
-
                 datos.setearConsulta(
                     "update Categorias set Descripcion = '" + modificar.Nombre + "' where ID = " + modificar.ID);
 
