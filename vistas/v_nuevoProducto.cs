@@ -172,13 +172,17 @@ namespace vistas
             MarcaNegocio marc = new MarcaNegocio();
             CategoriaNegocio cate = new CategoriaNegocio();
 
-            cbxCategoria.DataSource = cate.listar();
+            List<Categoria> liscat = cate.listar();
+            List<Marca> listmarc = marc.listar();
+             
+            cbxCategoria.DataSource = liscat.OrderBy(o => o.Nombre).ToList();
             cbxCategoria.ValueMember = "id";
             cbxCategoria.DisplayMember = "Nombre";
 
-            cbxMarca.DataSource = marc.listar();
+            cbxMarca.DataSource = listmarc.OrderBy(o => o.Nombre).ToList();
             cbxMarca.ValueMember = "id";
             cbxMarca.DisplayMember = "Nombre";
+
             cbxCategoria.Text = "--Seleccione Categoria--";
             cbxMarca.Text = "--Seleccione Marca--";
         }
@@ -299,7 +303,7 @@ namespace vistas
 
         private void btnNuevaCategoria_Click(object sender, EventArgs e)
         {
-            v_nuevaCategoria vent = new v_nuevaCategoria();
+            v_nuevaCategoria vent = new v_nuevaCategoria(true);
             vent.ShowDialog();
         }
 

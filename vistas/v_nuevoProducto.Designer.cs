@@ -444,7 +444,7 @@ namespace vistas
             // 
             // panel5
             // 
-            this.panel5.BackColor = System.Drawing.SystemColors.ControlDarkDark;
+            this.panel5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(69)))), ((int)(((byte)(15)))), ((int)(((byte)(4)))));
             this.panel5.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.panel5.Location = new System.Drawing.Point(345, 415);
             this.panel5.Name = "panel5";
@@ -453,7 +453,7 @@ namespace vistas
             // 
             // panel6
             // 
-            this.panel6.BackColor = System.Drawing.SystemColors.ControlDarkDark;
+            this.panel6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(69)))), ((int)(((byte)(15)))), ((int)(((byte)(4)))));
             this.panel6.Controls.Add(this.lblTitulo);
             this.panel6.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel6.Location = new System.Drawing.Point(0, 0);
@@ -463,12 +463,16 @@ namespace vistas
             // 
             // lblTitulo
             // 
+            this.lblTitulo.Dock = System.Windows.Forms.DockStyle.Left;
+            this.lblTitulo.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblTitulo.ForeColor = System.Drawing.SystemColors.ActiveCaption;
-            this.lblTitulo.Location = new System.Drawing.Point(21, 10);
+            this.lblTitulo.Location = new System.Drawing.Point(0, 0);
             this.lblTitulo.Name = "lblTitulo";
-            this.lblTitulo.Size = new System.Drawing.Size(109, 13);
+            this.lblTitulo.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
+            this.lblTitulo.Size = new System.Drawing.Size(140, 31);
             this.lblTitulo.TabIndex = 16;
             this.lblTitulo.Text = "Nuevo Producto";
+            this.lblTitulo.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // v_nuevoProducto
             // 

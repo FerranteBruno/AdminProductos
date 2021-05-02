@@ -15,11 +15,22 @@ namespace vistas
     public partial class v_nuevaCategoria : Form
     {
         private Categoria cat = null;
+        private bool ventana = false;
+
         public v_nuevaCategoria()
         {
             InitializeComponent();
         }
-
+        public v_nuevaCategoria(bool aux)
+        {
+            InitializeComponent();
+            ventana = aux;
+            if (aux)
+            {
+                pnlGrid.Visible = false;
+                this.Width = 345;
+            }
+        }
         public v_nuevaCategoria(Categoria aux)
         {
             InitializeComponent();
@@ -152,6 +163,7 @@ namespace vistas
         private void dgvCategorias_Click(object sender, EventArgs e)
         {
             btnEliminar.Enabled = true;
+
         }
     }
 }

@@ -12,16 +12,15 @@ namespace negocio
     public class ProductoNegocio
     {
 
-        public List<Producto> listar()
+        public List<Producto> listar(string consulta = "")
         {
             List<Producto> lista = new List<Producto>();
-            //SqlConnection conexion = new SqlConnection();
-
             AccesoDatos datos = new AccesoDatos();
 
             try
             {
-                datos.setearConsulta("select a.id ID, Codigo, Nombre, a.Descripcion Descripcion, m.Descripcion Marca, c.Descripcion Categoria , ImagenUrl, a.Stock Stock, a.Estado Estado ,Precio, M.ID as IDMarca, C.ID as IDCategoria from Articulos A, Marcas M, Categorias C where a.IDMarca = m.id and a.IDCategoria = c.ID");
+                datos.setearConsulta("select a.id ID, Codigo, Nombre, a.Descripcion Descripcion, m.Descripcion Marca, c.Descripcion Categoria , ImagenUrl, a.Stock Stock, a.Estado Estado ,Precio, M.ID as IDMarca, C.ID as IDCategoria from Articulos A, Marcas M, Categorias C where a.IDMarca = m.id and a.IDCategoria = c.ID " + consulta);
+                
                 datos.ejecutarLectura();
 
                 while (datos.Lector.Read())
@@ -62,53 +61,7 @@ namespace negocio
             }
 
         }
-        public List<Producto> Buscar(string consulta)
-        {
-            List<Producto> lista = new List<Producto>();            
-            AccesoDatos datos = new AccesoDatos();
-
-            try
-            {
-                datos.setearConsulta("select a.id ID, Codigo, Nombre, a.Descripcion Descripcion, m.Descripcion Marca, c.Descripcion Categoria , ImagenUrl, a.Stock Stock, a.Estado Estado ,Precio, M.ID as IDMarca, C.ID as IDCategoria from Articulos A, Marcas M, Categorias C where a.IDMarca = m.id and a.IDCategoria = c.ID AND Nombre LIKE '%"+consulta+"%'");
-                datos.ejecutarLectura();
-
-                Producto aux = new Producto();
-
-                aux.ID = (int)datos.Lector["ID"];
-                aux.Codigo = (string)datos.Lector["Codigo"];
-                aux.Nombre = (string)datos.Lector["Nombre"];
-                aux.Descripcion = (string)datos.Lector["Descripcion"];
-                aux.Marca = new Marca((string)datos.Lector["Marca"]);
-                aux.Marca.ID = ((int)datos.Lector["IDMarca"]);
-                aux.Categoria = new Categoria((string)datos.Lector["Categoria"]);
-                aux.Categoria.ID = ((int)datos.Lector["IDCategoria"]);
-                aux.UrlImagen = (string)datos.Lector["ImagenUrl"];
-                aux.Precio = float.Parse(datos.Lector["Precio"].ToString());
-                aux.Stock = float.Parse(datos.Lector["Stock"].ToString());
-                aux.Estado = (bool)datos.Lector["Estado"];
-
-                if (aux.Estado != false)
-                {
-                    lista.Add(aux);
-                }
-
-                return lista;
-            }
-
-            catch (Exception )
-            {
-                // throw ex;
-                return lista;
-
-              
-            }
-            finally
-            {
-                datos.cerrarConexion();
-            }
-
-        }
-
+        
         public void agregar(Producto nuevo)
         {
             AccesoDatos datos = new AccesoDatos();

@@ -46,36 +46,72 @@ namespace vistas
             cbxCategoria.Text = "--Seleccione Categoria--";
             cbxMarca.Text = "--Seleccione Marca--";
         }
-        private void cargarProductos()
+        private void cargarProductos(string consulta="")
         {
             ProductoNegocio prod = new ProductoNegocio();
+            
             dgvProductos.DataSource = null;
             dgvProductos.Rows.Clear();
             dgvProductos.AutoGenerateColumns = false;
             dgvProductos.ClearSelection();
-            dgvProductos.DataSource = prod.listar();
+
+            if (!consulta.Trim().Equals(""))
+            {
+                dgvProductos.DataSource = prod.listar(consulta);
+            }
+            else
+            {
+                dgvProductos.DataSource = prod.listar();
+            }
+
+            
+           
         }
         private string armaConsultaFiltro()
         {
-            string consulta="";
+            string consulta = "";
             if (txtBuscar.Text != "")
             {
-                consulta += txtBuscar.Text.ToString();
+                consulta += " AND Nombre LIKE '%" + txtBuscar.Text.Trim().ToString() + "%'";
+
+                //if (cbxMarca.SelectedIndex != -1 && cbxMarca.Text != "--Seleccione Marca--")
+                //{
+                //    consulta += "AND m.Descripcion like '%" + cbxMarca.Text + "%'";
+                //}
+                //if (cbxCategoria.SelectedIndex != -1 && cbxMarca.Text != "--Seleccione Categoria--")
+                //{
+                //    consulta += "AND c.Descripcion like '%" + cbxCategoria.Text + "%'";
+                //}
             }
-            //if (cbxMarca.SelectedIndex != -1)
-            //{
-            //    consulta+="and"
-            //}
+
+            if (cbxMarca.Text != "--Seleccione Marca--")
+            {
+                consulta += " AND m.Descripcion like '%" + cbxMarca.Text + "%'";
+            }
+            if (cbxCategoria.Text != "--Seleccione Categoria--")
+            {
+                consulta += " AND c.Descripcion like '%" + cbxCategoria.Text + "%'";
+            }
+
+
             return consulta;
         }
         private void buscarProucto()
         {
-            ProductoNegocio prod = new ProductoNegocio();
-            dgvProductos.DataSource = null;
-            dgvProductos.Rows.Clear();
-            dgvProductos.AutoGenerateColumns = false;
-            dgvProductos.ClearSelection();
-            dgvProductos.DataSource = prod.Buscar(armaConsultaFiltro());
+            string consutla = armaConsultaFiltro();
+
+            if (!consutla.Trim().Equals(""))
+            {
+                ProductoNegocio prod = new ProductoNegocio();
+                List<Producto> listprod = prod.listar(consutla);
+
+                dgvProductos.DataSource = null;
+                dgvProductos.Rows.Clear();
+                dgvProductos.AutoGenerateColumns = false;
+                dgvProductos.ClearSelection();
+                dgvProductos.DataSource = listprod;
+            }
+            
         }
 
 
@@ -88,12 +124,12 @@ namespace vistas
 
         private void dgvProductos_CellClick(object sender, DataGridViewCellEventArgs e)
         {
-            lblNombre.Text= dgvProductos.CurrentRow.Cells[2].Value.ToString();
+            lblNombre.Text = dgvProductos.CurrentRow.Cells[2].Value.ToString();
             lblMarca.Text = dgvProductos.CurrentRow.Cells[4].Value.ToString();
             lblCategoria.Text = dgvProductos.CurrentRow.Cells[5].Value.ToString();
-            lblPrecio.Text = dgvProductos.CurrentRow.Cells[7].Value.ToString();
+            lblPrecio.Text = "$ "+dgvProductos.CurrentRow.Cells[7].Value.ToString();
             lblDescripcion.Text = dgvProductos.CurrentRow.Cells[3].Value.ToString();
-            picProducto.ImageLocation= dgvProductos.CurrentRow.Cells[6].Value.ToString();
+            picProducto.ImageLocation = dgvProductos.CurrentRow.Cells[6].Value.ToString();
         }
 
         private void btnModificar_Click(object sender, EventArgs e)
@@ -104,7 +140,7 @@ namespace vistas
 
             modificar.ShowDialog();
             cargarProductos();
-            
+
 
         }
         private void eliminarProducto(Producto prod)
@@ -134,9 +170,31 @@ namespace vistas
 
         }
 
-        private void btnGuardar_Click(object sender, EventArgs e)
+
+        private void txtBuscar_TextChanged(object sender, EventArgs e)
         {
-            buscarProucto();
+            cargarProductos(armaConsultaFiltro());
+            
+
+        }
+
+        private void cbxMarca_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            cargarProductos(armaConsultaFiltro());
+        }
+
+        private void cbxCategoria_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            cargarProductos(armaConsultaFiltro());
+            
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            txtBuscar.Text = "";
+            cbxCategoria.Text = "--Seleccione Categoria--";
+            cbxMarca.Text = "--Seleccione Marca--";
+            cargarProductos();
         }
     }
 }

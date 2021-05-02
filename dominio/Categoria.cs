@@ -23,6 +23,12 @@ namespace dominio
         {
             this.Nombre = Nombre;
         }
+        public Categoria(string Nombre,int id,bool est)
+        {
+            ID = id;
+            this.Nombre = Nombre;
+            Estado = est;
+        }
         public override string ToString()
         {
             return Nombre;

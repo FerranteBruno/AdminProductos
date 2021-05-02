@@ -42,19 +42,19 @@ namespace vistas
             this.panel6 = new System.Windows.Forms.Panel();
             this.panel3 = new System.Windows.Forms.Panel();
             this.dgvCategorias = new System.Windows.Forms.DataGridView();
-            this.panel4 = new System.Windows.Forms.Panel();
-            this.btnEliminar = new System.Windows.Forms.Button();
-            this.panel2 = new System.Windows.Forms.Panel();
-            this.panel7 = new System.Windows.Forms.Panel();
             this.c_ID = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.c_Nombre = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.panel4 = new System.Windows.Forms.Panel();
+            this.btnEliminar = new System.Windows.Forms.Button();
+            this.pnlGrid = new System.Windows.Forms.Panel();
+            this.panel7 = new System.Windows.Forms.Panel();
             this.panel1.SuspendLayout();
             this.panel8.SuspendLayout();
             this.panel10.SuspendLayout();
             this.panel5.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvCategorias)).BeginInit();
             this.panel4.SuspendLayout();
-            this.panel2.SuspendLayout();
+            this.pnlGrid.SuspendLayout();
             this.SuspendLayout();
             // 
             // panel1
@@ -143,7 +143,7 @@ namespace vistas
             // 
             // panel5
             // 
-            this.panel5.BackColor = System.Drawing.SystemColors.ControlDarkDark;
+            this.panel5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(69)))), ((int)(((byte)(15)))), ((int)(((byte)(4)))));
             this.panel5.Controls.Add(this.button1);
             this.panel5.Controls.Add(this.label2);
             this.panel5.Dock = System.Windows.Forms.DockStyle.Top;
@@ -169,18 +169,21 @@ namespace vistas
             // 
             // label2
             // 
+            this.label2.Dock = System.Windows.Forms.DockStyle.Left;
             this.label2.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Bold);
             this.label2.ForeColor = System.Drawing.SystemColors.ActiveCaption;
-            this.label2.Location = new System.Drawing.Point(4, 5);
+            this.label2.Location = new System.Drawing.Point(0, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(103, 21);
+            this.label2.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
+            this.label2.Size = new System.Drawing.Size(103, 26);
             this.label2.TabIndex = 4;
             this.label2.Text = "Categoria";
+            this.label2.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.label2.Click += new System.EventHandler(this.label2_Click);
             // 
             // panel6
             // 
-            this.panel6.BackColor = System.Drawing.SystemColors.ControlDarkDark;
+            this.panel6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(69)))), ((int)(((byte)(15)))), ((int)(((byte)(4)))));
             this.panel6.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.panel6.Location = new System.Drawing.Point(0, 170);
             this.panel6.Name = "panel6";
@@ -216,6 +219,21 @@ namespace vistas
             this.dgvCategorias.Click += new System.EventHandler(this.dgvCategorias_Click);
             this.dgvCategorias.Leave += new System.EventHandler(this.dgvCategorias_Leave);
             // 
+            // c_ID
+            // 
+            this.c_ID.DataPropertyName = "id";
+            this.c_ID.HeaderText = "Id";
+            this.c_ID.Name = "c_ID";
+            this.c_ID.ReadOnly = true;
+            // 
+            // c_Nombre
+            // 
+            this.c_Nombre.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.c_Nombre.DataPropertyName = "Nombre";
+            this.c_Nombre.HeaderText = "Nombre";
+            this.c_Nombre.Name = "c_Nombre";
+            this.c_Nombre.ReadOnly = true;
+            // 
             // panel4
             // 
             this.panel4.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
@@ -242,18 +260,18 @@ namespace vistas
             this.btnEliminar.UseVisualStyleBackColor = true;
             this.btnEliminar.Click += new System.EventHandler(this.btnEliminar_Click);
             // 
-            // panel2
+            // pnlGrid
             // 
-            this.panel2.BackColor = System.Drawing.Color.Black;
-            this.panel2.Controls.Add(this.dgvCategorias);
-            this.panel2.Controls.Add(this.panel7);
-            this.panel2.Controls.Add(this.panel4);
-            this.panel2.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel2.Location = new System.Drawing.Point(345, 26);
-            this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(362, 144);
-            this.panel2.TabIndex = 9;
-            this.panel2.Paint += new System.Windows.Forms.PaintEventHandler(this.panel2_Paint);
+            this.pnlGrid.BackColor = System.Drawing.Color.Black;
+            this.pnlGrid.Controls.Add(this.dgvCategorias);
+            this.pnlGrid.Controls.Add(this.panel7);
+            this.pnlGrid.Controls.Add(this.panel4);
+            this.pnlGrid.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.pnlGrid.Location = new System.Drawing.Point(345, 26);
+            this.pnlGrid.Name = "pnlGrid";
+            this.pnlGrid.Size = new System.Drawing.Size(362, 144);
+            this.pnlGrid.TabIndex = 9;
+            this.pnlGrid.Paint += new System.Windows.Forms.PaintEventHandler(this.panel2_Paint);
             // 
             // panel7
             // 
@@ -264,27 +282,12 @@ namespace vistas
             this.panel7.Size = new System.Drawing.Size(362, 30);
             this.panel7.TabIndex = 27;
             // 
-            // c_ID
-            // 
-            this.c_ID.DataPropertyName = "id";
-            this.c_ID.HeaderText = "Id";
-            this.c_ID.Name = "c_ID";
-            this.c_ID.ReadOnly = true;
-            // 
-            // c_Nombre
-            // 
-            this.c_Nombre.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.c_Nombre.DataPropertyName = "Nombre";
-            this.c_Nombre.HeaderText = "Nombre";
-            this.c_Nombre.Name = "c_Nombre";
-            this.c_Nombre.ReadOnly = true;
-            // 
             // v_nuevaCategoria
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(707, 193);
-            this.Controls.Add(this.panel2);
+            this.Controls.Add(this.pnlGrid);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.panel6);
             this.Controls.Add(this.panel3);
@@ -301,7 +304,7 @@ namespace vistas
             this.panel5.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dgvCategorias)).EndInit();
             this.panel4.ResumeLayout(false);
-            this.panel2.ResumeLayout(false);
+            this.pnlGrid.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -322,7 +325,7 @@ namespace vistas
         private System.Windows.Forms.DataGridView dgvCategorias;
         private System.Windows.Forms.Panel panel4;
         private System.Windows.Forms.Button btnEliminar;
-        private System.Windows.Forms.Panel panel2;
+        private System.Windows.Forms.Panel pnlGrid;
         private System.Windows.Forms.Panel panel7;
         private System.Windows.Forms.DataGridViewTextBoxColumn c_ID;
         private System.Windows.Forms.DataGridViewTextBoxColumn c_Nombre;

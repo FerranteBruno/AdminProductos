@@ -58,7 +58,7 @@ namespace vistas
             // 
             // panel6
             // 
-            this.panel6.BackColor = System.Drawing.SystemColors.ControlDarkDark;
+            this.panel6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(69)))), ((int)(((byte)(15)))), ((int)(((byte)(4)))));
             this.panel6.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.panel6.Location = new System.Drawing.Point(0, 170);
             this.panel6.Name = "panel6";
@@ -161,7 +161,6 @@ namespace vistas
             this.pnlGrid.Name = "pnlGrid";
             this.pnlGrid.Size = new System.Drawing.Size(362, 144);
             this.pnlGrid.TabIndex = 15;
-            
             // 
             // dgvMarcas
             // 
@@ -236,7 +235,7 @@ namespace vistas
             // 
             // panel5
             // 
-            this.panel5.BackColor = System.Drawing.SystemColors.ControlDarkDark;
+            this.panel5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(69)))), ((int)(((byte)(15)))), ((int)(((byte)(4)))));
             this.panel5.Controls.Add(this.btnNMarcaExit);
             this.panel5.Controls.Add(this.label2);
             this.panel5.Dock = System.Windows.Forms.DockStyle.Top;
@@ -262,19 +261,23 @@ namespace vistas
             // 
             // label2
             // 
+            this.label2.Dock = System.Windows.Forms.DockStyle.Left;
             this.label2.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Bold);
             this.label2.ForeColor = System.Drawing.SystemColors.ActiveCaption;
-            this.label2.Location = new System.Drawing.Point(3, 5);
+            this.label2.Location = new System.Drawing.Point(0, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(103, 14);
+            this.label2.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
+            this.label2.Size = new System.Drawing.Size(103, 26);
             this.label2.TabIndex = 4;
             this.label2.Text = "Marca";
+            this.label2.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.label2.Click += new System.EventHandler(this.label2_Click);
             // 
             // v_nuevaMarca
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(707, 193);
             this.Controls.Add(this.pnlGrid);
             this.Controls.Add(this.panel1);
