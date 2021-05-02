@@ -15,11 +15,22 @@ namespace vistas
     public partial class v_nuevaMarca : Form
     {
         private Marca marc = null;
+        private bool ventana = false;
+
         public v_nuevaMarca()
         {
             InitializeComponent();
         }
-
+        public v_nuevaMarca(bool aux)
+        {
+            InitializeComponent();
+            ventana = aux;
+            if (aux)
+            {
+                pnlGrid.Visible = false;
+                this.Width = 345;
+            }
+        }
         public v_nuevaMarca(Marca aux)
         {
             InitializeComponent();
@@ -55,8 +66,8 @@ namespace vistas
         private void v_nuevaMarca_Load(object sender, EventArgs e)
         {
             cargarMarcas();
-            txtNombre.Text = "--Ingrese una Marca--";
-
+            //txtNombre.Text = "--Ingrese una Marca--";
+            txtNombre.Focus();
             if(marc != null)
             {
                 txtNombre.Text = marc.Nombre;
@@ -95,13 +106,25 @@ namespace vistas
 
         private void btnGuardar_Click(object sender, EventArgs e)
         {
-            if (marc == null)
+            if (txtNombre.Text != "")
             {
-                guardarMarca();
+                if (marc == null)
+                {
+                    guardarMarca();
+                    if (ventana)
+                    {
+                        this.Close();
+                    }
+                }
+                else
+                {
+                    modificarMarca();
+                }
             }
             else
             {
-                modificarMarca();
+                MessageBox.Show("Por favor ingrese el nombre de la marca");
+                txtNombre.Focus();
             }
         }
 
@@ -122,10 +145,10 @@ namespace vistas
 
         private void txtNombre_Leave(object sender, EventArgs e)
         {
-            if (txtNombre.Text == "")
-            {
-                txtNombre.Text = "--Ingrese una Marca--";
-            }
+        //    if (txtNombre.Text == "")
+        //    {
+        //        txtNombre.Text = "--Ingrese una Marca--";
+        //    }
         }
 
         private void dgvMarcas_CellContentClick(object sender, DataGridViewCellEventArgs e)
@@ -158,6 +181,19 @@ namespace vistas
                 datos.eliminar(eliminado);
             }
             cargarMarcas();
+        }
+
+        private void txtNombre_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (ventana)
+            {
+                if (e.KeyChar == (char)Keys.Enter)
+                {
+                    guardarMarca();
+                    e.Handled = true;
+                    this.Close();
+                }
+            }
         }
     }
 }

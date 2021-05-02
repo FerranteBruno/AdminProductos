@@ -31,6 +31,21 @@ namespace vistas
                 aux.Visible = true;
             }
         }
+        private void cargarComboBox()
+        {
+            MarcaNegocio marc = new MarcaNegocio();
+            CategoriaNegocio cate = new CategoriaNegocio();
+
+            cbxCategoria.DataSource = cate.listar();
+            cbxCategoria.ValueMember = "id";
+            cbxCategoria.DisplayMember = "Nombre";
+
+            cbxMarca.DataSource = marc.listar();
+            cbxMarca.ValueMember = "id";
+            cbxMarca.DisplayMember = "Nombre";
+            cbxCategoria.Text = "--Seleccione Categoria--";
+            cbxMarca.Text = "--Seleccione Marca--";
+        }
         private void cargarProductos()
         {
             ProductoNegocio prod = new ProductoNegocio();
@@ -40,11 +55,35 @@ namespace vistas
             dgvProductos.ClearSelection();
             dgvProductos.DataSource = prod.listar();
         }
+        private string armaConsultaFiltro()
+        {
+            string consulta="";
+            if (txtBuscar.Text != "")
+            {
+                consulta += txtBuscar.Text.ToString();
+            }
+            //if (cbxMarca.SelectedIndex != -1)
+            //{
+            //    consulta+="and"
+            //}
+            return consulta;
+        }
+        private void buscarProucto()
+        {
+            ProductoNegocio prod = new ProductoNegocio();
+            dgvProductos.DataSource = null;
+            dgvProductos.Rows.Clear();
+            dgvProductos.AutoGenerateColumns = false;
+            dgvProductos.ClearSelection();
+            dgvProductos.DataSource = prod.Buscar(armaConsultaFiltro());
+        }
 
 
         private void v_productos_Load(object sender, EventArgs e)
         {
+            cargarComboBox();
             cargarProductos();
+            txtBuscar.Focus();
         }
 
         private void dgvProductos_CellClick(object sender, DataGridViewCellEventArgs e)
@@ -97,7 +136,7 @@ namespace vistas
 
         private void btnGuardar_Click(object sender, EventArgs e)
         {
-
+            buscarProucto();
         }
     }
 }

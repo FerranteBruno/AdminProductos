@@ -62,6 +62,52 @@ namespace negocio
             }
 
         }
+        public List<Producto> Buscar(string consulta)
+        {
+            List<Producto> lista = new List<Producto>();            
+            AccesoDatos datos = new AccesoDatos();
+
+            try
+            {
+                datos.setearConsulta("select a.id ID, Codigo, Nombre, a.Descripcion Descripcion, m.Descripcion Marca, c.Descripcion Categoria , ImagenUrl, a.Stock Stock, a.Estado Estado ,Precio, M.ID as IDMarca, C.ID as IDCategoria from Articulos A, Marcas M, Categorias C where a.IDMarca = m.id and a.IDCategoria = c.ID AND Nombre LIKE '%"+consulta+"%'");
+                datos.ejecutarLectura();
+
+                Producto aux = new Producto();
+
+                aux.ID = (int)datos.Lector["ID"];
+                aux.Codigo = (string)datos.Lector["Codigo"];
+                aux.Nombre = (string)datos.Lector["Nombre"];
+                aux.Descripcion = (string)datos.Lector["Descripcion"];
+                aux.Marca = new Marca((string)datos.Lector["Marca"]);
+                aux.Marca.ID = ((int)datos.Lector["IDMarca"]);
+                aux.Categoria = new Categoria((string)datos.Lector["Categoria"]);
+                aux.Categoria.ID = ((int)datos.Lector["IDCategoria"]);
+                aux.UrlImagen = (string)datos.Lector["ImagenUrl"];
+                aux.Precio = float.Parse(datos.Lector["Precio"].ToString());
+                aux.Stock = float.Parse(datos.Lector["Stock"].ToString());
+                aux.Estado = (bool)datos.Lector["Estado"];
+
+                if (aux.Estado != false)
+                {
+                    lista.Add(aux);
+                }
+
+                return lista;
+            }
+
+            catch (Exception )
+            {
+                // throw ex;
+                return lista;
+
+              
+            }
+            finally
+            {
+                datos.cerrarConexion();
+            }
+
+        }
 
         public void agregar(Producto nuevo)
         {
@@ -99,12 +145,12 @@ namespace negocio
             AccesoDatos datos = new AccesoDatos();
             try
             {
-                
+
 
                 //datos.setearConsulta("update Articulos set codigo = '" + modificar.Codigo + "', nombre = '" + modificar.Nombre + "', Descripcion = '" + modificar.Descripcion +
                 //    "', IdMarca = " + modificar.Marca.ID + ", IdCategoria = " + modificar.Categoria.ID + ", ImagenUrl = '" + modificar.UrlImagen + "', Precio = " + modificar.Precio + ", Stock = " + modificar.Stock + ", Estado = 1 WhERE id = " + modificar.ID + ";");
 
-                datos.setearConsulta("update Articulos set codigo = @codigo, nombre = @nombre, Descripcion = @descripcion, IdMarca = @IDMarca, IdCategoria = @IDCategoria, ImagenUrl = @imagenUrl, Precio = @precio, Stock = @stock, Estado = 1 WhERE Id = "+modificar.ID+"");
+                datos.setearConsulta("update Articulos set codigo = @codigo, nombre = @nombre, Descripcion = @descripcion, IdMarca = @IDMarca, IdCategoria = @IDCategoria, ImagenUrl = @imagenUrl, Precio = @precio, Stock = @stock, Estado = 1 WhERE Id = " + modificar.ID + "");
 
                 datos.agregarParametro("@codigo", modificar.Codigo);
                 datos.agregarParametro("@nombre", modificar.Nombre);
@@ -136,8 +182,8 @@ namespace negocio
             {
                 Producto aux = new Producto();
 
-                    aux.ID = ID;
-                    aux.Estado = false;             
+                aux.ID = ID;
+                aux.Estado = false;
 
                 datos.setearConsulta(
                     "update Articulos set Estado = 0 where ID = " + aux.ID + ""

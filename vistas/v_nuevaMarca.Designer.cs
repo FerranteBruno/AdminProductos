@@ -37,7 +37,7 @@ namespace vistas
             this.btnCancelar = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.txtNombre = new System.Windows.Forms.TextBox();
-            this.panel2 = new System.Windows.Forms.Panel();
+            this.pnlGrid = new System.Windows.Forms.Panel();
             this.dgvMarcas = new System.Windows.Forms.DataGridView();
             this.c_id = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.c_nombre = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -50,7 +50,7 @@ namespace vistas
             this.panel1.SuspendLayout();
             this.panel8.SuspendLayout();
             this.panel10.SuspendLayout();
-            this.panel2.SuspendLayout();
+            this.pnlGrid.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvMarcas)).BeginInit();
             this.panel3.SuspendLayout();
             this.panel5.SuspendLayout();
@@ -148,19 +148,20 @@ namespace vistas
             this.txtNombre.Size = new System.Drawing.Size(286, 20);
             this.txtNombre.TabIndex = 17;
             this.txtNombre.Click += new System.EventHandler(this.txtNombre_Click);
+            this.txtNombre.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtNombre_KeyPress);
             this.txtNombre.Leave += new System.EventHandler(this.txtNombre_Leave);
             // 
-            // panel2
+            // pnlGrid
             // 
-            this.panel2.Controls.Add(this.dgvMarcas);
-            this.panel2.Controls.Add(this.panel3);
-            this.panel2.Controls.Add(this.panel4);
-            this.panel2.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel2.Location = new System.Drawing.Point(345, 26);
-            this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(362, 144);
-            this.panel2.TabIndex = 15;
-            this.panel2.Paint += new System.Windows.Forms.PaintEventHandler(this.panel2_Paint);
+            this.pnlGrid.Controls.Add(this.dgvMarcas);
+            this.pnlGrid.Controls.Add(this.panel3);
+            this.pnlGrid.Controls.Add(this.panel4);
+            this.pnlGrid.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.pnlGrid.Location = new System.Drawing.Point(345, 26);
+            this.pnlGrid.Name = "pnlGrid";
+            this.pnlGrid.Size = new System.Drawing.Size(362, 144);
+            this.pnlGrid.TabIndex = 15;
+            
             // 
             // dgvMarcas
             // 
@@ -275,7 +276,7 @@ namespace vistas
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(707, 193);
-            this.Controls.Add(this.panel2);
+            this.Controls.Add(this.pnlGrid);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.panel6);
             this.Controls.Add(this.panel5);
@@ -288,7 +289,7 @@ namespace vistas
             this.panel8.ResumeLayout(false);
             this.panel8.PerformLayout();
             this.panel10.ResumeLayout(false);
-            this.panel2.ResumeLayout(false);
+            this.pnlGrid.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dgvMarcas)).EndInit();
             this.panel3.ResumeLayout(false);
             this.panel5.ResumeLayout(false);
@@ -303,7 +304,7 @@ namespace vistas
         private System.Windows.Forms.Panel panel8;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.TextBox txtNombre;
-        private System.Windows.Forms.Panel panel2;
+        private System.Windows.Forms.Panel pnlGrid;
         private System.Windows.Forms.Panel panel5;
         private System.Windows.Forms.Button btnNMarcaExit;
         private System.Windows.Forms.Label label2;

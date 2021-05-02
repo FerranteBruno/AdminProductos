@@ -64,13 +64,13 @@ namespace vistas
             this.btnModificar = new System.Windows.Forms.Button();
             this.btnEliminar = new System.Windows.Forms.Button();
             this.panel5 = new System.Windows.Forms.Panel();
-            this.comboBox3 = new System.Windows.Forms.ComboBox();
+            this.cbxCategoria = new System.Windows.Forms.ComboBox();
             this.label6 = new System.Windows.Forms.Label();
-            this.comboBox2 = new System.Windows.Forms.ComboBox();
+            this.cbxMarca = new System.Windows.Forms.ComboBox();
             this.label5 = new System.Windows.Forms.Label();
             this.btnGuardar = new System.Windows.Forms.Button();
             this.label2 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.txtBuscar = new System.Windows.Forms.TextBox();
             this.panel6 = new System.Windows.Forms.Panel();
             this.label1 = new System.Windows.Forms.Label();
             this.panel2.SuspendLayout();
@@ -489,50 +489,50 @@ namespace vistas
             // panel5
             // 
             this.panel5.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.panel5.Controls.Add(this.comboBox3);
+            this.panel5.Controls.Add(this.cbxCategoria);
             this.panel5.Controls.Add(this.label6);
-            this.panel5.Controls.Add(this.comboBox2);
+            this.panel5.Controls.Add(this.cbxMarca);
             this.panel5.Controls.Add(this.label5);
             this.panel5.Controls.Add(this.btnGuardar);
             this.panel5.Controls.Add(this.label2);
-            this.panel5.Controls.Add(this.textBox1);
+            this.panel5.Controls.Add(this.txtBuscar);
             this.panel5.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel5.Location = new System.Drawing.Point(0, 26);
             this.panel5.Name = "panel5";
             this.panel5.Size = new System.Drawing.Size(760, 36);
             this.panel5.TabIndex = 3;
             // 
-            // comboBox3
+            // cbxCategoria
             // 
-            this.comboBox3.FormattingEnabled = true;
-            this.comboBox3.Location = new System.Drawing.Point(644, 8);
-            this.comboBox3.Name = "comboBox3";
-            this.comboBox3.Size = new System.Drawing.Size(104, 21);
-            this.comboBox3.TabIndex = 27;
+            this.cbxCategoria.FormattingEnabled = true;
+            this.cbxCategoria.Location = new System.Drawing.Point(613, 8);
+            this.cbxCategoria.Name = "cbxCategoria";
+            this.cbxCategoria.Size = new System.Drawing.Size(135, 21);
+            this.cbxCategoria.TabIndex = 27;
             // 
             // label6
             // 
             this.label6.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Bold);
             this.label6.ForeColor = System.Drawing.SystemColors.ControlDark;
-            this.label6.Location = new System.Drawing.Point(558, 8);
+            this.label6.Location = new System.Drawing.Point(544, 9);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(80, 19);
             this.label6.TabIndex = 26;
             this.label6.Text = "Categoria";
             // 
-            // comboBox2
+            // cbxMarca
             // 
-            this.comboBox2.FormattingEnabled = true;
-            this.comboBox2.Location = new System.Drawing.Point(447, 9);
-            this.comboBox2.Name = "comboBox2";
-            this.comboBox2.Size = new System.Drawing.Size(104, 21);
-            this.comboBox2.TabIndex = 25;
+            this.cbxMarca.FormattingEnabled = true;
+            this.cbxMarca.Location = new System.Drawing.Point(403, 8);
+            this.cbxMarca.Name = "cbxMarca";
+            this.cbxMarca.Size = new System.Drawing.Size(135, 21);
+            this.cbxMarca.TabIndex = 25;
             // 
             // label5
             // 
             this.label5.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Bold);
             this.label5.ForeColor = System.Drawing.SystemColors.ControlDark;
-            this.label5.Location = new System.Drawing.Point(377, 9);
+            this.label5.Location = new System.Drawing.Point(350, 9);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(47, 19);
             this.label5.TabIndex = 24;
@@ -541,7 +541,7 @@ namespace vistas
             // 
             // btnGuardar
             // 
-            this.btnGuardar.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.btnGuardar.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.btnGuardar.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnGuardar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnGuardar.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
@@ -563,12 +563,12 @@ namespace vistas
             this.label2.TabIndex = 5;
             this.label2.Text = "Buscar ";
             // 
-            // textBox1
+            // txtBuscar
             // 
-            this.textBox1.Location = new System.Drawing.Point(63, 8);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(213, 20);
-            this.textBox1.TabIndex = 0;
+            this.txtBuscar.Location = new System.Drawing.Point(63, 8);
+            this.txtBuscar.Name = "txtBuscar";
+            this.txtBuscar.Size = new System.Drawing.Size(213, 20);
+            this.txtBuscar.TabIndex = 0;
             // 
             // panel6
             // 
@@ -628,14 +628,14 @@ namespace vistas
         private System.Windows.Forms.PictureBox picProducto;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Panel panel5;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox txtBuscar;
         private System.Windows.Forms.Panel panel6;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Button btnGuardar;
-        private System.Windows.Forms.ComboBox comboBox3;
+        private System.Windows.Forms.ComboBox cbxCategoria;
         private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.ComboBox comboBox2;
+        private System.Windows.Forms.ComboBox cbxMarca;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Button btnEliminar;
         private System.Windows.Forms.Button btnModificar;

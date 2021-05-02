@@ -167,12 +167,8 @@ namespace vistas
             limpiarCampos(Controles);
             this.Close();
         }
-        
-        #endregion
-
-        private void v_nuevoProducto_Load(object sender, EventArgs e)
+        private void cargarComboBox()
         {
-            
             MarcaNegocio marc = new MarcaNegocio();
             CategoriaNegocio cate = new CategoriaNegocio();
 
@@ -185,8 +181,13 @@ namespace vistas
             cbxMarca.DisplayMember = "Nombre";
             cbxCategoria.Text = "--Seleccione Categoria--";
             cbxMarca.Text = "--Seleccione Marca--";
+        }
+        
+        #endregion
 
-            
+        private void v_nuevoProducto_Load(object sender, EventArgs e)
+        {
+            cargarComboBox();
 
             if (prod != null)
             {
@@ -291,8 +292,9 @@ namespace vistas
 
         private void btnNuevaMarca_Click(object sender, EventArgs e)
         {
-            v_nuevaMarca vent = new v_nuevaMarca();
+            v_nuevaMarca vent = new v_nuevaMarca(true);
             vent.ShowDialog();
+            cargarComboBox();
         }
 
         private void btnNuevaCategoria_Click(object sender, EventArgs e)

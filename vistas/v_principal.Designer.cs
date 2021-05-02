@@ -39,12 +39,12 @@ namespace vistas
             this.btnProductos = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
             this.pnlAdministracion = new System.Windows.Forms.Panel();
+            this.btnNuevaMarca = new System.Windows.Forms.Button();
+            this.btnNuevaCategoria = new System.Windows.Forms.Button();
             this.btnNuevoProducto = new System.Windows.Forms.Button();
             this.btnAdministracion = new System.Windows.Forms.Button();
             this.pnlContenedor = new System.Windows.Forms.Panel();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
-            this.btnNuevaMarca = new System.Windows.Forms.Button();
-            this.btnNuevaCategoria = new System.Windows.Forms.Button();
             this.pnlTitulo.SuspendLayout();
             this.panel3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -63,7 +63,7 @@ namespace vistas
             this.pnlTitulo.Dock = System.Windows.Forms.DockStyle.Top;
             this.pnlTitulo.Location = new System.Drawing.Point(0, 0);
             this.pnlTitulo.Name = "pnlTitulo";
-            this.pnlTitulo.Size = new System.Drawing.Size(920, 24);
+            this.pnlTitulo.Size = new System.Drawing.Size(987, 24);
             this.pnlTitulo.TabIndex = 1;
             this.pnlTitulo.MouseMove += new System.Windows.Forms.MouseEventHandler(this.pnlTitulo_MouseMove);
             // 
@@ -86,7 +86,7 @@ namespace vistas
             this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button1.Font = new System.Drawing.Font("Segoe UI", 11.25F);
             this.button1.ForeColor = System.Drawing.Color.Red;
-            this.button1.Location = new System.Drawing.Point(886, 0);
+            this.button1.Location = new System.Drawing.Point(953, 0);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(34, 24);
             this.button1.TabIndex = 2;
@@ -192,6 +192,40 @@ namespace vistas
             this.pnlAdministracion.TabIndex = 4;
             this.pnlAdministracion.Visible = false;
             // 
+            // btnNuevaMarca
+            // 
+            this.btnNuevaMarca.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnNuevaMarca.FlatAppearance.BorderSize = 0;
+            this.btnNuevaMarca.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnNuevaMarca.Font = new System.Drawing.Font("Segoe UI", 9.75F);
+            this.btnNuevaMarca.ForeColor = System.Drawing.Color.Silver;
+            this.btnNuevaMarca.Location = new System.Drawing.Point(0, 66);
+            this.btnNuevaMarca.Name = "btnNuevaMarca";
+            this.btnNuevaMarca.Padding = new System.Windows.Forms.Padding(30, 0, 0, 0);
+            this.btnNuevaMarca.Size = new System.Drawing.Size(160, 33);
+            this.btnNuevaMarca.TabIndex = 4;
+            this.btnNuevaMarca.Text = "Marcas";
+            this.btnNuevaMarca.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnNuevaMarca.UseVisualStyleBackColor = true;
+            this.btnNuevaMarca.Click += new System.EventHandler(this.btnNuevaMarca_Click);
+            // 
+            // btnNuevaCategoria
+            // 
+            this.btnNuevaCategoria.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnNuevaCategoria.FlatAppearance.BorderSize = 0;
+            this.btnNuevaCategoria.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnNuevaCategoria.Font = new System.Drawing.Font("Segoe UI", 9.75F);
+            this.btnNuevaCategoria.ForeColor = System.Drawing.Color.Silver;
+            this.btnNuevaCategoria.Location = new System.Drawing.Point(0, 33);
+            this.btnNuevaCategoria.Name = "btnNuevaCategoria";
+            this.btnNuevaCategoria.Padding = new System.Windows.Forms.Padding(30, 0, 0, 0);
+            this.btnNuevaCategoria.Size = new System.Drawing.Size(160, 33);
+            this.btnNuevaCategoria.TabIndex = 3;
+            this.btnNuevaCategoria.Text = "Categorías";
+            this.btnNuevaCategoria.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnNuevaCategoria.UseVisualStyleBackColor = true;
+            this.btnNuevaCategoria.Click += new System.EventHandler(this.btnNuevaCategoria_Click);
+            // 
             // btnNuevoProducto
             // 
             this.btnNuevoProducto.Dock = System.Windows.Forms.DockStyle.Top;
@@ -233,7 +267,7 @@ namespace vistas
             this.pnlContenedor.Dock = System.Windows.Forms.DockStyle.Fill;
             this.pnlContenedor.Location = new System.Drawing.Point(160, 24);
             this.pnlContenedor.Name = "pnlContenedor";
-            this.pnlContenedor.Size = new System.Drawing.Size(760, 501);
+            this.pnlContenedor.Size = new System.Drawing.Size(827, 501);
             this.pnlContenedor.TabIndex = 2;
             // 
             // pictureBox2
@@ -241,53 +275,19 @@ namespace vistas
             this.pictureBox2.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.pictureBox2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.pictureBox2.Image = global::vistas.Properties.Resources.logo;
-            this.pictureBox2.Location = new System.Drawing.Point(181, 105);
+            this.pictureBox2.Location = new System.Drawing.Point(214, 105);
             this.pictureBox2.Name = "pictureBox2";
             this.pictureBox2.Size = new System.Drawing.Size(398, 270);
             this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox2.TabIndex = 0;
             this.pictureBox2.TabStop = false;
             // 
-            // btnNuevaMarca
-            // 
-            this.btnNuevaMarca.Dock = System.Windows.Forms.DockStyle.Top;
-            this.btnNuevaMarca.FlatAppearance.BorderSize = 0;
-            this.btnNuevaMarca.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnNuevaMarca.Font = new System.Drawing.Font("Segoe UI", 9.75F);
-            this.btnNuevaMarca.ForeColor = System.Drawing.Color.Silver;
-            this.btnNuevaMarca.Location = new System.Drawing.Point(0, 66);
-            this.btnNuevaMarca.Name = "btnNuevaMarca";
-            this.btnNuevaMarca.Padding = new System.Windows.Forms.Padding(30, 0, 0, 0);
-            this.btnNuevaMarca.Size = new System.Drawing.Size(160, 33);
-            this.btnNuevaMarca.TabIndex = 4;
-            this.btnNuevaMarca.Text = "Marcas";
-            this.btnNuevaMarca.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnNuevaMarca.UseVisualStyleBackColor = true;
-            this.btnNuevaMarca.Click += new System.EventHandler(this.btnNuevaMarca_Click);
-            // 
-            // btnNuevaCategoria
-            // 
-            this.btnNuevaCategoria.Dock = System.Windows.Forms.DockStyle.Top;
-            this.btnNuevaCategoria.FlatAppearance.BorderSize = 0;
-            this.btnNuevaCategoria.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnNuevaCategoria.Font = new System.Drawing.Font("Segoe UI", 9.75F);
-            this.btnNuevaCategoria.ForeColor = System.Drawing.Color.Silver;
-            this.btnNuevaCategoria.Location = new System.Drawing.Point(0, 33);
-            this.btnNuevaCategoria.Name = "btnNuevaCategoria";
-            this.btnNuevaCategoria.Padding = new System.Windows.Forms.Padding(30, 0, 0, 0);
-            this.btnNuevaCategoria.Size = new System.Drawing.Size(160, 33);
-            this.btnNuevaCategoria.TabIndex = 3;
-            this.btnNuevaCategoria.Text = "Categorías";
-            this.btnNuevaCategoria.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnNuevaCategoria.UseVisualStyleBackColor = true;
-            this.btnNuevaCategoria.Click += new System.EventHandler(this.btnNuevaCategoria_Click);
-            // 
             // v_principal
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.ClientSize = new System.Drawing.Size(920, 525);
+            this.ClientSize = new System.Drawing.Size(987, 525);
             this.Controls.Add(this.pnlContenedor);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.pnlTitulo);
