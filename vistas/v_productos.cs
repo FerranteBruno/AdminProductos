@@ -19,18 +19,6 @@ namespace vistas
             InitializeComponent();
         }
 
-
-        private void ocultarMostrarPaneles(Panel aux)
-        {
-            if (aux.Visible == true)
-            {
-                aux.Visible = false;
-            }
-            else
-            {
-                aux.Visible = true;
-            }
-        }
         private void cargarComboBox()
         {
             MarcaNegocio marc = new MarcaNegocio();
@@ -46,10 +34,10 @@ namespace vistas
             cbxCategoria.Text = "--Seleccione Categoria--";
             cbxMarca.Text = "--Seleccione Marca--";
         }
-        private void cargarProductos(string consulta="")
+        private void cargarProductos(string consulta = "")
         {
             ProductoNegocio prod = new ProductoNegocio();
-            
+
             dgvProductos.DataSource = null;
             dgvProductos.Rows.Clear();
             dgvProductos.AutoGenerateColumns = false;
@@ -64,8 +52,8 @@ namespace vistas
                 dgvProductos.DataSource = prod.listar();
             }
 
-            
-           
+
+
         }
         private string armaConsultaFiltro()
         {
@@ -96,42 +84,21 @@ namespace vistas
 
             return consulta;
         }
-        private void buscarProucto()
-        {
-            string consutla = armaConsultaFiltro();
-
-            if (!consutla.Trim().Equals(""))
-            {
-                ProductoNegocio prod = new ProductoNegocio();
-                List<Producto> listprod = prod.listar(consutla);
-
-                dgvProductos.DataSource = null;
-                dgvProductos.Rows.Clear();
-                dgvProductos.AutoGenerateColumns = false;
-                dgvProductos.ClearSelection();
-                dgvProductos.DataSource = listprod;
-            }
-            
-        }
-
-
         private void v_productos_Load(object sender, EventArgs e)
         {
             cargarComboBox();
             cargarProductos();
             txtBuscar.Focus();
         }
-
         private void dgvProductos_CellClick(object sender, DataGridViewCellEventArgs e)
         {
             lblNombre.Text = dgvProductos.CurrentRow.Cells[2].Value.ToString();
             lblMarca.Text = dgvProductos.CurrentRow.Cells[4].Value.ToString();
             lblCategoria.Text = dgvProductos.CurrentRow.Cells[5].Value.ToString();
-            lblPrecio.Text = "$ "+dgvProductos.CurrentRow.Cells[7].Value.ToString();
+            lblPrecio.Text = "$ " + dgvProductos.CurrentRow.Cells[7].Value.ToString();
             lblDescripcion.Text = dgvProductos.CurrentRow.Cells[3].Value.ToString();
             picProducto.ImageLocation = dgvProductos.CurrentRow.Cells[6].Value.ToString();
         }
-
         private void btnModificar_Click(object sender, EventArgs e)
         {
             Producto prod = (Producto)dgvProductos.CurrentRow.DataBoundItem;
@@ -164,31 +131,25 @@ namespace vistas
                 eliminarProducto(prod);
             }
         }
-
         private void label5_Click(object sender, EventArgs e)
         {
 
         }
-
-
         private void txtBuscar_TextChanged(object sender, EventArgs e)
         {
             cargarProductos(armaConsultaFiltro());
-            
+
 
         }
-
         private void cbxMarca_SelectedIndexChanged(object sender, EventArgs e)
         {
             cargarProductos(armaConsultaFiltro());
         }
-
         private void cbxCategoria_SelectedIndexChanged(object sender, EventArgs e)
         {
             cargarProductos(armaConsultaFiltro());
-            
-        }
 
+        }
         private void button1_Click(object sender, EventArgs e)
         {
             txtBuscar.Text = "";

@@ -29,6 +29,7 @@ namespace vistas
             {
                 pnlGrid.Visible = false;
                 this.Width = 345;
+                this.Height = 177;
             }
         }
         public v_nuevaMarca(Marca aux)

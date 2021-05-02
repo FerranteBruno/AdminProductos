@@ -134,5 +134,25 @@ namespace vistas
         {
 
         }
+
+        private void btnVer_MouseEnter(object sender, EventArgs e)
+        {
+            btnVer.ForeColor = Color.White;
+        }
+
+        private void btnVer_MouseLeave(object sender, EventArgs e)
+        {
+            btnVer.ForeColor = Color.DeepSkyBlue;
+        }
+
+        private void btnAdministracion_MouseEnter(object sender, EventArgs e)
+        {
+            btnAdministracion.ForeColor = Color.White;
+        }
+
+        private void btnAdministracion_MouseLeave(object sender, EventArgs e)
+        {
+            btnAdministracion.ForeColor = Color.DeepSkyBlue;
+        }
     }
 }

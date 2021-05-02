@@ -29,6 +29,7 @@ namespace vistas
             {
                 pnlGrid.Visible = false;
                 this.Width = 345;
+                this.Height = 177;
             }
         }
         public v_nuevaCategoria(Categoria aux)
@@ -62,8 +63,6 @@ namespace vistas
         private void v_nuevaCategoria_Load(object sender, EventArgs e)
         {
             cargarCategorias();
-            txtNombre.Text = "--Ingrese una Categoría--";
-
             if (cat != null)
             {
                 txtNombre.Text = cat.Nombre;
@@ -140,6 +139,10 @@ namespace vistas
             {
                 btnEliminar.Enabled = false;
             }
+            if (btnModificar.Focused == false)
+            {
+                btnModificar.Enabled = false;
+            }
         }
 
         private void txtNombre_Click(object sender, EventArgs e)
@@ -163,7 +166,35 @@ namespace vistas
         private void dgvCategorias_Click(object sender, EventArgs e)
         {
             btnEliminar.Enabled = true;
+            btnModificar.Enabled = true;
+        }
 
+        private void btnEliminar_EnabledChanged(object sender, EventArgs e)
+        {
+            if (btnEliminar.Enabled)
+            {
+                btnEliminar.BackColor = Color.Black;
+                btnEliminar.ForeColor = Color.DeepSkyBlue;
+            }
+            else
+            {
+                btnEliminar.BackColor = Color.White;
+                btnEliminar.ForeColor = SystemColors.ControlText;
+            }
+        }
+
+        private void btnModificar_EnabledChanged(object sender, EventArgs e)
+        {
+            if (btnModificar.Enabled)
+            {
+                btnModificar.BackColor = Color.DarkViolet;
+                btnModificar.ForeColor = Color.DeepSkyBlue;
+            }
+            else
+            {
+                btnModificar.BackColor = Color.White;
+                btnModificar.ForeColor = SystemColors.ControlText;
+            }
         }
     }
 }

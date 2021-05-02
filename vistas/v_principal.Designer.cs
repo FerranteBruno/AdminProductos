@@ -57,7 +57,7 @@ namespace vistas
             // 
             // pnlTitulo
             // 
-            this.pnlTitulo.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(69)))), ((int)(((byte)(15)))), ((int)(((byte)(4)))));
+            this.pnlTitulo.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(41)))), ((int)(((byte)(59)))));
             this.pnlTitulo.Controls.Add(this.label1);
             this.pnlTitulo.Controls.Add(this.button1);
             this.pnlTitulo.Dock = System.Windows.Forms.DockStyle.Top;
@@ -69,14 +69,16 @@ namespace vistas
             // 
             // label1
             // 
-            this.label1.AutoSize = true;
+            this.label1.Dock = System.Windows.Forms.DockStyle.Left;
             this.label1.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Bold);
-            this.label1.ForeColor = System.Drawing.Color.Red;
-            this.label1.Location = new System.Drawing.Point(10, 7);
+            this.label1.ForeColor = System.Drawing.Color.DeepSkyBlue;
+            this.label1.Location = new System.Drawing.Point(0, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(83, 16);
+            this.label1.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
+            this.label1.Size = new System.Drawing.Size(112, 24);
             this.label1.TabIndex = 3;
             this.label1.Text = "Admin*Data";
+            this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // button1
             // 
@@ -107,7 +109,7 @@ namespace vistas
             // 
             this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.pictureBox1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.pictureBox1.Image = global::vistas.Properties.Resources.logo1;
+            this.pictureBox1.Image = global::vistas.Properties.Resources.logo;
             this.pictureBox1.Location = new System.Drawing.Point(0, 0);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(160, 163);
@@ -118,12 +120,13 @@ namespace vistas
             // 
             // btnVer
             // 
+            this.btnVer.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(58)))), ((int)(((byte)(75)))));
             this.btnVer.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnVer.Dock = System.Windows.Forms.DockStyle.Top;
             this.btnVer.FlatAppearance.BorderSize = 0;
             this.btnVer.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnVer.Font = new System.Drawing.Font("Segoe UI", 11.25F);
-            this.btnVer.ForeColor = System.Drawing.Color.Red;
+            this.btnVer.ForeColor = System.Drawing.Color.DeepSkyBlue;
             this.btnVer.Location = new System.Drawing.Point(0, 163);
             this.btnVer.Name = "btnVer";
             this.btnVer.Padding = new System.Windows.Forms.Padding(13, 0, 0, 0);
@@ -131,8 +134,10 @@ namespace vistas
             this.btnVer.TabIndex = 1;
             this.btnVer.Text = "Ver";
             this.btnVer.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnVer.UseVisualStyleBackColor = true;
+            this.btnVer.UseVisualStyleBackColor = false;
             this.btnVer.Click += new System.EventHandler(this.button1_Click);
+            this.btnVer.MouseEnter += new System.EventHandler(this.btnVer_MouseEnter);
+            this.btnVer.MouseLeave += new System.EventHandler(this.btnVer_MouseLeave);
             // 
             // pnlVer
             // 
@@ -167,6 +172,7 @@ namespace vistas
             // panel1
             // 
             this.panel1.AutoScroll = true;
+            this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(58)))), ((int)(((byte)(75)))));
             this.panel1.Controls.Add(this.pnlAdministracion);
             this.panel1.Controls.Add(this.btnAdministracion);
             this.panel1.Controls.Add(this.pnlVer);
@@ -245,12 +251,13 @@ namespace vistas
             // 
             // btnAdministracion
             // 
+            this.btnAdministracion.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(58)))), ((int)(((byte)(75)))));
             this.btnAdministracion.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnAdministracion.Dock = System.Windows.Forms.DockStyle.Top;
             this.btnAdministracion.FlatAppearance.BorderSize = 0;
             this.btnAdministracion.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnAdministracion.Font = new System.Drawing.Font("Segoe UI", 11.25F);
-            this.btnAdministracion.ForeColor = System.Drawing.Color.Red;
+            this.btnAdministracion.ForeColor = System.Drawing.Color.DeepSkyBlue;
             this.btnAdministracion.Location = new System.Drawing.Point(0, 230);
             this.btnAdministracion.Name = "btnAdministracion";
             this.btnAdministracion.Padding = new System.Windows.Forms.Padding(13, 0, 0, 0);
@@ -258,11 +265,14 @@ namespace vistas
             this.btnAdministracion.TabIndex = 3;
             this.btnAdministracion.Text = "Administracion";
             this.btnAdministracion.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnAdministracion.UseVisualStyleBackColor = true;
+            this.btnAdministracion.UseVisualStyleBackColor = false;
             this.btnAdministracion.Click += new System.EventHandler(this.btnAdministracion_Click);
+            this.btnAdministracion.MouseEnter += new System.EventHandler(this.btnAdministracion_MouseEnter);
+            this.btnAdministracion.MouseLeave += new System.EventHandler(this.btnAdministracion_MouseLeave);
             // 
             // pnlContenedor
             // 
+            this.pnlContenedor.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(59)))), ((int)(((byte)(74)))));
             this.pnlContenedor.Controls.Add(this.pictureBox2);
             this.pnlContenedor.Dock = System.Windows.Forms.DockStyle.Fill;
             this.pnlContenedor.Location = new System.Drawing.Point(160, 24);
@@ -272,7 +282,6 @@ namespace vistas
             // 
             // pictureBox2
             // 
-            this.pictureBox2.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.pictureBox2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.pictureBox2.Image = global::vistas.Properties.Resources.logo;
             this.pictureBox2.Location = new System.Drawing.Point(214, 105);
@@ -296,7 +305,6 @@ namespace vistas
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "v_principal";
             this.pnlTitulo.ResumeLayout(false);
-            this.pnlTitulo.PerformLayout();
             this.panel3.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.pnlVer.ResumeLayout(false);
