@@ -141,5 +141,11 @@
   <ItemGroup>
     <None Include="Resources\earth-globe1.png" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\IconoDeProyecto.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\16x16.ico" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

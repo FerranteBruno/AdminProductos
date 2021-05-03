@@ -10,19 +10,22 @@ namespace negocio
     public class CategoriaNegocio
     {
 
-        public List<Categoria> listar()
+        public List<Categoria> listar(bool combobox = false)
         {
             List<Categoria> lista = new List<Categoria>();
 
             AccesoDatos datos = new AccesoDatos();
 
-            Categoria estado0 = new Categoria();
+            if (combobox)
+            {
+                Categoria estado0 = new Categoria();
 
-            estado0.ID = -1;
-            estado0.Nombre = "--Seleccione Categoría--";
-            estado0.Estado = true;
+                estado0.ID = -1;
+                estado0.Nombre = "--Seleccione Categoría--";
+                estado0.Estado = true;
 
-            lista.Add(estado0);
+                lista.Add(estado0);
+            }
 
             try
             {
@@ -112,7 +115,7 @@ namespace negocio
                 aux.Estado = false;
 
                 datos.setearConsulta(
-                    "update Categorias set Estado = 0 where ID = " + aux.ID );
+                    "update Categorias set Estado = 0 where ID = " + aux.ID);
 
                 datos.ejectutarAccion();
 

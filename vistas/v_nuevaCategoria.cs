@@ -102,13 +102,25 @@ namespace vistas
 
         private void btnGuardar_Click(object sender, EventArgs e)
         {
-            if (cat == null)
+            if (txtNombre.Text != "")
             {
-                guardarCategoria();
+                if (cat == null)
+                {
+                    guardarCategoria();
+                    if (ventana)
+                    {
+                        this.Close();
+                    }
+                }
+                else
+                {
+                    modificarCategoria();
+                }
             }
             else
             {
-                modificarCategoria();
+                MessageBox.Show("Por favor ingrese una categoría");
+                txtNombre.Focus();
             }
             cargarCategorias();
         }
@@ -186,6 +198,15 @@ namespace vistas
 
             catmod.ShowDialog();
             cargarCategorias();
+        }
+
+        private void txtNombre_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (e.KeyChar == (char)Keys.Enter)
+            {
+                btnGuardar.PerformClick();
+                e.Handled = true;
+            }
         }
     }
 }

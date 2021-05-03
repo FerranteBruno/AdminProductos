@@ -7,22 +7,25 @@ using dominio;
 
 namespace negocio
 {
-   public class MarcaNegocio
+    public class MarcaNegocio
     {
 
-        public List<Marca> listar()
+        public List<Marca> listar(bool combobox = false)
         {
             List<Marca> lista = new List<Marca>();
 
             AccesoDatos datos = new AccesoDatos();
 
-            Marca estado0 = new Marca();
+            if (combobox)
+            {
+                Marca estado0 = new Marca();
 
-            estado0.ID = -1;
-            estado0.Nombre = "--Seleccione Marca--";
-            estado0.Estado = true;
+                estado0.ID = -1;
+                estado0.Nombre = "--Seleccione Marca--";
+                estado0.Estado = true;
 
-            lista.Add(estado0);
+                lista.Add(estado0);
+            }
 
             try
             {
@@ -113,7 +116,7 @@ namespace negocio
                 aux.Estado = false;
 
                 datos.setearConsulta(
-                    "update Marcas set Estado = 0 where ID = " + aux.ID );
+                    "update Marcas set Estado = 0 where ID = " + aux.ID);
 
                 datos.ejectutarAccion();
 

@@ -76,7 +76,7 @@ namespace vistas
                     if (b.SelectedIndex == 0)
                     {
                         cont++;
-                        a.BackColor = Color.Red;
+                        a.BackColor= Color.Red;
                         if (cont == 1) { aux = a; } //Guarda el primer control vacio
                         ok = false;
                     }
@@ -173,20 +173,15 @@ namespace vistas
         {
             MarcaNegocio marc = new MarcaNegocio();
             CategoriaNegocio cate = new CategoriaNegocio();
-
-            List<Categoria> liscat = cate.listar();
-            List<Marca> listmarc = marc.listar();
-             
-            cbxCategoria.DataSource = liscat.OrderBy(o => o.Nombre).ToList();
+                         
+            cbxCategoria.DataSource = cate.listar(true);
             cbxCategoria.ValueMember = "id";
             cbxCategoria.DisplayMember = "Nombre";
 
-            cbxMarca.DataSource = listmarc.OrderBy(o => o.Nombre).ToList();
+            cbxMarca.DataSource = marc.listar(true);
             cbxMarca.ValueMember = "id";
             cbxMarca.DisplayMember = "Nombre";
 
-            cbxCategoria.Text = "--Seleccione Categoria--";
-            cbxMarca.Text = "--Seleccione Marca--";
         }
         
         #endregion
@@ -307,6 +302,7 @@ namespace vistas
         {
             v_nuevaCategoria vent = new v_nuevaCategoria(true);
             vent.ShowDialog();
+            cargarComboBox();
         }
 
         private void txtCodigo_KeyPress(object sender, KeyPressEventArgs e)

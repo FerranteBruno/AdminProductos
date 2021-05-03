@@ -29,8 +29,19 @@ namespace vistas
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(v_productos));
             this.panel2 = new System.Windows.Forms.Panel();
             this.dgvProductos = new System.Windows.Forms.DataGridView();
+            this.c_id = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.c_Codigo = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.c_nombre = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.c_descripcion = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.c_marca = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.c_categoria = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.c_url = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.c_precio = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.c_stock = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.c_estado = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.panel3 = new System.Windows.Forms.Panel();
             this.pnlDatosProducto = new System.Windows.Forms.Panel();
             this.panel8 = new System.Windows.Forms.Panel();
@@ -49,11 +60,16 @@ namespace vistas
             this.label4 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.panel4 = new System.Windows.Forms.Panel();
+            this.panel10 = new System.Windows.Forms.Panel();
             this.picProducto = new System.Windows.Forms.PictureBox();
+            this.panel9 = new System.Windows.Forms.Panel();
+            this.panel7 = new System.Windows.Forms.Panel();
             this.panel1 = new System.Windows.Forms.Panel();
             this.btnModificar = new System.Windows.Forms.Button();
             this.btnEliminar = new System.Windows.Forms.Button();
             this.panel5 = new System.Windows.Forms.Panel();
+            this.panel11 = new System.Windows.Forms.Panel();
+            this.button1 = new System.Windows.Forms.Button();
             this.cbxCategoria = new System.Windows.Forms.ComboBox();
             this.label6 = new System.Windows.Forms.Label();
             this.cbxMarca = new System.Windows.Forms.ComboBox();
@@ -62,33 +78,18 @@ namespace vistas
             this.txtBuscar = new System.Windows.Forms.TextBox();
             this.panel6 = new System.Windows.Forms.Panel();
             this.label1 = new System.Windows.Forms.Label();
-            this.c_id = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.c_Codigo = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.c_nombre = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.c_descripcion = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.c_marca = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.c_categoria = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.c_url = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.c_precio = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.c_stock = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.c_estado = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.button1 = new System.Windows.Forms.Button();
-            this.panel7 = new System.Windows.Forms.Panel();
-            this.panel9 = new System.Windows.Forms.Panel();
-            this.panel10 = new System.Windows.Forms.Panel();
-            this.panel11 = new System.Windows.Forms.Panel();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvProductos)).BeginInit();
             this.panel3.SuspendLayout();
             this.pnlDatosProducto.SuspendLayout();
             this.panel8.SuspendLayout();
             this.panel4.SuspendLayout();
+            this.panel10.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.picProducto)).BeginInit();
             this.panel1.SuspendLayout();
             this.panel5.SuspendLayout();
-            this.panel6.SuspendLayout();
-            this.panel10.SuspendLayout();
             this.panel11.SuspendLayout();
+            this.panel6.SuspendLayout();
             this.SuspendLayout();
             // 
             // panel2
@@ -119,6 +120,7 @@ namespace vistas
             this.c_estado});
             this.dgvProductos.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dgvProductos.Location = new System.Drawing.Point(0, 0);
+            this.dgvProductos.MultiSelect = false;
             this.dgvProductos.Name = "dgvProductos";
             this.dgvProductos.ReadOnly = true;
             this.dgvProductos.RowTemplate.Height = 25;
@@ -126,6 +128,84 @@ namespace vistas
             this.dgvProductos.Size = new System.Drawing.Size(610, 292);
             this.dgvProductos.TabIndex = 0;
             this.dgvProductos.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvProductos_CellClick);
+            // 
+            // c_id
+            // 
+            this.c_id.DataPropertyName = "ID";
+            this.c_id.HeaderText = "ID";
+            this.c_id.Name = "c_id";
+            this.c_id.ReadOnly = true;
+            this.c_id.Visible = false;
+            // 
+            // c_Codigo
+            // 
+            this.c_Codigo.DataPropertyName = "Codigo";
+            this.c_Codigo.HeaderText = "Codigo";
+            this.c_Codigo.Name = "c_Codigo";
+            this.c_Codigo.ReadOnly = true;
+            this.c_Codigo.Visible = false;
+            // 
+            // c_nombre
+            // 
+            this.c_nombre.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.c_nombre.DataPropertyName = "Nombre";
+            this.c_nombre.HeaderText = "Nombre";
+            this.c_nombre.Name = "c_nombre";
+            this.c_nombre.ReadOnly = true;
+            // 
+            // c_descripcion
+            // 
+            this.c_descripcion.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.c_descripcion.DataPropertyName = "Descripcion";
+            this.c_descripcion.HeaderText = "Descripcion";
+            this.c_descripcion.Name = "c_descripcion";
+            this.c_descripcion.ReadOnly = true;
+            this.c_descripcion.Visible = false;
+            // 
+            // c_marca
+            // 
+            this.c_marca.DataPropertyName = "Marca";
+            this.c_marca.HeaderText = "Marca";
+            this.c_marca.Name = "c_marca";
+            this.c_marca.ReadOnly = true;
+            // 
+            // c_categoria
+            // 
+            this.c_categoria.DataPropertyName = "Categoria";
+            this.c_categoria.HeaderText = "Categoria";
+            this.c_categoria.Name = "c_categoria";
+            this.c_categoria.ReadOnly = true;
+            this.c_categoria.Visible = false;
+            // 
+            // c_url
+            // 
+            this.c_url.DataPropertyName = "UrlImagen";
+            this.c_url.HeaderText = "UrlImagen";
+            this.c_url.Name = "c_url";
+            this.c_url.ReadOnly = true;
+            this.c_url.Visible = false;
+            // 
+            // c_precio
+            // 
+            this.c_precio.DataPropertyName = "Precio";
+            this.c_precio.HeaderText = "Precio";
+            this.c_precio.Name = "c_precio";
+            this.c_precio.ReadOnly = true;
+            // 
+            // c_stock
+            // 
+            this.c_stock.DataPropertyName = "Stock";
+            this.c_stock.HeaderText = "Stock";
+            this.c_stock.Name = "c_stock";
+            this.c_stock.ReadOnly = true;
+            // 
+            // c_estado
+            // 
+            this.c_estado.DataPropertyName = "Estado";
+            this.c_estado.HeaderText = "Estado";
+            this.c_estado.Name = "c_estado";
+            this.c_estado.ReadOnly = true;
+            this.c_estado.Visible = false;
             // 
             // panel3
             // 
@@ -363,6 +443,16 @@ namespace vistas
             this.panel4.Size = new System.Drawing.Size(201, 340);
             this.panel4.TabIndex = 0;
             // 
+            // panel10
+            // 
+            this.panel10.BackColor = System.Drawing.SystemColors.ControlDarkDark;
+            this.panel10.Controls.Add(this.picProducto);
+            this.panel10.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panel10.Location = new System.Drawing.Point(0, 66);
+            this.panel10.Name = "panel10";
+            this.panel10.Size = new System.Drawing.Size(201, 208);
+            this.panel10.TabIndex = 3;
+            // 
             // picProducto
             // 
             this.picProducto.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
@@ -376,6 +466,24 @@ namespace vistas
             this.picProducto.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.picProducto.TabIndex = 0;
             this.picProducto.TabStop = false;
+            // 
+            // panel9
+            // 
+            this.panel9.BackColor = System.Drawing.SystemColors.ControlDarkDark;
+            this.panel9.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.panel9.Location = new System.Drawing.Point(0, 274);
+            this.panel9.Name = "panel9";
+            this.panel9.Size = new System.Drawing.Size(201, 66);
+            this.panel9.TabIndex = 2;
+            // 
+            // panel7
+            // 
+            this.panel7.BackColor = System.Drawing.SystemColors.ControlDarkDark;
+            this.panel7.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel7.Location = new System.Drawing.Point(0, 0);
+            this.panel7.Name = "panel7";
+            this.panel7.Size = new System.Drawing.Size(201, 66);
+            this.panel7.TabIndex = 1;
             // 
             // panel1
             // 
@@ -434,6 +542,29 @@ namespace vistas
             this.panel5.Name = "panel5";
             this.panel5.Size = new System.Drawing.Size(811, 36);
             this.panel5.TabIndex = 3;
+            // 
+            // panel11
+            // 
+            this.panel11.Anchor = System.Windows.Forms.AnchorStyles.Left;
+            this.panel11.Controls.Add(this.button1);
+            this.panel11.Location = new System.Drawing.Point(658, 0);
+            this.panel11.Name = "panel11";
+            this.panel11.Size = new System.Drawing.Size(153, 35);
+            this.panel11.TabIndex = 28;
+            // 
+            // button1
+            // 
+            this.button1.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.button1.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button1.ForeColor = System.Drawing.SystemColors.MenuHighlight;
+            this.button1.Location = new System.Drawing.Point(31, 6);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(90, 23);
+            this.button1.TabIndex = 28;
+            this.button1.Text = "Limpiar Filtro";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // cbxCategoria
             // 
@@ -516,135 +647,6 @@ namespace vistas
             this.label1.Text = "Listado de Productos";
             this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
-            // c_id
-            // 
-            this.c_id.DataPropertyName = "ID";
-            this.c_id.HeaderText = "ID";
-            this.c_id.Name = "c_id";
-            this.c_id.ReadOnly = true;
-            this.c_id.Visible = false;
-            // 
-            // c_Codigo
-            // 
-            this.c_Codigo.DataPropertyName = "Codigo";
-            this.c_Codigo.HeaderText = "Codigo";
-            this.c_Codigo.Name = "c_Codigo";
-            this.c_Codigo.ReadOnly = true;
-            this.c_Codigo.Visible = false;
-            // 
-            // c_nombre
-            // 
-            this.c_nombre.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.c_nombre.DataPropertyName = "Nombre";
-            this.c_nombre.HeaderText = "Nombre";
-            this.c_nombre.Name = "c_nombre";
-            this.c_nombre.ReadOnly = true;
-            // 
-            // c_descripcion
-            // 
-            this.c_descripcion.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.c_descripcion.DataPropertyName = "Descripcion";
-            this.c_descripcion.HeaderText = "Descripcion";
-            this.c_descripcion.Name = "c_descripcion";
-            this.c_descripcion.ReadOnly = true;
-            this.c_descripcion.Visible = false;
-            // 
-            // c_marca
-            // 
-            this.c_marca.DataPropertyName = "Marca";
-            this.c_marca.HeaderText = "Marca";
-            this.c_marca.Name = "c_marca";
-            this.c_marca.ReadOnly = true;
-            // 
-            // c_categoria
-            // 
-            this.c_categoria.DataPropertyName = "Categoria";
-            this.c_categoria.HeaderText = "Categoria";
-            this.c_categoria.Name = "c_categoria";
-            this.c_categoria.ReadOnly = true;
-            this.c_categoria.Visible = false;
-            // 
-            // c_url
-            // 
-            this.c_url.DataPropertyName = "UrlImagen";
-            this.c_url.HeaderText = "UrlImagen";
-            this.c_url.Name = "c_url";
-            this.c_url.ReadOnly = true;
-            this.c_url.Visible = false;
-            // 
-            // c_precio
-            // 
-            this.c_precio.DataPropertyName = "Precio";
-            this.c_precio.HeaderText = "Precio";
-            this.c_precio.Name = "c_precio";
-            this.c_precio.ReadOnly = true;
-            // 
-            // c_stock
-            // 
-            this.c_stock.DataPropertyName = "Stock";
-            this.c_stock.HeaderText = "Stock";
-            this.c_stock.Name = "c_stock";
-            this.c_stock.ReadOnly = true;
-            // 
-            // c_estado
-            // 
-            this.c_estado.DataPropertyName = "Estado";
-            this.c_estado.HeaderText = "Estado";
-            this.c_estado.Name = "c_estado";
-            this.c_estado.ReadOnly = true;
-            this.c_estado.Visible = false;
-            // 
-            // button1
-            // 
-            this.button1.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.button1.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button1.ForeColor = System.Drawing.SystemColors.MenuHighlight;
-            this.button1.Location = new System.Drawing.Point(31, 6);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(90, 23);
-            this.button1.TabIndex = 28;
-            this.button1.Text = "Limpiar Filtro";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
-            // 
-            // panel7
-            // 
-            this.panel7.BackColor = System.Drawing.SystemColors.ControlDarkDark;
-            this.panel7.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel7.Location = new System.Drawing.Point(0, 0);
-            this.panel7.Name = "panel7";
-            this.panel7.Size = new System.Drawing.Size(201, 66);
-            this.panel7.TabIndex = 1;
-            // 
-            // panel9
-            // 
-            this.panel9.BackColor = System.Drawing.SystemColors.ControlDarkDark;
-            this.panel9.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.panel9.Location = new System.Drawing.Point(0, 274);
-            this.panel9.Name = "panel9";
-            this.panel9.Size = new System.Drawing.Size(201, 66);
-            this.panel9.TabIndex = 2;
-            // 
-            // panel10
-            // 
-            this.panel10.BackColor = System.Drawing.SystemColors.ControlDarkDark;
-            this.panel10.Controls.Add(this.picProducto);
-            this.panel10.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel10.Location = new System.Drawing.Point(0, 66);
-            this.panel10.Name = "panel10";
-            this.panel10.Size = new System.Drawing.Size(201, 208);
-            this.panel10.TabIndex = 3;
-            // 
-            // panel11
-            // 
-            this.panel11.Anchor = System.Windows.Forms.AnchorStyles.Left;
-            this.panel11.Controls.Add(this.button1);
-            this.panel11.Location = new System.Drawing.Point(658, 0);
-            this.panel11.Name = "panel11";
-            this.panel11.Size = new System.Drawing.Size(153, 35);
-            this.panel11.TabIndex = 28;
-            // 
             // v_productos
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -656,6 +658,8 @@ namespace vistas
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.panel5);
             this.Controls.Add(this.panel6);
+            this.DoubleBuffered = true;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "v_productos";
             this.Text = "v_productos";
             this.Load += new System.EventHandler(this.v_productos_Load);
@@ -665,13 +669,13 @@ namespace vistas
             this.pnlDatosProducto.ResumeLayout(false);
             this.panel8.ResumeLayout(false);
             this.panel4.ResumeLayout(false);
+            this.panel10.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.picProducto)).EndInit();
             this.panel1.ResumeLayout(false);
             this.panel5.ResumeLayout(false);
             this.panel5.PerformLayout();
-            this.panel6.ResumeLayout(false);
-            this.panel10.ResumeLayout(false);
             this.panel11.ResumeLayout(false);
+            this.panel6.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
