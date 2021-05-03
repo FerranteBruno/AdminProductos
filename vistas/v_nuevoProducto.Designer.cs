@@ -291,24 +291,26 @@ namespace vistas
             // cbxMarca
             // 
             this.cbxMarca.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.cbxMarca.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cbxMarca.FormattingEnabled = true;
             this.cbxMarca.Location = new System.Drawing.Point(32, 174);
             this.cbxMarca.Name = "cbxMarca";
             this.cbxMarca.Size = new System.Drawing.Size(173, 21);
+            this.cbxMarca.Sorted = true;
             this.cbxMarca.TabIndex = 16;
-            this.cbxMarca.Text = "--Seleccione Marca--";
             this.cbxMarca.Enter += new System.EventHandler(this.cbxMarca_Enter);
             this.cbxMarca.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.cbxMarca_KeyPress);
             // 
             // cbxCategoria
             // 
             this.cbxCategoria.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.cbxCategoria.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cbxCategoria.FormattingEnabled = true;
             this.cbxCategoria.Location = new System.Drawing.Point(32, 218);
             this.cbxCategoria.Name = "cbxCategoria";
             this.cbxCategoria.Size = new System.Drawing.Size(173, 21);
+            this.cbxCategoria.Sorted = true;
             this.cbxCategoria.TabIndex = 16;
-            this.cbxCategoria.Text = "--Seleccione Categoria--";
             this.cbxCategoria.Enter += new System.EventHandler(this.cbxCategoria_Enter);
             this.cbxCategoria.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.cbxCategoria_KeyPress);
             // 

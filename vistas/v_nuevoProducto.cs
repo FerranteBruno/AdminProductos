@@ -73,7 +73,7 @@ namespace vistas
                 {
                     ComboBox b = (ComboBox)a;
 
-                    if (b.Text == "--Seleccione Categoria--" || b.Text == "--Seleccione Marca--")
+                    if (b.SelectedIndex == 0)
                     {
                         cont++;
                         a.BackColor = Color.Red;

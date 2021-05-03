@@ -16,6 +16,14 @@ namespace negocio
 
             AccesoDatos datos = new AccesoDatos();
 
+            Categoria estado0 = new Categoria();
+
+            estado0.ID = -1;
+            estado0.Nombre = "--Seleccione Categoría--";
+            estado0.Estado = true;
+
+            lista.Add(estado0);
+
             try
             {
                 datos.setearConsulta("select ID, Descripcion, Estado from Categorias");

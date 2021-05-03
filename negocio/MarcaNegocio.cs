@@ -16,6 +16,14 @@ namespace negocio
 
             AccesoDatos datos = new AccesoDatos();
 
+            Marca estado0 = new Marca();
+
+            estado0.ID = -1;
+            estado0.Nombre = "--Seleccione Marca--";
+            estado0.Estado = true;
+
+            lista.Add(estado0);
+
             try
             {
                 datos.setearConsulta("select ID, Descripcion, Estado from Marcas");
