@@ -1,9 +1,0 @@
-E:\Git\Pointer-Bucks\AdminProductos\negocio\bin\Release\negocio.dll
-E:\Git\Pointer-Bucks\AdminProductos\negocio\bin\Release\negocio.pdb
-E:\Git\Pointer-Bucks\AdminProductos\negocio\bin\Release\dominio.dll
-E:\Git\Pointer-Bucks\AdminProductos\negocio\bin\Release\dominio.pdb
-E:\Git\Pointer-Bucks\AdminProductos\negocio\obj\Release\negocio.csprojAssemblyReference.cache
-E:\Git\Pointer-Bucks\AdminProductos\negocio\obj\Release\negocio.csproj.CoreCompileInputs.cache
-E:\Git\Pointer-Bucks\AdminProductos\negocio\obj\Release\negocio.csproj.CopyComplete
-E:\Git\Pointer-Bucks\AdminProductos\negocio\obj\Release\negocio.dll
-E:\Git\Pointer-Bucks\AdminProductos\negocio\obj\Release\negocio.pdb

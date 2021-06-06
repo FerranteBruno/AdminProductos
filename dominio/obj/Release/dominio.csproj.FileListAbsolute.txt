@@ -1,6 +1,0 @@
-E:\Git\Pointer-Bucks\AdminProductos\dominio\bin\Release\dominio.dll
-E:\Git\Pointer-Bucks\AdminProductos\dominio\bin\Release\dominio.pdb
-E:\Git\Pointer-Bucks\AdminProductos\dominio\obj\Release\dominio.csprojAssemblyReference.cache
-E:\Git\Pointer-Bucks\AdminProductos\dominio\obj\Release\dominio.csproj.CoreCompileInputs.cache
-E:\Git\Pointer-Bucks\AdminProductos\dominio\obj\Release\dominio.dll
-E:\Git\Pointer-Bucks\AdminProductos\dominio\obj\Release\dominio.pdb
