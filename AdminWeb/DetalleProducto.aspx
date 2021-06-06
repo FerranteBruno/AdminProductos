@@ -1,16 +1,44 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="DetalleProducto.aspx.cs" Inherits="AdminWeb.DetalleProducto" %>
+﻿<%@ Page Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="DetalleProducto.aspx.cs" Inherits="AdminWeb.DetalleProducto" %>
 
-<!DOCTYPE html>
+<asp:Content ID="DetCont" ContentPlaceHolderID="MainContent" runat="server">
 
-<html xmlns="http://www.w3.org/1999/xhtml">
-<head runat="server">
-<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
-    <title></title>
-</head>
-<body>
-    <form id="form1" runat="server">
-        <div>
+    <div class="container">
+        <div class="row">
+            
+
+            <div class="card-body">
+                 <h5 class="card-title"><% = seleccionado.Nombre %></h5>
+                 <p class="card-text"><% = seleccionado.Descripcion %></p>
+                 <p class="card-text"><small class="text-muted"><% = seleccionado.Precio %></small></p>
+                 </div>
+                 <img src="<% = seleccionado.UrlImagen %>" class="card-img-bottom" alt="...">
+                </div>
+             </div>
+
+    <div class="container">
+        <div class="row">
+
+            <div class="input-group">
+              <select class="custom-select" id="inputGroupSelect04" aria-label="Example select with button addon">
+                <option value="1">Uno</option>
+                <option value="2">Dos</option>
+                <option value="3">Tres</option>
+                <option value="4">Cuatro</option>
+                <option value="5">Cinco</option>
+                <option value="6">Seis</option>
+
+
+              </select>
+              <div class="input-group-append">
+                <a href="Carrito.aspx?id=<% = seleccionado.ID %>">
+                    <button class="btn btn-outline-secondary" type="button">Añadir al Carrito</button>
+                  </a>
+              </div>
+            </div>
+
+
         </div>
-    </form>
-</body>
-</html>
+    </div>
+
+
+</asp:Content>

@@ -21,7 +21,7 @@
                   </ul>
                   <div class="card-body">
                      <a href="DetalleProducto.aspx?id=<% = item.ID %>" class="btn btn-primary">Ver Detalle</a>
-                     <a href="Carrito.aspx?id=<% = item.ID %>&e=t"><i class="bi bi-cart-plus"></i></a>
+                     <a href="Carrito.aspx?id=<% = item.ID %>"><i class="fas fa-cart-plus" style="transform: scale(1.5); padding-left: 4vh"></i></a>
                 </div>
             </div>
 

@@ -18,7 +18,7 @@ namespace AdminWeb
             try{
                 list = negocio.listar();
 
-                Session.Add("Listado de Productos", list);
+                Session.Add("listadoProductos", list);
 
             }catch(Exception ex)
             {
