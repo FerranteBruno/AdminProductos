@@ -33,7 +33,14 @@ namespace AdminWeb
                     if(carrito.listado.Find(x => x.item.ID.ToString() == Request.QueryString["ID"]) == null)
                     {
                         List<Producto> listadoOriginal = (List<Producto>)Session["listadoProductos"];
-                        carrito.listado.Add(listadoOriginal.Find(x => x.item.ID.ToString() == Request.QueryString["ID"]));
+                        itemCarrito aux = new itemCarrito();
+
+                        aux.id = 0;
+                        aux.cantidad = 1;
+                        aux.item = listadoOriginal.Find(x => x.ID.ToString() == Request.QueryString["ID"]);
+                        aux.subtotal = aux.cantidad * aux.item.Precio;
+
+                        carrito.listado.Add(aux);
                         
                     }
                 }
