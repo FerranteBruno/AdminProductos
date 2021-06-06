@@ -12,32 +12,36 @@ namespace AdminWeb
     public partial class Carrito : System.Web.UI.Page
     {
         //public List<Producto> enCarrito;
-        public Carrito carrito = new Carrito();
+        public CarritoCompra carrito = new CarritoCompra();
         public List<itemCarrito> enCarrito;
 
 
         protected void Page_Load(object sender, EventArgs e)
         {
-            enCarrito = (List<itemCarrito>)Session["listaEnCarro"];
+            carrito.listado = enCarrito;
 
-            if (enCarrito == null)
-                enCarrito = new List<itemCarrito>();
+            carrito.listado = (List<itemCarrito>)Session["listaEnCarro"];
+
+
+            if (carrito.listado == null)
+                carrito.listado = new List<itemCarrito>();
 
             if(!IsPostBack)
             {
                 if(Request.QueryString["ID"] != null)
                 {
-                    if(enCarrito.Find(x => x.item.ID.ToString() == Request.QueryString["ID"]) == null)
+                    if(carrito.listado.Find(x => x.item.ID.ToString() == Request.QueryString["ID"]) == null)
                     {
-                        List<itemCarrito> listadoOriginal = (List<itemCarrito>)Session["listadoProductos"];
-                        enCarrito.Add(listadoOriginal.Find(x => x.item.ID.ToString() == Request.QueryString["ID"]));
+                        List<Producto> listadoOriginal = (List<Producto>)Session["listadoProductos"];
+                        carrito.listado.Add(listadoOriginal.Find(x => x.item.ID.ToString() == Request.QueryString["ID"]));
+                        
                     }
                 }
-                repetidor.DataSource = enCarrito;
+                repetidor.DataSource = carrito.listado;
                 repetidor.DataBind();
             }
 
-            Session.Add("listaEnCarro", enCarrito);
+            Session.Add("listaEnCarro", carrito.listado);
         }
 
         protected void btnEliminar2_Click(object sender, EventArgs e)
