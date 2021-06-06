@@ -11,22 +11,26 @@ namespace AdminWeb
 {
     public partial class Carrito : System.Web.UI.Page
     {
-        public List<Producto> enCarrito;
+        //public List<Producto> enCarrito;
+        public Carrito carrito = new Carrito();
+        public List<itemCarrito> enCarrito;
+
+
         protected void Page_Load(object sender, EventArgs e)
         {
-            enCarrito = (List<Producto>)Session["listaEnCarro"];
+            enCarrito = (List<itemCarrito>)Session["listaEnCarro"];
 
             if (enCarrito == null)
-                enCarrito = new List<Producto>();
+                enCarrito = new List<itemCarrito>();
 
             if(!IsPostBack)
             {
                 if(Request.QueryString["ID"] != null)
                 {
-                    if(enCarrito.Find(x => x.ID.ToString() == Request.QueryString["ID"]) == null)
+                    if(enCarrito.Find(x => x.item.ID.ToString() == Request.QueryString["ID"]) == null)
                     {
-                        List<Producto> listadoOriginal = (List<Producto>)Session["listadoProductos"];
-                        enCarrito.Add(listadoOriginal.Find(x => x.ID.ToString() == Request.QueryString["ID"]));
+                        List<itemCarrito> listadoOriginal = (List<itemCarrito>)Session["listadoProductos"];
+                        enCarrito.Add(listadoOriginal.Find(x => x.item.ID.ToString() == Request.QueryString["ID"]));
                     }
                 }
                 repetidor.DataSource = enCarrito;
