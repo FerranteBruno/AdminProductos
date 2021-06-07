@@ -22,11 +22,9 @@
             </ItemTemplate>
         </asp:Repeater>
   
-<hr class="mt-2 mb-3"/><% = carrito.total %>
-
-
-
     </table>
+
+    <asp:Label ID="lblTotal" runat="server" Text="lale"></asp:Label>
 
 
 </asp:Content>

@@ -18,18 +18,17 @@ namespace AdminWeb
 
         protected void Page_Load(object sender, EventArgs e)
         {
-
             enCarrito = (List<itemCarrito>)Session["listaEnCarro"];
-
+            carrito = (CarritoCompra)Session["Total"];
 
             if (enCarrito == null)
                 enCarrito = new List<itemCarrito>();
 
-            if(!IsPostBack)
+            if (!IsPostBack)
             {
-                if(Request.QueryString["ID"] != null)
+                if (Request.QueryString["ID"] != null)
                 {
-                    if(enCarrito.Find(x => x.item.ID.ToString() == Request.QueryString["ID"]) == null)
+                    if (enCarrito.Find(x => x.item.ID.ToString() == Request.QueryString["ID"]) == null)
                     {
                         List<Producto> listadoOriginal = (List<Producto>)Session["listadoProductos"];
                         itemCarrito aux = new itemCarrito();
@@ -40,18 +39,29 @@ namespace AdminWeb
                         aux.id = aux.item.ID;
 
                         enCarrito.Add(aux);
-                        
+
+                        carrito.listado = enCarrito;
                     }
                 }
+
+                if (carrito != null)
+                {
+                    foreach (itemCarrito item in enCarrito)
+                    {
+                        carrito.total += item.subtotal;
+
+                        lblTotal.Text = carrito.total.ToString();
+                    }
+                }
+
                 repetidor.DataSource = enCarrito;
                 repetidor.DataBind();
-                foreach(itemCarrito item in enCarrito)
-                {
-                    carrito.total += item.subtotal;
-                }
+
             }
 
             Session.Add("listaEnCarro", enCarrito);
+            Session.Add("Total", carrito);
+
         }
 
         protected void btnEliminar2_Click(object sender, EventArgs e)
@@ -60,7 +70,17 @@ namespace AdminWeb
             List<itemCarrito> enCarrito = (List<itemCarrito>)Session["listaEnCarro"];
             itemCarrito elim = enCarrito.Find(x => x.id.ToString() == argument);
             enCarrito.Remove(elim);
+
+            //foreach (itemCarrito item in enCarrito)
+            //{
+            //    carrito.total -= elim.subtotal;
+
+            //    lblTotal.Text = carrito.total.ToString();
+            //}
+
+
             Session.Add("listaEnCarro", enCarrito);
+            Session.Add("Total", carrito);
             repetidor.DataSource = null;
             repetidor.DataSource = enCarrito;
             repetidor.DataBind();
