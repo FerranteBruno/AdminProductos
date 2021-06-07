@@ -34,7 +34,7 @@
                     <a class="nav-link" href="About">About</a>
                     <a class="nav-link" href="Contact">Contact</a>
                     <a class="nav-link" href="ListaProductos">Productos</a>
-                    <a class="nav-link" href="Carrito" >Carrito</a>
+                    <a class="nav-link" href="Carrito" ><% = sToCarrito %> </a>
                 </div>
             </div>
         </nav>
@@ -44,7 +44,7 @@
             </asp:ContentPlaceHolder>
             <hr />
             <footer>
-                <p>&copy; <%: DateTime.Now.Year %> - My ASP.NET Application</p>
+                <p>&copy; <%: DateTime.Now.Year %> - ROTA Tech</p>
             </footer>
         </div>
 

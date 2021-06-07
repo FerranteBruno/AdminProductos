@@ -15,7 +15,7 @@
                     <p class="card-text"><% = item.Descripcion %></p>
                   </div>
                   <ul class="list-group list-group-flush">
-                    <li class="list-group-item">$ <% = item.Precio %></li>
+                    <li class="list-group-item"><% = item.Precio.ToString("c",nfi) %></li>
                     <li class="list-group-item"><% = item.Categoria %></li>
                     <li class="list-group-item"><% = item.Marca %></li>
                   </ul>

@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Globalization;
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
@@ -12,6 +13,7 @@ namespace AdminWeb
     public partial class DetalleProducto : System.Web.UI.Page
     {
         public Producto seleccionado;
+        public NumberFormatInfo nfi = new CultureInfo("en-US", false).NumberFormat;
         protected void Page_Load(object sender, EventArgs e)
         {
 

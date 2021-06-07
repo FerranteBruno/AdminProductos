@@ -10,13 +10,14 @@
                 <tr>
                     <td><%#Eval("item.Nombre")%></td>
                     <td>
-                        <%--<asp:Button ID="btnEliminar" CssClass="btn btn-primary" Text="Eliminar" CommandArgument='<%#Eval("Id")%>' CommandName="idPokemon" runat="server" OnClick="btnEliminar_Click" />--%>
-                        <asp:Label ID="lblSubTotal" runat="server" Text="lale"></asp:Label>
-                        <asp:Button Text="Eliminar" CssClass="btn btn-primary" ID="btnEliminar2" onClick="btnEliminar2_Click" CommandArgument='<%#Eval("ID")%>' runat="server" />
-
+                        <asp:Label ID="lblSubTotal" runat="server" Text='<%#Eval("subtotal") %>'></asp:Label>
                     </td>
                     <td>
-                    <%//<asp:TextBox TextMode="Number" ID="txtCantidad" runat="server" AutoPostBack="true" OnTextChanged="txtCantidad_TextChanged" /> %>                     </td>
+                        <asp:TextBox TextMode="Number" ID="txtCantidad" runat="server" AutoPostBack="true" OnTextChanged="txtCantidad_TextChanged" Text="1" />
+                    </td>
+                    <td>
+                    <asp:Button Text="Eliminar" CssClass="btn btn-primary" ID="btnEliminar2" onClick="btnEliminar2_Click" CommandArgument='<%#Eval("ID")%>' runat="server" />
+                    </td>
                 </tr>
 
             </ItemTemplate>
@@ -24,7 +25,9 @@
   
     </table>
 
-    <asp:Label ID="lblTotal" runat="server" Text="lale"></asp:Label>
 
+
+
+    <asp:Label ID="lblTotal" runat="server" Text="lale"></asp:Label>
 
 </asp:Content>

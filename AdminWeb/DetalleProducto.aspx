@@ -9,7 +9,7 @@
             <div class="card-body">
                  <h5 class="card-title"><% = seleccionado.Nombre %></h5>
                  <p class="card-text"><% = seleccionado.Descripcion %></p>
-                 <p class="card-text"><small class="text-muted"><% = seleccionado.Precio %></small></p>
+                 <p class="card-text"><small class="text-muted"><% = seleccionado.Precio.ToString("c",nfi) %></small></p>
                  </div>
                  <img src="<% = seleccionado.UrlImagen %>" class="card-img-bottom" alt="...">
                 </div>
@@ -29,9 +29,10 @@
 
 
               </select>
-              <div class="input-group-append">
+              <div class="input-group-append" style="margin-left:auto; margin-right:auto;">
                 <a href="Carrito.aspx?id=<% = seleccionado.ID %>">
-                    <button class="btn btn-outline-secondary" type="button">Añadir al Carrito</button>
+                    <button class="btn btn-outline-secondary" type="button">Añadir al Carrito <p class="card-text"><small class="text-muted"><% = seleccionado.Precio.ToString("c",nfi) %></small></p> </button>
+                    
                   </a>
               </div>
             </div>
