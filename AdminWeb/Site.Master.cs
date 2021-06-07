@@ -11,10 +11,22 @@ namespace AdminWeb
 {
     public partial class SiteMaster : MasterPage
     {
-        public string sToCarrito = "Carrito(0)";
+        public string sToCarrito;
+        public CarritoCompra carrito;
+        public List<itemCarrito> enCarrito;
         protected void Page_Load(object sender, EventArgs e)
         {
-            
+            carrito = (CarritoCompra)Session["Total"];
+            enCarrito = (List<itemCarrito>)Session["listaEnCarro"];
+
+
+            if (carrito == null)
+                sToCarrito = "Carrito(0)";
+            else
+            {
+                sToCarrito = "Carrito(" + carrito.listado.Count() + ")";
+            }
+
         }
     }
 
