@@ -45,6 +45,10 @@ namespace AdminWeb
                 }
                 repetidor.DataSource = enCarrito;
                 repetidor.DataBind();
+                foreach(itemCarrito item in enCarrito)
+                {
+                    carrito.total += item.subtotal;
+                }
             }
 
             Session.Add("listaEnCarro", enCarrito);

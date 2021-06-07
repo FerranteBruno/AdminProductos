@@ -21,6 +21,9 @@
 
             </ItemTemplate>
         </asp:Repeater>
+  
+<hr class="mt-2 mb-3"/><% = carrito.total %>
+
 
 
     </table>
