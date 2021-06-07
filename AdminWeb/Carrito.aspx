@@ -8,10 +8,10 @@
     
             <ItemTemplate>
                 <tr>
-                    <td><%#Eval("Nombre")%></td>
+                    <td><%#Eval("item.Nombre")%></td>
                     <td>
                         <%--<asp:Button ID="btnEliminar" CssClass="btn btn-primary" Text="Eliminar" CommandArgument='<%#Eval("Id")%>' CommandName="idPokemon" runat="server" OnClick="btnEliminar_Click" />--%>
-                        <asp:Label ID="lblSubtotal" runat="server" Text="<%=enCarrito.item.Precio %>"></asp:Label>
+                        <asp:Label ID="lblSubtotal" runat="server" Text="lelele"></asp:Label>
                         <asp:Button Text="Eliminar" CssClass="btn btn-primary" ID="btnEliminar2" onClick="btnEliminar2_Click" CommandArgument='<%#Eval("ID")%>' runat="server" />
 
                     </td>

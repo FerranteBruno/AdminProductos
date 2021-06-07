@@ -18,44 +18,43 @@ namespace AdminWeb
 
         protected void Page_Load(object sender, EventArgs e)
         {
-            carrito.listado = enCarrito;
 
-            carrito.listado = (List<itemCarrito>)Session["listaEnCarro"];
+            enCarrito = (List<itemCarrito>)Session["listaEnCarro"];
 
 
-            if (carrito.listado == null)
-                carrito.listado = new List<itemCarrito>();
+            if (enCarrito == null)
+                enCarrito = new List<itemCarrito>();
 
             if(!IsPostBack)
             {
                 if(Request.QueryString["ID"] != null)
                 {
-                    if(carrito.listado.Find(x => x.item.ID.ToString() == Request.QueryString["ID"]) == null)
+                    if(enCarrito.Find(x => x.item.ID.ToString() == Request.QueryString["ID"]) == null)
                     {
                         List<Producto> listadoOriginal = (List<Producto>)Session["listadoProductos"];
                         itemCarrito aux = new itemCarrito();
 
-                        aux.id = 0;
                         aux.cantidad = 1;
                         aux.item = listadoOriginal.Find(x => x.ID.ToString() == Request.QueryString["ID"]);
                         aux.subtotal = aux.cantidad * aux.item.Precio;
+                        aux.id = aux.item.ID;
 
-                        carrito.listado.Add(aux);
+                        enCarrito.Add(aux);
                         
                     }
                 }
-                repetidor.DataSource = carrito.listado;
+                repetidor.DataSource = enCarrito;
                 repetidor.DataBind();
             }
 
-            Session.Add("listaEnCarro", carrito.listado);
+            Session.Add("listaEnCarro", enCarrito);
         }
 
         protected void btnEliminar2_Click(object sender, EventArgs e)
         {
             var argument = ((Button)sender).CommandArgument;
-            List<Producto> enCarrito = (List<Producto>)Session["listaEnCarro"];
-            Producto elim = enCarrito.Find(x => x.ID.ToString() == argument);
+            List<itemCarrito> enCarrito = (List<itemCarrito>)Session["listaEnCarro"];
+            itemCarrito elim = enCarrito.Find(x => x.id.ToString() == argument);
             enCarrito.Remove(elim);
             Session.Add("listaEnCarro", enCarrito);
             repetidor.DataSource = null;

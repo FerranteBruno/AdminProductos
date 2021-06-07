@@ -3,4 +3,3 @@ C:\Users\darkz\source\repos\AdminProd\AdminProductos\dominio\bin\Debug\dominio.p
 C:\Users\darkz\source\repos\AdminProd\AdminProductos\dominio\obj\Debug\dominio.csproj.CoreCompileInputs.cache
 C:\Users\darkz\source\repos\AdminProd\AdminProductos\dominio\obj\Debug\dominio.dll
 C:\Users\darkz\source\repos\AdminProd\AdminProductos\dominio\obj\Debug\dominio.pdb
-C:\Users\darkz\source\repos\AdminProd\AdminProductos\dominio\obj\Debug\dominio.csproj.AssemblyReference.cache
