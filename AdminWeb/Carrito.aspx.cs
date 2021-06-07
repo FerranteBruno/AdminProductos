@@ -24,6 +24,9 @@ namespace AdminWeb
             if (enCarrito == null)
                 enCarrito = new List<itemCarrito>();
 
+            if (carrito == null)
+                carrito = new CarritoCompra();
+
             if (!IsPostBack)
             {
                 if (Request.QueryString["ID"] != null)
@@ -40,24 +43,26 @@ namespace AdminWeb
 
                         enCarrito.Add(aux);
 
+                       
+
+                        carrito.total += aux.subtotal;
                         carrito.listado = enCarrito;
                     }
                 }
 
-                if (carrito != null)
-                {
-                    foreach (itemCarrito item in enCarrito)
-                    {
-                        carrito.total += item.subtotal;
+                    //foreach (itemCarrito item in enCarrito)
+                    //{
+                    //    carrito.total += item.subtotal;
 
-                        lblTotal.Text = carrito.total.ToString();
-                    }
-                }
+                    //    lblTotal.Text = carrito.total.ToString();
+                    //}
 
                 repetidor.DataSource = enCarrito;
                 repetidor.DataBind();
 
             }
+
+            lblTotal.Text = carrito.total.ToString();
 
             Session.Add("listaEnCarro", enCarrito);
             Session.Add("Total", carrito);
@@ -71,12 +76,10 @@ namespace AdminWeb
             itemCarrito elim = enCarrito.Find(x => x.id.ToString() == argument);
             enCarrito.Remove(elim);
 
-            //foreach (itemCarrito item in enCarrito)
-            //{
-            //    carrito.total -= elim.subtotal;
+                carrito.total -= elim.subtotal;
 
-            //    lblTotal.Text = carrito.total.ToString();
-            //}
+                lblTotal.Text = carrito.total.ToString();
+
 
 
             Session.Add("listaEnCarro", enCarrito);
