@@ -13,15 +13,22 @@ namespace AdminWeb
     {
         public string sToCarrito;
         public CarritoCompra carrito;
+        public int acu=0;
         protected void Page_Load(object sender, EventArgs e)
         {
             carrito = (CarritoCompra)Session["Total"];
 
             if (carrito == null)
-                sToCarrito = "Carrito(0)";
+                sToCarrito = "Carrito";
             else
             {
-                sToCarrito = "Carrito(" + carrito.listado.Count() + ")";
+                foreach(itemCarrito i in carrito.listado)
+                {
+                    acu += i.cantidad;
+                }
+
+
+                sToCarrito = "Carrito(" + acu + ")";
             }
 
         }

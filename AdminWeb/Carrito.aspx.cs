@@ -50,16 +50,20 @@ namespace AdminWeb
                         aux.subtotal = aux.cantidad * aux.item.Precio;
                         aux.id = aux.item.ID;
 
+                        carrito.total += aux.item.Precio;
+
+                        lblTotal.Text = "Total: " + carrito.total.ToString("c", nfi);
+
                         ListaEnCarrito.Add(aux);
                     }
                     carrito.listado = ListaEnCarrito;
+
                 }
                 repetidor.DataSource = ListaEnCarrito;
                 repetidor.DataBind();
             }
 
-            lblTotal.Text = carrito.total.ToString("c", nfi);
-
+            lblTotal.Text = "Total: " + carrito.total.ToString("c", nfi);
             Session.Add("listaEnCarro", ListaEnCarrito);
             Session.Add("Total", carrito);
         }
@@ -75,15 +79,18 @@ namespace AdminWeb
 
             carrito.total -= elim.subtotal;
             if (carrito.total < 0) carrito.total = 0;
-            lblTotal.Text = carrito.total.ToString("c", nfi);
-
-
+            lblTotal.Text = "Total: " + carrito.total.ToString("c", nfi);
 
             Session.Add("listaEnCarro", ListaEnCarrito);
             Session.Add("Total", carrito);
             repetidor.DataSource = null;
             repetidor.DataSource = ListaEnCarrito;
             repetidor.DataBind();
+
+            /*if(!(carrito.listado.Count()==1))
+            Server.TransferRequest(Request.Url.AbsolutePath, false);*/
+
+
         }
         protected void btnInc_Click(object sender, EventArgs e)
         {
@@ -108,11 +115,16 @@ namespace AdminWeb
 
             carrito.total = totalAux;
 
+            lblTotal.Text = "Total: " + carrito.total.ToString("c", nfi);
+
             Session.Add("listaEnCarro", ListaEnCarrito);
             Session.Add("Total", carrito);
             repetidor.DataSource = null;
             repetidor.DataSource = ListaEnCarrito;
             repetidor.DataBind();
+
+            
+            Server.TransferRequest(Request.Url.AbsolutePath, false);
         }
 
         protected void btnDec_Click(object sender, EventArgs e)
@@ -124,7 +136,7 @@ namespace AdminWeb
             var argument = ((Button)sender).CommandArgument;
             List<itemCarrito> ListaEnCarrito = (List<itemCarrito>)Session["listaEnCarro"];
             itemCarrito sobrecarga = ListaEnCarrito.Find(x => x.id.ToString() == argument);
-            if (sobrecarga.cantidad>0)
+            if (sobrecarga.cantidad>1)
             {
                 sobrecarga.cantidad--;
                 sobrecarga.subtotal = sobrecarga.item.Precio * sobrecarga.cantidad;
@@ -139,12 +151,16 @@ namespace AdminWeb
 
                 carrito.total = totalAux;
 
+                lblTotal.Text ="Total: "+ carrito.total.ToString("c", nfi);
+
 
                 Session.Add("listaEnCarro", ListaEnCarrito);
                 Session.Add("Total", carrito);
                 repetidor.DataSource = null;
                 repetidor.DataSource = ListaEnCarrito;
                 repetidor.DataBind();
+
+                Server.TransferRequest(Request.Url.AbsolutePath, false);
             }       
 
             
