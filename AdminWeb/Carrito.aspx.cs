@@ -52,11 +52,11 @@ namespace AdminWeb
                         enCarrito.Add(aux);
 
 
+                        }
+                        
+                        carrito.listado = enCarrito;
                     }
-
-                    carrito.listado = enCarrito;
-                }
-
+                        
 
                 repetidor.DataSource = enCarrito;
                 repetidor.DataBind();
@@ -98,28 +98,19 @@ namespace AdminWeb
 
         protected void txtCantidad_TextChanged(object sender, EventArgs e)
         {
-
+            
         }
 
         protected void btnInc_Click(object sender, EventArgs e)
         {
+            carrito = (CarritoCompra)Session["Total"];
+
 
             var argument = ((Button)sender).CommandArgument;
             List<itemCarrito> enCarrito = (List<itemCarrito>)Session["listaEnCarro"];
             itemCarrito sobrecarga = enCarrito.Find(x => x.id.ToString() == argument);
 
-            sobrecarga.cantidad++;
-
-            int cont = 0;
-
-            foreach(itemCarrito item in enCarrito)
-            {
-                cont++;
-                if (item.id == sobrecarga.id)
-                {
-                    enCarrito[cont].cantidad = sobrecarga.cantidad;
-                }
-            }
+            sobrecarga.cantidad ++;
 
             Session.Add("listaEnCarro", enCarrito);
             Session.Add("Total", carrito);
@@ -130,22 +121,14 @@ namespace AdminWeb
 
         protected void btnDec_Click(object sender, EventArgs e)
         {
-           
+            carrito = (CarritoCompra)Session["Total"];
+
+
             var argument = ((Button)sender).CommandArgument;
             List<itemCarrito> enCarrito = (List<itemCarrito>)Session["listaEnCarro"];
             itemCarrito sobrecarga = enCarrito.Find(x => x.id.ToString() == argument);
 
-            sobrecarga.cantidad--;
-            int cont = 0;
-
-            foreach (itemCarrito item in enCarrito)
-            {
-                cont++;
-                if (item.id == sobrecarga.id)
-                {
-                    enCarrito[cont].cantidad = sobrecarga.cantidad;
-                }
-            }
+            sobrecarga.cantidad --;
 
             Session.Add("listaEnCarro", enCarrito);
             Session.Add("Total", carrito);
