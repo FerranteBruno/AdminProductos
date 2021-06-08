@@ -13,11 +13,9 @@ namespace AdminWeb
     {
         public string sToCarrito;
         public CarritoCompra carrito;
-        public List<itemCarrito> enCarrito;
         protected void Page_Load(object sender, EventArgs e)
         {
             carrito = (CarritoCompra)Session["Total"];
-            enCarrito = (List<itemCarrito>)Session["listaEnCarro"];
 
 
             if (carrito == null)
