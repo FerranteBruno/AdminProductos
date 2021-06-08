@@ -16,6 +16,7 @@ namespace AdminWeb
         public CarritoCompra carrito = new CarritoCompra();
         public List<itemCarrito> ListaEnCarrito;
         NumberFormatInfo nfi = new CultureInfo("en-US", false).NumberFormat;
+        double totalAux;
 
         protected void Page_Load(object sender, EventArgs e)
         {
@@ -50,9 +51,9 @@ namespace AdminWeb
                         aux.id = aux.item.ID;
 
                         ListaEnCarrito.Add(aux);
-                        }
-                        carrito.listado = ListaEnCarrito;
                     }
+                    carrito.listado = ListaEnCarrito;
+                }
                 repetidor.DataSource = ListaEnCarrito;
                 repetidor.DataBind();
             }
@@ -87,19 +88,25 @@ namespace AdminWeb
         protected void btnInc_Click(object sender, EventArgs e)
         {
             carrito = (CarritoCompra)Session["Total"];
-
+            totalAux = 0;
             var argument = ((Button)sender).CommandArgument;
             List<itemCarrito> ListaEnCarrito = (List<itemCarrito>)Session["listaEnCarro"];
             itemCarrito sobrecarga = ListaEnCarrito.Find(x => x.id.ToString() == argument);
 
 
-            sobrecarga.cantidad ++;
+            sobrecarga.cantidad++;
             sobrecarga.subtotal = sobrecarga.item.Precio * sobrecarga.cantidad;
 
-            var elementIndex = ListaEnCarrito.FindIndex(x => x.id.ToString() == argument);
-            ListaEnCarrito[elementIndex] = sobrecarga;
+            var indiceItem = ListaEnCarrito.FindIndex(x => x.id.ToString() == argument);
+            ListaEnCarrito[indiceItem] = sobrecarga;
 
-            carrito.
+            foreach (itemCarrito i in ListaEnCarrito)
+            {
+                totalAux += i.subtotal;
+            }
+
+
+            carrito.total = totalAux;
 
             Session.Add("listaEnCarro", ListaEnCarrito);
             Session.Add("Total", carrito);
@@ -112,22 +119,36 @@ namespace AdminWeb
         {
             carrito = (CarritoCompra)Session["Total"];
 
+            totalAux = 0;
 
             var argument = ((Button)sender).CommandArgument;
             List<itemCarrito> ListaEnCarrito = (List<itemCarrito>)Session["listaEnCarro"];
             itemCarrito sobrecarga = ListaEnCarrito.Find(x => x.id.ToString() == argument);
+            if (sobrecarga.cantidad>0)
+            {
+                sobrecarga.cantidad--;
+                sobrecarga.subtotal = sobrecarga.item.Precio * sobrecarga.cantidad;
+                var elementIndex = ListaEnCarrito.FindIndex(x => x.id.ToString() == argument);
+                ListaEnCarrito[elementIndex] = sobrecarga;
 
-            sobrecarga.cantidad --;
-            sobrecarga.subtotal = sobrecarga.item.Precio * sobrecarga.cantidad;
+                foreach (itemCarrito i in ListaEnCarrito)
+                {
+                    totalAux += i.subtotal;
+                }
 
-            var elementIndex = ListaEnCarrito.FindIndex(x => x.id.ToString() == argument);
-            ListaEnCarrito[elementIndex] = sobrecarga;
 
-            Session.Add("listaEnCarro", ListaEnCarrito);
-            Session.Add("Total", carrito);
-            repetidor.DataSource = null;
-            repetidor.DataSource = ListaEnCarrito;
-            repetidor.DataBind();
+                carrito.total = totalAux;
+
+
+                Session.Add("listaEnCarro", ListaEnCarrito);
+                Session.Add("Total", carrito);
+                repetidor.DataSource = null;
+                repetidor.DataSource = ListaEnCarrito;
+                repetidor.DataBind();
+            }       
+
+            
+
 
         }
 
