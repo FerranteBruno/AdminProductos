@@ -17,7 +17,6 @@ namespace AdminWeb
         {
             carrito = (CarritoCompra)Session["Total"];
 
-
             if (carrito == null)
                 sToCarrito = "Carrito(0)";
             else
@@ -27,5 +26,4 @@ namespace AdminWeb
 
         }
     }
-
 }
