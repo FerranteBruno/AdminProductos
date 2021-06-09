@@ -1,0 +1,46 @@
+﻿logoRota{
+    background-image = url("Resources/rtech-logo.png");
+}
+.content {
+    line-height: 1.1;
+    background-color: #FFF;
+    color: #000;
+    position: absolute;
+    top: 36px; /* because there is a top-menu which is 36px high */
+    left: 70px; /* because there is a side-menu which is 70px wide */
+    right: 0px;
+    bottom: 0px;
+    overflow-x: hidden;
+    overflow-y: auto;
+}
+
+#content_left {
+    position: absolute;
+    width: 22.5%;
+    left: 0px;
+    top: 0px;
+    border-right: 1px solid #ccc;
+    padding: 10px;
+    overflow-x: hidden;
+    overflow-y: hidden;
+}
+
+#content_mid {
+    position: relative;
+    width: 50%;
+    top: 10px;
+    left: 25%;
+    float: left;
+    padding-left: 10px;
+}
+
+#content_right {
+    position: absolute;
+    width: 22.5%;
+    right: 0px;
+    top: 0px;
+    border-left: 1px solid #ccc;
+    padding: 10px;
+    overflow-x: hidden;
+    overflow-y: hidden;
+}

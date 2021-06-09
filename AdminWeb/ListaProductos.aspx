@@ -2,9 +2,17 @@
 
 <asp:Content ID="ListaCont1" ContentPlaceHolderID="MainContent" runat="server">
     <div class="container">
-        <div class="row">
 
+        <div class="input-group input-group-sm mb-1" style="padding-left: 50rem;padding-top: 2rem; padding-bottom: 2rem; max-width:100% ">
+                  <div class="input-group-prepend">
+                    <asp:TextBox ID="Buscador" class="form-control" runat="server" OnTextChanged="Buscador_OnTextChanged" ></asp:TextBox>
+                    <span class="input-group-text" id="inputGroup-sizing-default">Buscador</span>
+                  </div>
+                </div> 
+        <div class="row">
+            
         <% foreach (dominio.Producto item in list)
+            
             {%>
             
 
@@ -27,6 +35,6 @@
 
 
         <% } %>
+                </div>
              </div>
-        </div>
 </asp:Content>

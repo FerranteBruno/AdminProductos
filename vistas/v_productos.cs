@@ -51,9 +51,6 @@ namespace vistas
             {
                 dgvProductos.DataSource = prod.listar();
             }
-
-
-
         }
         private string armaConsultaFiltro()
         {
@@ -68,7 +65,7 @@ namespace vistas
                 //}
                 //if (cbxCategoria.SelectedIndex != -1 && cbxMarca.Text != "--Seleccione Categoria--")
                 //{
-                //    consulta += "AND c.Descripcion like '%" + cbxCategoria.Text + "%'";
+                //    consulta += "AND ..c.Descripcion like '%" + cbxCategoria.Text + "%'";
                 //}
             }
 
