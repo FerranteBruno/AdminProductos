@@ -81,16 +81,25 @@ namespace AdminWeb
             if (carrito.total < 0) carrito.total = 0;
             lblTotal.Text = "Total: " + carrito.total.ToString("c", nfi);
 
+            
             Session.Add("listaEnCarro", ListaEnCarrito);
             Session.Add("Total", carrito);
             repetidor.DataSource = null;
             repetidor.DataSource = ListaEnCarrito;
             repetidor.DataBind();
 
-            /*if(!(carrito.listado.Count()==1))
-            Server.TransferRequest(Request.Url.AbsolutePath, false);*/
+            /*if(!(carrito.listado.Count()==1))*/
+            /*Server.TransferRequest(Request.Url.AbsolutePath, false);*/
+            
 
-
+            if (carrito.listado.Count > 0)
+            {
+                Response.Redirect("Carrito.aspx");
+            }
+            else
+            {
+                Response.Redirect("ListaProductos.aspx");
+            }
         }
         protected void btnInc_Click(object sender, EventArgs e)
         {
@@ -112,7 +121,6 @@ namespace AdminWeb
                 totalAux += i.subtotal;
             }
 
-
             carrito.total = totalAux;
 
             lblTotal.Text = "Total: " + carrito.total.ToString("c", nfi);
@@ -123,8 +131,8 @@ namespace AdminWeb
             repetidor.DataSource = ListaEnCarrito;
             repetidor.DataBind();
 
-            
-            Server.TransferRequest(Request.Url.AbsolutePath, false);
+            Response.Redirect("Carrito.aspx");
+            /* Server.TransferRequest(Request.Url.AbsolutePath, false);*/
         }
 
         protected void btnDec_Click(object sender, EventArgs e)
@@ -132,6 +140,7 @@ namespace AdminWeb
             carrito = (CarritoCompra)Session["Total"];
 
             totalAux = 0;
+
 
             var argument = ((Button)sender).CommandArgument;
             List<itemCarrito> ListaEnCarrito = (List<itemCarrito>)Session["listaEnCarro"];
@@ -160,9 +169,13 @@ namespace AdminWeb
                 repetidor.DataSource = ListaEnCarrito;
                 repetidor.DataBind();
 
-                Server.TransferRequest(Request.Url.AbsolutePath, false);
+                Response.Redirect("Carrito.aspx");
+                /*Server.TransferRequest(Request.Url.AbsolutePath, false);*/
             }       
-
+            if (sobrecarga.cantidad == 1)
+            {
+                
+            }
             
 
 

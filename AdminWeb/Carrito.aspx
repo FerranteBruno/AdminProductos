@@ -19,6 +19,7 @@
                             <asp:Button ID="btnInc" runat="server" Text="+" type="button" AutoPostBack="true" onClick="btnInc_Click" class="btn btn-secondary" CommandArgument='<%#Eval("ID")%>'/>
                               <asp:Button ID="btnCant" runat="server" Text='<%#Eval("cantidad") %>' type="text" class="btn btn-secondary" AutoPostBack="true" CommandArgument='<%#Eval("ID")%>'/>
                               <asp:Button ID="btnDec" runat="server" Text="-" type="button" class="btn btn-secondary" AutoPostBack="true" onClick="btnDec_Click" CommandArgument='<%#Eval("ID")%>'/>
+
                           </div>
                         </div>
                         

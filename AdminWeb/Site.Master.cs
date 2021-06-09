@@ -11,9 +11,9 @@ namespace AdminWeb
 {
     public partial class SiteMaster : MasterPage
     {
-        public string sToCarrito;
+        public string sToCarrito="Carrito";
         public CarritoCompra carrito;
-        public int acu=0;
+        public int acu = 0;
         protected void Page_Load(object sender, EventArgs e)
         {
             carrito = (CarritoCompra)Session["Total"];
@@ -22,15 +22,22 @@ namespace AdminWeb
                 sToCarrito = "Carrito";
             else
             {
-                foreach(itemCarrito i in carrito.listado)
+                if (carrito.listado != null)
                 {
-                    acu += i.cantidad;
+                    foreach (itemCarrito i in carrito.listado)
+                    {
+                        acu += i.cantidad;
+                    }
+                    if (acu != 0)
+                    {
+                        sToCarrito = "Carrito(" + acu + ")";
+                    }
                 }
-
-
-                sToCarrito = "Carrito(" + acu + ")";
+                else
+                {
+                    sToCarrito = "Carrito";
+                }
             }
-
         }
     }
 }
