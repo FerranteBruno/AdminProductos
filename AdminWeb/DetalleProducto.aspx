@@ -8,7 +8,6 @@
 
         <div class="card-body" style="margin: auto">
             <h5 class="card-title" style="font-size: 25px"><% = seleccionado.Nombre %></h5>
-            <!--<p class="card-text"><small class="text-muted"><% = seleccionado.Precio.ToString("c",nfi) %></small></p>-->
         </div>
         <img src="<% = seleccionado.UrlImagen %>" class="card-img-bottom" alt="..." style="max-height: 50%; max-width: 50%; margin: auto;">
 
