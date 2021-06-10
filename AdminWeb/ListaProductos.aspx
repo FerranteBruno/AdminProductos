@@ -17,15 +17,15 @@
             
 
             <div class="card" style="width: 18rem;">
-              <img src="<% = item.UrlImagen %>" class="card-img-top" alt="...">
+              <img src="<% = item.UrlImagen %>" class="card-img-top" alt="texto de imagen" onerror="this.src='img/earth-globe1.png';" >
                   <div class="card-body">
                     <h5 class="card-title"><% = item.Nombre %></h5>
-                    <p class="card-text"><% = item.Descripcion %></p>
+                    <!--<p class="card-text"><%// = item.Descripcion %></p>-->
                   </div>
                   <ul class="list-group list-group-flush">
                     <li class="list-group-item"><% = item.Precio.ToString("c",nfi) %></li>
-                    <li class="list-group-item"><% = item.Categoria %></li>
-                    <li class="list-group-item"><% = item.Marca %></li>
+                    <!--<li class="list-group-item"><%// = item.Categoria %></li>
+                    <li class="list-group-item"><% //= item.Marca %></li>-->
                   </ul>
                   <div class="card-body">
                      <a href="DetalleProducto.aspx?id=<% = item.ID %>" class="btn btn-primary">Ver Detalle</a>

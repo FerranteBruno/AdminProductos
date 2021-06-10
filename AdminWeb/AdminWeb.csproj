@@ -134,6 +134,8 @@
     <Content Include="Global.asax" />
     <Content Include="ListaProductos.aspx" />
     <Content Include="Productos.aspx" />
+    <Content Include="img\earth-globe1.png" />
+    <Content Include="img\giferror21.gif" />
     <Content Include="Scripts\bootstrap.bundle.js" />
     <Content Include="Scripts\bootstrap.bundle.min.js" />
     <Content Include="Scripts\bootstrap.js" />

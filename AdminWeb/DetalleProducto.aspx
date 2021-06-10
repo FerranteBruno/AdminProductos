@@ -2,43 +2,46 @@
 
 <asp:Content ID="DetCont" ContentPlaceHolderID="MainContent" runat="server">
 
-    <div class="container">
-        <div class="row">
-            
-
-            <div class="card-body">
-                 <h5 class="card-title"><% = seleccionado.Nombre %></h5>
-                 <p class="card-text"><% = seleccionado.Descripcion %></p>
-                 <p class="card-text"><small class="text-muted"><% = seleccionado.Precio.ToString("c",nfi) %></small></p>
-                 </div>
-                 <img src="<% = seleccionado.UrlImagen %>" class="card-img-bottom" alt="...">
-                </div>
-             </div>
-
-    <div class="container">
-        <div class="row">
-
-            <div class="input-group">
-              <select class="custom-select" id="inputGroupSelect04" aria-label="Example select with button addon">
-                <option value="1">Uno</option>
-                <option value="2">Dos</option>
-                <option value="3">Tres</option>
-                <option value="4">Cuatro</option>
-                <option value="5">Cinco</option>
-                <option value="6">Seis</option>
+    <div style="margin: auto; text-align: center">
 
 
-              </select>
-              <div class="input-group-append" style="margin-left:auto; margin-right:auto;">
-                <a href="Carrito.aspx?id=<% = seleccionado.ID %>">
-                    <button class="btn btn-outline-secondary" type="button">Añadir al Carrito <p class="card-text"><small class="text-muted"><% = seleccionado.Precio.ToString("c",nfi) %></small></p> </button>
-                    
-                  </a>
-              </div>
-            </div>
 
-
+        <div class="card-body" style="margin: auto">
+            <h5 class="card-title" style="font-size: 25px"><% = seleccionado.Nombre %></h5>
+            <!--<p class="card-text"><small class="text-muted"><% = seleccionado.Precio.ToString("c",nfi) %></small></p>-->
         </div>
+        <img src="<% = seleccionado.UrlImagen %>" class="card-img-bottom" alt="..." style="max-height: 50%; max-width: 50%; margin: auto;">
+
+        <div style="text-align: center">
+            <div style="text-align: left;display:block;margin-left:30%;margin-right:30%">
+                <p class="card-text">Descripcion: <% = seleccionado.Descripcion %></p>
+                <p class="card-text">Categoria: <% = seleccionado.Categoria %></p>
+                <p class="card-text">Marca: <% = seleccionado.Marca %></p>
+            </div>
+        </div>
+
+        <div class="input-group-append" style="text-align: center; display: block;margin-top:10px">
+            <a href="Carrito.aspx?id=<% = seleccionado.ID %>">
+
+                <button class="btn btn-outline-secondary" type="button" style="text-align: center">
+                    Añadir al Carrito
+                        <p class="card-text"><small class="text-muted"><% = seleccionado.Precio.ToString("c",nfi) %></small></p>
+                </button>
+
+
+            </a>
+        </div>
+
+
+
+    </div>
+
+
+    <div class="container">
+        <div class="row">
+        </div>
+
+
     </div>
 
 
